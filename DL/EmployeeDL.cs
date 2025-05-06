@@ -27,13 +27,13 @@ namespace HyperstarManagementSystem.DL
         }
         static public DataTable getAllEmployees()
         {
-            string query = "SELECT employee_id,fullname, username, passw, roll_name, dept_name FROM roles natural join employees natural join departments;";
+            string query = "SELECT employee_id,fullname, username, passw, role_name, dept_name FROM roles natural join employees natural join departments;";
             DataTable dt = DataBaseHelper.GetTable(query);
             return dt;
         }
         static public DataTable getRole()
         {
-            string query = "SELECT roll_name FROM roles";
+            string query = "SELECT role_name FROM roles";
             DataTable dt = DataBaseHelper.GetTable(query);
             return dt;
         }
