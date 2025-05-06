@@ -25,3 +25,4 @@ namespace HyperstarManagementSystem.BL
             BillDetails = billDetails;
         }
     }
+}
