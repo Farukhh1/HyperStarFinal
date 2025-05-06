@@ -109,6 +109,8 @@
     <Compile Include="AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BL\BillDetailBL.cs" />
+    <Compile Include="BL\BillsBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
     <Compile Include="DL\DataBaseHelper.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
