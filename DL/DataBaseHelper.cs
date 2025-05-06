@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using HyperstarManagementSystem.BL;
 
 namespace HyperstarManagementSystem.DL
 {

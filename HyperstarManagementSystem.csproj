@@ -112,8 +112,12 @@
     <Compile Include="BL\BillDetailBL.cs" />
     <Compile Include="BL\BillsBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
+    <Compile Include="BL\ProductBL.cs" />
+    <Compile Include="DL\BillDetailDL.cs" />
+    <Compile Include="DL\BillsDL.cs" />
     <Compile Include="DL\DataBaseHelper.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
+    <Compile Include="DL\ProductDL.cs" />
     <Compile Include="EmployeeCrud.cs">
       <SubType>UserControl</SubType>
     </Compile>

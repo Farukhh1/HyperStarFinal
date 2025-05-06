@@ -8,20 +8,20 @@ namespace HyperstarManagementSystem.BL
 {
     internal class BillsBL
     {
-        public int billID { get; set; }
-        public int customerID { get; set; }
-        public int employeeID { get; set; }
-        public string billDate { get; set; }
-        public decimal totalAmount { get; set; }
-        public List<BillDetailBL> billDetails { get; set; }
+        public int BillID { get; set; }
+        public int CustomerID { get; set; }
+        public int EmployeeID { get; set; }
+        public string BillDate { get; set; }
+        public decimal TotalAmount { get; set; }
+        public List<BillDetailBL> BillDetails { get; set; }
+
         public BillsBL(int billID, int customerID, int employeeID, string billDate, decimal totalAmount, List<BillDetailBL> billDetails)
         {
-            this.billID = billID;
-            this.customerID = customerID;
-            this.employeeID = employeeID;
-            this.billDate = billDate;
-            this.totalAmount = totalAmount;
-            this.billDetails = billDetails;
+            BillID = billID;
+            CustomerID = customerID;
+            EmployeeID = employeeID;
+            BillDate = billDate;
+            TotalAmount = totalAmount;
+            BillDetails = billDetails;
         }
     }
-}
