@@ -131,6 +131,7 @@
     <Compile Include="BL\BillsBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
     <Compile Include="BL\ProductBL.cs" />
+    <Compile Include="BL\ProductReport.cs" />
     <Compile Include="DL\BillDetailDL.cs" />
     <Compile Include="DL\BillsDL.cs" />
     <Compile Include="DL\DataBaseHelper.cs" />
@@ -156,6 +157,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\Report.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Report\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
@@ -179,7 +186,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\ProductReport.rdlc" />
+    <EmbeddedResource Include="Report\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.ProductBL.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.ProductReport.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -214,9 +227,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-stars-100 %281%29.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reports\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
