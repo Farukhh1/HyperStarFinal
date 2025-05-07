@@ -12,7 +12,7 @@ namespace HyperstarManagementSystem.BL
         public string ProductName { get; set; }
         public decimal Price { get; set; }
         public int in_stock { get; set; }
-        public int supplierID { get; set; }
+        public int supplierID { get; set; } 
         public string manufacturer { get; set; }
         public int dept_id { get; set; }
         public ProductBL(string productCode, string productName, decimal price, int in_stock, int supplierID, string manufacturer, int dept_id)
