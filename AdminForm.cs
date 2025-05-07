@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.Reports;
 
 namespace HyperstarManagementSystem
 {
@@ -37,6 +38,16 @@ namespace HyperstarManagementSystem
 
             // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(employeeControl);
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            this.mainContentPanel.Controls.Clear();
+            Report report = new Report();
+            report.Dock = DockStyle.Fill;
+
+            // Add it to the container panel (assumed named mainContentPanel)
+            this.mainContentPanel.Controls.Add(report);
         }
 
         // Handle resizing
