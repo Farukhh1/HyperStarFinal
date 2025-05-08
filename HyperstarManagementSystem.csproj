@@ -130,6 +130,7 @@
     <Compile Include="BL\BillDetailBL.cs" />
     <Compile Include="BL\BillsBL.cs" />
     <Compile Include="BL\EmployeeBL.cs" />
+    <Compile Include="BL\InactiveProductBL.cs" />
     <Compile Include="BL\PaymentBL.cs" />
     <Compile Include="BL\ProductBL.cs" />
     <Compile Include="BL\ProductReport.cs" />
@@ -189,13 +190,24 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\InactiveProducts.rdlc" />
     <EmbeddedResource Include="Report\ProductReport.rdlc" />
     <EmbeddedResource Include="Report\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.BillDetailBL.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.BillsBL.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.EmployeeBL.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.InactiveProductBL.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.PaymentBL.datasource" />
     <None Include="Properties\DataSources\HyperstarManagementSystem.BL.ProductBL.datasource" />
     <None Include="Properties\DataSources\HyperstarManagementSystem.BL.ProductReport.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.test1.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.DL.DataBaseHelper.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.DL.EmployeeDL.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.DL.PaymentDL.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.DL.ProductDL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

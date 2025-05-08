@@ -8,5 +8,6 @@ namespace HyperstarManagementSystem.BL
 {
     internal class test1
     {
+
     }
 }
