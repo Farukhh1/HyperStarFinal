@@ -134,7 +134,6 @@
     <Compile Include="BL\PaymentBL.cs" />
     <Compile Include="BL\ProductBL.cs" />
     <Compile Include="BL\ProductReport.cs" />
-    <Compile Include="BL\test1.cs" />
     <Compile Include="DL\BillDetailDL.cs" />
     <Compile Include="DL\BillsDL.cs" />
     <Compile Include="DL\DataBaseHelper.cs" />
