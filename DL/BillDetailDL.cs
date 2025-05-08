@@ -20,7 +20,7 @@ namespace HyperstarManagementSystem
             {
                 int billdetailID = Convert.ToInt32(dr["billdetail_id"]);
                 int billId = Convert.ToInt32(dr["bill_id"]);
-                int productCode = Convert.ToInt32(dr["product_code"]);
+                string productCode = (dr["product_code"]).ToString();
                 int quantity = Convert.ToInt32(dr["qty"]);
                 decimal totalPrice = Convert.ToDecimal(dr["total_price"]);
                 BillDetailBL b = new BillDetailBL(billdetailID, billId, productCode, quantity, totalPrice);

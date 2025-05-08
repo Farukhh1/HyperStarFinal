@@ -10,17 +10,22 @@ namespace HyperstarManagementSystem.BL
     {
         public int billdetailID { get; set; }
         public int BillID { get; set; }
-        public int ProductCode { get; set; }
+        public string ProductCode { get; set; }
         public int Quantity { get; set; }
         public decimal TotalPrice { get; set; }
 
-        public BillDetailBL(int billdetailID, int billID, int productCode, int quantity, decimal totalPrice)
+        public BillDetailBL(int billdetailID, int billID, string productCode, int quantity, decimal totalPrice)
         {
             this.billdetailID = billdetailID;
             BillID = billID;
             ProductCode = productCode;
             Quantity = quantity;
             TotalPrice = totalPrice;
+        }
+        public BillDetailBL(string productCode, int quantity)
+        {
+            ProductCode = productCode;
+            Quantity = quantity;
         }
     }
 }

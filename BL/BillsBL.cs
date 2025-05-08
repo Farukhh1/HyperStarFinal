@@ -14,8 +14,9 @@ namespace HyperstarManagementSystem.BL
         public string BillDate { get; set; }
         public decimal TotalAmount { get; set; }
         public List<BillDetailBL> BillDetails { get; set; }
+        public PaymentBL Payment { get; set; }
 
-        public BillsBL(int billID, int customerID, int employeeID, string billDate, decimal totalAmount, List<BillDetailBL> billDetails)
+        public BillsBL(int billID, int customerID, int employeeID, string billDate, decimal totalAmount, List<BillDetailBL> billDetails, PaymentBL payment)
         {
             BillID = billID;
             CustomerID = customerID;
@@ -23,6 +24,15 @@ namespace HyperstarManagementSystem.BL
             BillDate = billDate;
             TotalAmount = totalAmount;
             BillDetails = billDetails;
+            Payment = payment;
+        }
+        public BillsBL(int customerID, int employeeID, string billDate, List<BillDetailBL> billDetails, PaymentBL payment)
+        {
+            CustomerID = customerID;
+            EmployeeID = employeeID;
+            BillDate = billDate;
+            BillDetails = billDetails;
+            Payment = payment;
         }
     }
 }

@@ -8,14 +8,16 @@ namespace HyperstarManagementSystem.BL
 {
     internal class PaymentBL
     {
-        public int PaymentID { get; set; }
         public int BillID { get; set; }
         public decimal CashReceived { get; set; }
 
-        public PaymentBL(int paymentID, int billID, decimal cashReceived)
+        public PaymentBL(int billID, decimal cashReceived)
         {
-            PaymentID = paymentID;
             BillID = billID;
+            CashReceived = cashReceived;
+        }
+        public PaymentBL(decimal cashReceived)
+        {
             CashReceived = cashReceived;
         }
     }
