@@ -121,10 +121,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminForm.cs">
+    <Compile Include="UI\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm.Designer.cs">
+    <Compile Include="UI\AdminForm.Designer.cs">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BL\BillDetailBL.cs" />
@@ -141,34 +141,34 @@
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\PaymentDL.cs" />
     <Compile Include="DL\ProductDL.cs" />
-    <Compile Include="EmployeeCrud.cs">
+    <Compile Include="UI\EmployeeCrud.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="EmployeeCrud.Designer.cs">
+    <Compile Include="UI\EmployeeCrud.Designer.cs">
       <DependentUpon>EmployeeCrud.cs</DependentUpon>
     </Compile>
-    <Compile Include="InventoryManager.cs">
+    <Compile Include="UI\InventoryManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InventoryManager.Designer.cs">
+    <Compile Include="UI\InventoryManager.Designer.cs">
       <DependentUpon>InventoryManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="UI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="UI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductCrud.cs">
+    <Compile Include="UI\ProductCrud.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProductCrud.Designer.cs">
+    <Compile Include="UI\ProductCrud.Designer.cs">
       <DependentUpon>ProductCrud.cs</DependentUpon>
     </Compile>
-    <Compile Include="ProductsCrud.cs">
+    <Compile Include="UI\ProductsCrud.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ProductsCrud.Designer.cs">
+    <Compile Include="UI\ProductsCrud.Designer.cs">
       <DependentUpon>ProductsCrud.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -180,22 +180,22 @@
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="AdminForm.resx">
+    <EmbeddedResource Include="UI\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeCrud.resx">
+    <EmbeddedResource Include="UI\EmployeeCrud.resx">
       <DependentUpon>EmployeeCrud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InventoryManager.resx">
+    <EmbeddedResource Include="UI\InventoryManager.resx">
       <DependentUpon>InventoryManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductCrud.resx">
+    <EmbeddedResource Include="UI\ProductCrud.resx">
       <DependentUpon>ProductCrud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ProductsCrud.resx">
+    <EmbeddedResource Include="UI\ProductsCrud.resx">
       <DependentUpon>ProductsCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -213,7 +213,7 @@
     <EmbeddedResource Include="Report\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config" />
+    <None Include="UI\packages.config" />
     <None Include="Properties\DataSources\HyperstarManagementSystem.BL.BillDetailBL.datasource" />
     <None Include="Properties\DataSources\HyperstarManagementSystem.BL.BillsBL.datasource" />
     <None Include="Properties\DataSources\HyperstarManagementSystem.BL.EmployeeBL.datasource" />
@@ -237,7 +237,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="UI\App.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-h-32.png" />
