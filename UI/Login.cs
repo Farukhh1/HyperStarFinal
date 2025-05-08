@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.UI;
 
 namespace HyperstarManagementSystem
 {
@@ -52,6 +53,13 @@ namespace HyperstarManagementSystem
             InventoryManager inventoryManager = new InventoryManager();
             inventoryManager.Show();
 
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Cashier customer = new Cashier();
+            customer.Show();
         }
     }
 }

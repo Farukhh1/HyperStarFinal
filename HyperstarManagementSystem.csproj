@@ -134,13 +134,42 @@
     <Compile Include="BL\PaymentBL.cs" />
     <Compile Include="BL\ProductBL.cs" />
     <Compile Include="BL\ProductReport.cs" />
-    <Compile Include="BL\test1.cs" />
     <Compile Include="DL\BillDetailDL.cs" />
     <Compile Include="DL\BillsDL.cs" />
     <Compile Include="DL\DataBaseHelper.cs" />
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\PaymentDL.cs" />
     <Compile Include="DL\ProductDL.cs" />
+    <Compile Include="UI\Bills.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Bills.Designer.cs">
+      <DependentUpon>Bills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\BillsCrud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\BillsCrud.Designer.cs">
+      <DependentUpon>BillsCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Cashier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Cashier.Designer.cs">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerAdd.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerAdd.Designer.cs">
+      <DependentUpon>CustomerAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\CustomerCrud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CustomerCrud.Designer.cs">
+      <DependentUpon>CustomerCrud.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\EmployeeCrud.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -182,6 +211,18 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="UI\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\BillsCrud.resx">
+      <DependentUpon>BillsCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Cashier.resx">
+      <DependentUpon>Cashier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerAdd.resx">
+      <DependentUpon>CustomerAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CustomerCrud.resx">
+      <DependentUpon>CustomerCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\EmployeeCrud.resx">
       <DependentUpon>EmployeeCrud.cs</DependentUpon>
