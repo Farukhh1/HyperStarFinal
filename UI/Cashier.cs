@@ -42,11 +42,22 @@ namespace HyperstarManagementSystem.UI
         {
 
             this.mainContentPanel.Controls.Clear();
-            ProductCrud productControl = new ProductCrud();
-            productControl.Dock = DockStyle.Fill;
+            CustomerAdd customeradd = new CustomerAdd();
+            customeradd.Dock = DockStyle.Fill;
 
             // Add it to the container panel (assumed named mainContentPanel)
-            this.mainContentPanel.Controls.Add(productControl);
+            this.mainContentPanel.Controls.Add(customeradd);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.mainContentPanel.Controls.Clear();
+            BillsCrud BillControl = new BillsCrud();
+            BillControl.Dock = DockStyle.Fill;
+
+            // Add it to the container panel (assumed named mainContentPanel)
+            this.mainContentPanel.Controls.Add(BillControl);
+
         }
     }
 }

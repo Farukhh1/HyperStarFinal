@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HyperstarManagementSystem.Reports;
+using HyperstarManagementSystem.UI;
 
 namespace HyperstarManagementSystem
 {
@@ -57,7 +58,11 @@ namespace HyperstarManagementSystem
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
-
+            this.mainContentPanel.Controls.Clear();
+            CustomerCrud customerCrud = new CustomerCrud();
+            customerCrud.Dock = DockStyle.Fill;
+            // Add it to the container panel (assumed named mainContentPanel)
+            this.mainContentPanel.Controls.Add(customerCrud);
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
