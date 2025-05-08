@@ -594,7 +594,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.50396in</Top>
+        <Top>0.43403in</Top>
+        <Left>0.125in</Left>
         <Height>0.5in</Height>
         <Width>7.81771in</Width>
         <Style>
@@ -623,8 +624,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox34</rd:DefaultName>
-        <Top>0.06993in</Top>
-        <Left>3in</Left>
+        <Left>3.09375in</Left>
         <Height>0.29167in</Height>
         <Width>2.03in</Width>
         <ZIndex>1</ZIndex>
@@ -640,10 +640,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>3.71354in</Height>
+    <Height>2.79166in</Height>
     <Style />
   </Body>
-  <Width>8.03646in</Width>
+  <Width>8.07813in</Width>
   <Page>
     <LeftMargin>1in</LeftMargin>
     <RightMargin>1in</RightMargin>

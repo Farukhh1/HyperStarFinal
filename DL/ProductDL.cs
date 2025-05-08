@@ -32,7 +32,7 @@ namespace HyperstarManagementSystem.DL
         }
         public static List<ProductReport> GetAllProducts()
         {
-            string qry = "select products.product_code,products.name,products.price,products.in_stock,suppliers.name,manufacturers.m_name,dept_name from suppliers natural join products natural join manufacturers natural join departments where deleted = 0";
+            string qry = "SELECT p.product_code,p.name AS name,p.price,p.in_stock,s.name AS Sname, p.manufacturer,d.dept_name FROM products p JOIN suppliers s ON p.supplier_id = s.supplier_id JOIN departments d ON p.dept_id = d.dept_id WHERE p.deleted = 0;";
             DataTable dt = DataBaseHelper.GetTable(qry);
             List<ProductReport> products = new List<ProductReport>();
             foreach (DataRow dr in dt.Rows)
@@ -41,10 +41,29 @@ namespace HyperstarManagementSystem.DL
                 string productName = dr["name"].ToString();
                 decimal price = Convert.ToDecimal(dr["price"]);
                 int in_stock = Convert.ToInt32(dr["in_stock"]);
-                string supplierID = dr["name"].ToString();
-                string manufacturer = dr["m_name"].ToString();
+                string supplierID = dr["Sname"].ToString();
+                string manufacturer = dr["manufacturer"].ToString();
                 string dept_id = dr["dept_name"].ToString();
                 ProductReport p = new ProductReport(productCode, productName, price, in_stock, supplierID, manufacturer, dept_id);
+                products.Add(p);
+            }
+            return products;
+        }
+        public static List<InactiveProductBL> GetAllInactiveProducts()
+        {
+            string qry = "SELECT p.product_code,p.name AS name,p.price,p.in_stock,s.name AS Sname, p.manufacturer,d.dept_name FROM products p JOIN suppliers s ON p.supplier_id = s.supplier_id JOIN departments d ON p.dept_id = d.dept_id WHERE p.deleted = 1;";
+            DataTable dt = DataBaseHelper.GetTable(qry);
+            List<InactiveProductBL> products = new List<InactiveProductBL>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                string productCode = dr["product_code"].ToString();
+                string productName = dr["name"].ToString();
+                decimal price = Convert.ToDecimal(dr["price"]);
+                int in_stock = Convert.ToInt32(dr["in_stock"]);
+                string supplierID = dr["Sname"].ToString();
+                string manufacturer = dr["manufacturer"].ToString();
+                string dept_id = dr["dept_name"].ToString();
+                InactiveProductBL p = new InactiveProductBL(productCode, productName, price, in_stock, supplierID, manufacturer, dept_id);
                 products.Add(p);
             }
             return products;
