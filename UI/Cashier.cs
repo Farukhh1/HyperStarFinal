@@ -1,0 +1,52 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace HyperstarManagementSystem.UI
+{
+    public partial class Cashier : Form
+    {
+        public Cashier()
+        {
+            InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EmployeeCrudButton_Click(object sender, EventArgs e)
+        {
+            this.mainContentPanel.Controls.Clear();
+            EmployeeCrud employeeControl = new EmployeeCrud();
+            employeeControl.Dock = DockStyle.Fill;
+
+            // Add it to the container panel (assumed named mainContentPanel)
+            this.mainContentPanel.Controls.Add(employeeControl);
+        }
+
+        private void Customer_Load(object sender, EventArgs e)
+        {
+            this.Size = new Size(900, 580);
+            StartPosition = FormStartPosition.CenterScreen;
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+            this.mainContentPanel.Controls.Clear();
+            ProductCrud productControl = new ProductCrud();
+            productControl.Dock = DockStyle.Fill;
+
+            // Add it to the container panel (assumed named mainContentPanel)
+            this.mainContentPanel.Controls.Add(productControl);
+        }
+    }
+}
