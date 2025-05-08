@@ -35,5 +35,23 @@ namespace HyperstarManagementSystem
         {
 
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2CustomCheckBox1_Click(object sender, EventArgs e)
+        {
+            textBox2.PasswordChar = guna2CustomCheckBox1.Checked ? '\0' : '*';
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            InventoryManager inventoryManager = new InventoryManager();
+            inventoryManager.Show();
+
+        }
     }
 }

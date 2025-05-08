@@ -145,11 +145,23 @@
     <Compile Include="EmployeeCrud.Designer.cs">
       <DependentUpon>EmployeeCrud.cs</DependentUpon>
     </Compile>
+    <Compile Include="InventoryManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryManager.Designer.cs">
+      <DependentUpon>InventoryManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCrud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProductCrud.Designer.cs">
+      <DependentUpon>ProductCrud.cs</DependentUpon>
     </Compile>
     <Compile Include="ProductsCrud.cs">
       <SubType>UserControl</SubType>
@@ -172,8 +184,14 @@
     <EmbeddedResource Include="EmployeeCrud.resx">
       <DependentUpon>EmployeeCrud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InventoryManager.resx">
+      <DependentUpon>InventoryManager.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCrud.resx">
+      <DependentUpon>ProductCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductsCrud.resx">
       <DependentUpon>ProductsCrud.cs</DependentUpon>

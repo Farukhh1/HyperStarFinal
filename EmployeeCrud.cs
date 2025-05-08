@@ -197,5 +197,10 @@ namespace HyperstarManagementSystem
             role.Text = employeeView.CurrentRow.Cells[4].Value.ToString();
             dept.Text = employeeView.CurrentRow.Cells[5].Value.ToString();
         }
+
+        private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
