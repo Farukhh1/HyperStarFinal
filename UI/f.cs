@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HyperstarManagementSystem.UI
 {
-    public partial class Bills : UserControl
+    public partial class f : UserControl
     {
-        public Bills()
+        public f()
         {
             InitializeComponent();
         }

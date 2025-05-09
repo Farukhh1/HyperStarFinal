@@ -34,6 +34,15 @@ namespace HyperstarManagementSystem
             dept.DisplayMember = "dept_name";
             role.SelectedIndex = -1;
             dept.SelectedIndex = -1;
+
+            employeeView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            employeeView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            employeeView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+     
+            employeeView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
         }
         private void clear()
         {
@@ -194,14 +203,6 @@ namespace HyperstarManagementSystem
         }
         private void EmployeeCrud_Load(object sender, EventArgs e)
         {
-            employeeView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            employeeView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            employeeView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-
-            // Set Column Header Font Size (Optional)
-            employeeView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
 
         }
 

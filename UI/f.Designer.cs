@@ -1,6 +1,6 @@
 ﻿namespace HyperstarManagementSystem.UI
 {
-    partial class Bills
+    partial class f
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // f
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "f";
+            this.Size = new System.Drawing.Size(1844, 826);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
