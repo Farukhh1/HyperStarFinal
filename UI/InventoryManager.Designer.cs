@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InventoryManager));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
+            this.guna2Shapes4 = new Guna.UI2.WinForms.Guna2Shapes();
+            this.label2 = new System.Windows.Forms.Label();
             this.guna2Shapes2 = new Guna.UI2.WinForms.Guna2Shapes();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Shapes3 = new Guna.UI2.WinForms.Guna2Shapes();
@@ -44,10 +48,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
-            this.guna2Shapes4 = new Guna.UI2.WinForms.Guna2Shapes();
-            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
@@ -90,6 +90,67 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1178, 100);
             this.panel2.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label7.Location = new System.Drawing.Point(9, 30);
+            this.label7.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(162, 42);
+            this.label7.TabIndex = 31;
+            this.label7.Text = "Manager";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Shapes1
+            // 
+            this.guna2Shapes1.BackColor = System.Drawing.Color.Green;
+            this.guna2Shapes1.BorderColor = System.Drawing.Color.Green;
+            this.guna2Shapes1.FillColor = System.Drawing.Color.Green;
+            this.guna2Shapes1.Location = new System.Drawing.Point(0, 84);
+            this.guna2Shapes1.Name = "guna2Shapes1";
+            this.guna2Shapes1.PolygonSkip = 1;
+            this.guna2Shapes1.Rotate = 0F;
+            this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
+            this.guna2Shapes1.Size = new System.Drawing.Size(202, 16);
+            this.guna2Shapes1.TabIndex = 28;
+            this.guna2Shapes1.Text = "guna2Shapes1";
+            this.guna2Shapes1.Zoom = 80;
+            // 
+            // guna2Shapes4
+            // 
+            this.guna2Shapes4.BackColor = System.Drawing.Color.Green;
+            this.guna2Shapes4.BorderColor = System.Drawing.Color.Green;
+            this.guna2Shapes4.FillColor = System.Drawing.Color.Green;
+            this.guna2Shapes4.Location = new System.Drawing.Point(183, 0);
+            this.guna2Shapes4.Name = "guna2Shapes4";
+            this.guna2Shapes4.PolygonSkip = 1;
+            this.guna2Shapes4.Rotate = 0F;
+            this.guna2Shapes4.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
+            this.guna2Shapes4.Size = new System.Drawing.Size(19, 91);
+            this.guna2Shapes4.TabIndex = 30;
+            this.guna2Shapes4.Text = "guna2Shapes4";
+            this.guna2Shapes4.Zoom = 80;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label2.Font = new System.Drawing.Font("Stencil", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(0, 0);
+            this.label2.Margin = new System.Windows.Forms.Padding(0);
+            this.label2.Name = "label2";
+            this.label2.Padding = new System.Windows.Forms.Padding(190, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(1178, 100);
+            this.label2.TabIndex = 27;
+            this.label2.Text = "Hyperstar Management System";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Shapes2
             // 
@@ -168,7 +229,8 @@
             this.bills.Name = "bills";
             this.bills.Size = new System.Drawing.Size(180, 45);
             this.bills.TabIndex = 17;
-            this.bills.Text = ".";
+            this.bills.Text = "Supplier";
+            this.bills.Click += new System.EventHandler(this.bills_Click);
             // 
             // guna2Button4
             // 
@@ -246,7 +308,7 @@
             this.EmployeeCrudButton.Name = "EmployeeCrudButton";
             this.EmployeeCrudButton.Size = new System.Drawing.Size(180, 45);
             this.EmployeeCrudButton.TabIndex = 12;
-            this.EmployeeCrudButton.Text = ".";
+            this.EmployeeCrudButton.Text = "Manufacturer";
             this.EmployeeCrudButton.Click += new System.EventHandler(this.EmployeeCrudButton_Click_1);
             // 
             // mainContentPanel
@@ -305,67 +367,6 @@
             this.label1.Size = new System.Drawing.Size(542, 71);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome ";
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Stencil", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(0, 0);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(190, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(1178, 100);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Hyperstar Management System";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // guna2Shapes1
-            // 
-            this.guna2Shapes1.BackColor = System.Drawing.Color.Green;
-            this.guna2Shapes1.BorderColor = System.Drawing.Color.Green;
-            this.guna2Shapes1.FillColor = System.Drawing.Color.Green;
-            this.guna2Shapes1.Location = new System.Drawing.Point(0, 84);
-            this.guna2Shapes1.Name = "guna2Shapes1";
-            this.guna2Shapes1.PolygonSkip = 1;
-            this.guna2Shapes1.Rotate = 0F;
-            this.guna2Shapes1.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes1.Size = new System.Drawing.Size(202, 16);
-            this.guna2Shapes1.TabIndex = 28;
-            this.guna2Shapes1.Text = "guna2Shapes1";
-            this.guna2Shapes1.Zoom = 80;
-            // 
-            // guna2Shapes4
-            // 
-            this.guna2Shapes4.BackColor = System.Drawing.Color.Green;
-            this.guna2Shapes4.BorderColor = System.Drawing.Color.Green;
-            this.guna2Shapes4.FillColor = System.Drawing.Color.Green;
-            this.guna2Shapes4.Location = new System.Drawing.Point(183, 0);
-            this.guna2Shapes4.Name = "guna2Shapes4";
-            this.guna2Shapes4.PolygonSkip = 1;
-            this.guna2Shapes4.Rotate = 0F;
-            this.guna2Shapes4.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes4.Size = new System.Drawing.Size(19, 91);
-            this.guna2Shapes4.TabIndex = 30;
-            this.guna2Shapes4.Text = "guna2Shapes4";
-            this.guna2Shapes4.Zoom = 80;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(9, 30);
-            this.label7.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(162, 42);
-            this.label7.TabIndex = 31;
-            this.label7.Text = "Manager";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox10
             // 

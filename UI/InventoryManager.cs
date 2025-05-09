@@ -66,7 +66,10 @@ namespace HyperstarManagementSystem
 
         private void EmployeeCrudButton_Click_1(object sender, EventArgs e)
         {
-
+            this.mainContentPanel.Controls.Clear();
+            Manufacturer manufacturer = new Manufacturer();
+            manufacturer.Dock = DockStyle.Fill;
+            this.mainContentPanel.Controls.Add(manufacturer);
         }
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
@@ -74,6 +77,15 @@ namespace HyperstarManagementSystem
             this.Close();
             Login login = new Login();
             login.Show();
+        }
+
+        private void bills_Click(object sender, EventArgs e)
+        {
+            this.mainContentPanel.Controls.Clear();
+            SupplierCrud supplierCrud = new SupplierCrud();
+            supplierCrud.Dock = DockStyle.Fill;
+            this.mainContentPanel.Controls.Add(supplierCrud);
+
         }
     }
 }

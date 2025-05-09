@@ -16,5 +16,10 @@ namespace HyperstarManagementSystem.UI
         {
             InitializeComponent();
         }
+
+        private void ProductView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

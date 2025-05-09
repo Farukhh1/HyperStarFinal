@@ -183,12 +183,6 @@
     <Compile Include="UI\EmployeeCrud.Designer.cs">
       <DependentUpon>EmployeeCrud.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\f.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\f.Designer.cs">
-      <DependentUpon>f.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\InventoryManager.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +194,12 @@
     </Compile>
     <Compile Include="UI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Manufacturer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Manufacturer.Designer.cs">
+      <DependentUpon>Manufacturer.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ProductCrud.cs">
       <SubType>UserControl</SubType>
@@ -222,6 +222,12 @@
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UI\SupplierCrud.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\SupplierCrud.Designer.cs">
+      <DependentUpon>SupplierCrud.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UI\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -246,14 +252,14 @@
     <EmbeddedResource Include="UI\EmployeeCrud.resx">
       <DependentUpon>EmployeeCrud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\f.resx">
-      <DependentUpon>f.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\InventoryManager.resx">
       <DependentUpon>InventoryManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Manufacturer.resx">
+      <DependentUpon>Manufacturer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ProductCrud.resx">
       <DependentUpon>ProductCrud.cs</DependentUpon>
@@ -275,6 +281,9 @@
     <EmbeddedResource Include="Report\ProductReport.rdlc" />
     <EmbeddedResource Include="Report\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SupplierCrud.resx">
+      <DependentUpon>SupplierCrud.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="UI\packages.config" />
