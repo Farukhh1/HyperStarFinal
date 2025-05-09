@@ -36,7 +36,7 @@ namespace HyperstarManagementSystem
         }
         public static bool SaveBillTransaction(BillsBL bill)
         {
-            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=farrukh09;";
+            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=nehanking;";
 
             using (var conn = new MySqlConnection(connStr))
             {

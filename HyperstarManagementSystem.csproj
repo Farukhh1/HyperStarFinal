@@ -141,11 +141,11 @@
     <Compile Include="DL\EmployeeDL.cs" />
     <Compile Include="DL\PaymentDL.cs" />
     <Compile Include="DL\ProductDL.cs" />
-    <Compile Include="UI\BillsCrud.cs">
+    <Compile Include="UI\BillCrud.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\BillsCrud.Designer.cs">
-      <DependentUpon>BillsCrud.cs</DependentUpon>
+    <Compile Include="UI\BillCrud.Designer.cs">
+      <DependentUpon>BillCrud.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\BillView.cs">
       <SubType>UserControl</SubType>
@@ -231,8 +231,8 @@
     <EmbeddedResource Include="UI\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\BillsCrud.resx">
-      <DependentUpon>BillsCrud.cs</DependentUpon>
+    <EmbeddedResource Include="UI\BillCrud.resx">
+      <DependentUpon>BillCrud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\BillView.resx">
       <DependentUpon>BillView.cs</DependentUpon>
