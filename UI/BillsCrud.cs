@@ -48,7 +48,7 @@ namespace HyperstarManagementSystem.UI
             try
             {
                 string prodCode = productCode.Text.ToString();
-                int qty = Convert.ToInt32(quantity.Text);
+                int qty = Convert.ToInt32(quantity.Text.ToString());
                 BillDetailBL billDetail = new BillDetailBL(prodCode, qty);
                 cart.Add(billDetail);
                 ShowRows();

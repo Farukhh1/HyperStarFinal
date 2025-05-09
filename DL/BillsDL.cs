@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using HyperstarManagementSystem.BL;
 using HyperstarManagementSystem.DL;
 using HyperstarManagementSystem.UI;
@@ -35,7 +36,7 @@ namespace HyperstarManagementSystem
         }
         public static bool SaveBillTransaction(BillsBL bill)
         {
-            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=nehanking;";
+            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=farrukh09;";
 
             using (var conn = new MySqlConnection(connStr))
             {
@@ -67,6 +68,7 @@ namespace HyperstarManagementSystem
                             stockCmd.Parameters.AddWithValue("@qty", detail.Quantity);
                             stockCmd.Parameters.AddWithValue("@pcode", detail.ProductCode);
                             stockCmd.ExecuteNonQuery();
+
                         }
 
                         // 4. Get totalamount from trigger-generated billdetails
