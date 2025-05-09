@@ -42,25 +42,7 @@ namespace HyperstarManagementSystem
             role.SelectedIndex = -1;
             dept.SelectedIndex = -1;
         }
-        private void EmployeeCrud_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
@@ -138,7 +120,14 @@ namespace HyperstarManagementSystem
                 MessageBox.Show(ex.Message);
             }
         }
-
+        private void employeeView_Click(object sender, EventArgs e)
+        {
+            name.Text = employeeView.CurrentRow.Cells[1].Value.ToString();
+            username.Text = employeeView.CurrentRow.Cells[2].Value.ToString();
+            pwd.Text = employeeView.CurrentRow.Cells[3].Value.ToString();
+            role.Text = employeeView.CurrentRow.Cells[4].Value.ToString();
+            dept.Text = employeeView.CurrentRow.Cells[5].Value.ToString();
+        }
         private void label5_Click(object sender, EventArgs e)
         {
 
@@ -189,16 +178,28 @@ namespace HyperstarManagementSystem
 
         }
 
-        private void employeeView_Click(object sender, EventArgs e)
-        {
-            name.Text = employeeView.CurrentRow.Cells[1].Value.ToString();
-            username.Text = employeeView.CurrentRow.Cells[2].Value.ToString();
-            pwd.Text = employeeView.CurrentRow.Cells[3].Value.ToString();
-            role.Text = employeeView.CurrentRow.Cells[4].Value.ToString();
-            dept.Text = employeeView.CurrentRow.Cells[5].Value.ToString();
-        }
+
 
         private void textBox2_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+        private void EmployeeCrud_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

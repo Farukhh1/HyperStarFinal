@@ -195,11 +195,11 @@
     <Compile Include="UI\ProductCrud.Designer.cs">
       <DependentUpon>ProductCrud.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\ProductsCrud.cs">
+    <Compile Include="UI\ProductsView.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\ProductsCrud.Designer.cs">
-      <DependentUpon>ProductsCrud.cs</DependentUpon>
+    <Compile Include="UI\ProductsView.Designer.cs">
+      <DependentUpon>ProductsView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -237,8 +237,8 @@
     <EmbeddedResource Include="UI\ProductCrud.resx">
       <DependentUpon>ProductCrud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\ProductsCrud.resx">
-      <DependentUpon>ProductsCrud.cs</DependentUpon>
+    <EmbeddedResource Include="UI\ProductsView.resx">
+      <DependentUpon>ProductsView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

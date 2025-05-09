@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace HyperstarManagementSystem
 {
-    public partial class ProductsCrud : UserControl
+    public partial class ProductsView : UserControl
     {
-        public ProductsCrud()
+        public ProductsView()
         {
             InitializeComponent();
         }

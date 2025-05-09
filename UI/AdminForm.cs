@@ -67,7 +67,11 @@ namespace HyperstarManagementSystem
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-
+            this.mainContentPanel.Controls.Clear();
+            ProductsView productsView = new ProductsView();
+            productsView.Dock = DockStyle.Fill;
+            // Add it to the container panel (assumed named mainContentPanel)
+            this.mainContentPanel.Controls.Add(productsView);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
