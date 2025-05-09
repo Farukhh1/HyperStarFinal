@@ -121,7 +121,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\CustomerReportBL.cs" />
+    <Compile Include="BL\DepartmentBL.cs" />
+    <Compile Include="BL\EmployeePerformanceBL.cs" />
+    <Compile Include="BL\ProductSaleBL.cs" />
     <Compile Include="DL\CustomerDL.cs" />
+    <Compile Include="DL\CustomerReportDL.cs" />
+    <Compile Include="DL\DepartmentDL.cs" />
+    <Compile Include="DL\EmployeePerformanceDL.cs" />
+    <Compile Include="DL\ProductSaleDL.cs" />
     <Compile Include="UI\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,6 +236,10 @@
     <Compile Include="UI\SupplierCrud.Designer.cs">
       <DependentUpon>SupplierCrud.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Report\AllProductSoldReport.rdlc" />
+    <EmbeddedResource Include="Report\CustomerReport.rdlc" />
+    <EmbeddedResource Include="Report\DepartmentReport.rdlc" />
+    <EmbeddedResource Include="Report\EmployeePerformanceReport.rdlc" />
     <EmbeddedResource Include="UI\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -286,6 +298,10 @@
       <DependentUpon>SupplierCrud.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.CustomerReportBL.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.DepartmentBL.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.EmployeePerformanceBL.datasource" />
+    <None Include="Properties\DataSources\HyperstarManagementSystem.BL.ProductSaleBL.datasource" />
     <None Include="UI\packages.config" />
     <None Include="Properties\DataSources\HyperstarManagementSystem.BL.BillDetailBL.datasource" />
     <None Include="Properties\DataSources\HyperstarManagementSystem.BL.BillsBL.datasource" />

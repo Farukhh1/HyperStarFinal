@@ -83,11 +83,17 @@
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Items.AddRange(new object[] {
             "Active Products",
-            "InActive Products"});
+            "InActive Products",
+            "Departments",
+            "Customers",
+            "Product Sale",
+            "Top10 Sold Products",
+            "Employee Performance"});
             this.comboBox1.Location = new System.Drawing.Point(199, 758);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(213, 33);
             this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // productReportBindingSource
             // 
