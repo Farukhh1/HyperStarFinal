@@ -25,11 +25,11 @@ namespace HyperstarManagementSystem.UI
         private void EmployeeCrudButton_Click(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
-            EmployeeCrud employeeControl = new EmployeeCrud();
-            employeeControl.Dock = DockStyle.Fill;
-
+            BillView billView = new BillView();
+            billView.Dock = DockStyle.Fill;
             // Add it to the container panel (assumed named mainContentPanel)
-            this.mainContentPanel.Controls.Add(employeeControl);
+            this.mainContentPanel.Controls.Add(billView);
+
         }
 
         private void Customer_Load(object sender, EventArgs e)
@@ -58,6 +58,22 @@ namespace HyperstarManagementSystem.UI
             // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(BillControl);
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.mainContentPanel.Controls.Clear();
+            ProductsView productsView = new ProductsView();
+            productsView.Dock = DockStyle.Fill;
+            // Add it to the container panel (assumed named mainContentPanel)
+            this.mainContentPanel.Controls.Add(productsView);
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
         }
     }
 }

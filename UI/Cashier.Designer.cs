@@ -189,11 +189,12 @@
             this.guna2Button4.FillColor = System.Drawing.Color.Green;
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(14, 692);
+            this.guna2Button4.Location = new System.Drawing.Point(14, 683);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(180, 45);
             this.guna2Button4.TabIndex = 16;
             this.guna2Button4.Text = "BACK";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button1
             // 
@@ -208,7 +209,8 @@
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 15;
-            this.guna2Button1.Text = "guna2Button1";
+            this.guna2Button1.Text = "Products";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // guna2Button3
             // 
@@ -223,7 +225,7 @@
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(180, 45);
             this.guna2Button3.TabIndex = 14;
-            this.guna2Button3.Text = "guna2Button3";
+            this.guna2Button3.Text = "Customer";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // guna2Button2
@@ -239,7 +241,7 @@
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 13;
-            this.guna2Button2.Text = "Bills";
+            this.guna2Button2.Text = "Add Bills";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // EmployeeCrudButton
@@ -255,7 +257,7 @@
             this.EmployeeCrudButton.Name = "EmployeeCrudButton";
             this.EmployeeCrudButton.Size = new System.Drawing.Size(180, 45);
             this.EmployeeCrudButton.TabIndex = 12;
-            this.EmployeeCrudButton.Text = "..";
+            this.EmployeeCrudButton.Text = "Bill View";
             this.EmployeeCrudButton.Click += new System.EventHandler(this.EmployeeCrudButton_Click);
             // 
             // mainContentPanel

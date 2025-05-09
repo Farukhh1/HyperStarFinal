@@ -17,13 +17,23 @@ namespace HyperstarManagementSystem
             InitializeComponent();
         }
 
-        private void AddButton_Click(object sender, EventArgs e)
+        private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        private void guna2DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void ProductsView_Load(object sender, EventArgs e)
         {
+            ProductView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Align Header Text (Center)
+            ProductView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Align Cell Text (Center)
+            ProductView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Set Column Header Font Size (Optional)
+            ProductView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
 
         }
     }

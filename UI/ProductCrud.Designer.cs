@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DeleteButton = new Guna.UI2.WinForms.Guna2Button();
             this.ClearButton = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateButton = new Guna.UI2.WinForms.Guna2Button();
@@ -47,12 +47,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.ProductView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductView)).BeginInit();
             this.SuspendLayout();
@@ -68,7 +68,7 @@
             this.DeleteButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.DeleteButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DeleteButton.ForeColor = System.Drawing.Color.White;
-            this.DeleteButton.Location = new System.Drawing.Point(548, 151);
+            this.DeleteButton.Location = new System.Drawing.Point(494, 264);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(122, 58);
             this.DeleteButton.TabIndex = 64;
@@ -85,7 +85,7 @@
             this.ClearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.ClearButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.Location = new System.Drawing.Point(763, 149);
+            this.ClearButton.Location = new System.Drawing.Point(691, 264);
             this.ClearButton.Name = "ClearButton";
             this.ClearButton.Size = new System.Drawing.Size(122, 58);
             this.ClearButton.TabIndex = 63;
@@ -102,7 +102,7 @@
             this.UpdateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.UpdateButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.UpdateButton.ForeColor = System.Drawing.Color.White;
-            this.UpdateButton.Location = new System.Drawing.Point(763, 38);
+            this.UpdateButton.Location = new System.Drawing.Point(296, 264);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(122, 58);
             this.UpdateButton.TabIndex = 62;
@@ -119,7 +119,7 @@
             this.AddButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.AddButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddButton.ForeColor = System.Drawing.Color.White;
-            this.AddButton.Location = new System.Drawing.Point(548, 38);
+            this.AddButton.Location = new System.Drawing.Point(117, 262);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(122, 58);
             this.AddButton.TabIndex = 61;
@@ -131,7 +131,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(21, 311);
+            this.label5.Location = new System.Drawing.Point(527, 96);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(115, 24);
             this.label5.TabIndex = 60;
@@ -148,7 +148,7 @@
             this.dept.Font = new System.Drawing.Font("Arial Narrow", 9F);
             this.dept.ForeColor = System.Drawing.Color.Black;
             this.dept.ItemHeight = 14;
-            this.dept.Location = new System.Drawing.Point(170, 299);
+            this.dept.Location = new System.Drawing.Point(676, 84);
             this.dept.Name = "dept";
             this.dept.Size = new System.Drawing.Size(220, 20);
             this.dept.TabIndex = 59;
@@ -159,7 +159,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 257);
+            this.label3.Location = new System.Drawing.Point(526, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 24);
             this.label3.TabIndex = 58;
@@ -176,7 +176,7 @@
             this.role.Font = new System.Drawing.Font("Arial Narrow", 9F);
             this.role.ForeColor = System.Drawing.Color.Black;
             this.role.ItemHeight = 14;
-            this.role.Location = new System.Drawing.Point(169, 245);
+            this.role.Location = new System.Drawing.Point(675, 30);
             this.role.Name = "role";
             this.role.Size = new System.Drawing.Size(220, 20);
             this.role.TabIndex = 57;
@@ -250,8 +250,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.comboBox1);
             this.panel1.Controls.Add(this.guna2Button2);
-            this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.guna2ComboBox1);
             this.panel1.Controls.Add(this.textBox1);
@@ -287,23 +287,11 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Green;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(835, 299);
+            this.guna2Button2.Location = new System.Drawing.Point(838, 192);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(132, 43);
             this.guna2Button2.TabIndex = 74;
             this.guna2Button2.Text = "Search";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.textBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Gray;
-            this.textBox3.Location = new System.Drawing.Point(488, 312);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(324, 28);
-            this.textBox3.TabIndex = 73;
-            this.textBox3.Text = "search";
             // 
             // label7
             // 
@@ -311,7 +299,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(20, 343);
+            this.label7.Location = new System.Drawing.Point(527, 141);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(82, 24);
             this.label7.TabIndex = 68;
@@ -328,7 +316,7 @@
             this.guna2ComboBox1.Font = new System.Drawing.Font("Arial Narrow", 9F);
             this.guna2ComboBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2ComboBox1.ItemHeight = 14;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(169, 343);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(676, 141);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(220, 20);
             this.guna2ComboBox1.TabIndex = 67;
@@ -357,26 +345,26 @@
             // 
             // ProductView
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.ProductView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.ProductView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.ProductView.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProductView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProductView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.ProductView.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProductView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProductView.DefaultCellStyle = dataGridViewCellStyle12;
             this.ProductView.Dock = System.Windows.Forms.DockStyle.Top;
             this.ProductView.GridColor = System.Drawing.Color.Green;
             this.ProductView.Location = new System.Drawing.Point(0, 0);
@@ -407,6 +395,17 @@
             this.ProductView.ThemeStyle.RowsStyle.Height = 28;
             this.ProductView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ProductView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.ForeColor = System.Drawing.Color.Gray;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(570, 194);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(262, 33);
+            this.comboBox1.TabIndex = 77;
+            this.comboBox1.Text = "Search";
             // 
             // ProductCrud
             // 
@@ -446,6 +445,6 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

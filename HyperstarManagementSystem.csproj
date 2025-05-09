@@ -153,6 +153,12 @@
     <Compile Include="UI\BillsCrud.Designer.cs">
       <DependentUpon>BillsCrud.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\BillView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\BillView.Designer.cs">
+      <DependentUpon>BillView.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Cashier.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,12 @@
     </Compile>
     <Compile Include="UI\CustomerCrud.Designer.cs">
       <DependentUpon>CustomerCrud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Departments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\Departments.Designer.cs">
+      <DependentUpon>Departments.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\EmployeeCrud.cs">
       <SubType>UserControl</SubType>
@@ -216,6 +228,9 @@
     <EmbeddedResource Include="UI\BillsCrud.resx">
       <DependentUpon>BillsCrud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\BillView.resx">
+      <DependentUpon>BillView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\Cashier.resx">
       <DependentUpon>Cashier.cs</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\CustomerCrud.resx">
       <DependentUpon>CustomerCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Departments.resx">
+      <DependentUpon>Departments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\EmployeeCrud.resx">
       <DependentUpon>EmployeeCrud.cs</DependentUpon>

@@ -176,6 +176,15 @@ namespace HyperstarManagementSystem
             login.Show();
         }
 
+        private void bills_Click(object sender, EventArgs e)
+        {
+            this.mainContentPanel.Controls.Clear();
+            BillView billView = new BillView();
+            billView.Dock = DockStyle.Fill;
+            // Add it to the container panel (assumed named mainContentPanel)
+            this.mainContentPanel.Controls.Add(billView);
+        }
+
         // Handle resizing
         //    this.Resize += (s, e) => CenterLoginPanel();
         //}

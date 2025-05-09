@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.greenPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,7 +52,6 @@
             // 
             this.greenPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.greenPanel.Controls.Add(this.pictureBox1);
-            this.greenPanel.Controls.Add(this.label5);
             this.greenPanel.Controls.Add(this.label3);
             this.greenPanel.Controls.Add(this.label1);
             this.greenPanel.Dock = System.Windows.Forms.DockStyle.Left;
@@ -75,19 +73,6 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Stencil", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(207, 319);
-            this.label5.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 33);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "System";
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -107,12 +92,12 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Stencil", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(0, 319);
+            this.label1.Location = new System.Drawing.Point(9, 314);
             this.label1.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(207, 33);
+            this.label1.Size = new System.Drawing.Size(325, 33);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Management";
+            this.label1.Text = "Management System";
             // 
             // label2
             // 
@@ -285,7 +270,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private Guna.UI2.WinForms.Guna2Button LoginButton;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2CustomCheckBox guna2CustomCheckBox1;

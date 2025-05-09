@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.panel4 = new System.Windows.Forms.Panel();
+            this.bills = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             this.Report = new Guna.UI2.WinForms.Guna2Button();
             this.Customers = new Guna.UI2.WinForms.Guna2Button();
@@ -54,7 +55,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bills = new Guna.UI2.WinForms.Guna2Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -89,6 +89,22 @@
             this.panel4.TabIndex = 0;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // bills
+            // 
+            this.bills.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.bills.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.bills.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bills.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.bills.FillColor = System.Drawing.Color.Green;
+            this.bills.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bills.ForeColor = System.Drawing.Color.White;
+            this.bills.Location = new System.Drawing.Point(14, 467);
+            this.bills.Name = "bills";
+            this.bills.Size = new System.Drawing.Size(180, 45);
+            this.bills.TabIndex = 17;
+            this.bills.Text = "Bills";
+            this.bills.Click += new System.EventHandler(this.bills_Click);
+            // 
             // guna2Button4
             // 
             this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -98,7 +114,7 @@
             this.guna2Button4.FillColor = System.Drawing.Color.Green;
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(14, 692);
+            this.guna2Button4.Location = new System.Drawing.Point(14, 683);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(180, 45);
             this.guna2Button4.TabIndex = 16;
@@ -187,12 +203,12 @@
             this.guna2Shapes2.BackColor = System.Drawing.Color.Green;
             this.guna2Shapes2.BorderColor = System.Drawing.Color.Green;
             this.guna2Shapes2.FillColor = System.Drawing.Color.Green;
-            this.guna2Shapes2.Location = new System.Drawing.Point(0, 84);
+            this.guna2Shapes2.Location = new System.Drawing.Point(-3, 84);
             this.guna2Shapes2.Name = "guna2Shapes2";
             this.guna2Shapes2.PolygonSkip = 1;
             this.guna2Shapes2.Rotate = 0F;
             this.guna2Shapes2.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes2.Size = new System.Drawing.Size(208, 16);
+            this.guna2Shapes2.Size = new System.Drawing.Size(202, 16);
             this.guna2Shapes2.TabIndex = 4;
             this.guna2Shapes2.Text = "guna2Shapes2";
             this.guna2Shapes2.Zoom = 80;
@@ -201,9 +217,9 @@
             // guna2Shapes3
             // 
             this.guna2Shapes3.BackColor = System.Drawing.Color.Green;
-            this.guna2Shapes3.BorderColor = System.Drawing.Color.White;
+            this.guna2Shapes3.BorderColor = System.Drawing.Color.Green;
             this.guna2Shapes3.FillColor = System.Drawing.Color.Green;
-            this.guna2Shapes3.Location = new System.Drawing.Point(189, 0);
+            this.guna2Shapes3.Location = new System.Drawing.Point(180, 0);
             this.guna2Shapes3.Name = "guna2Shapes3";
             this.guna2Shapes3.PolygonSkip = 1;
             this.guna2Shapes3.Rotate = 0F;
@@ -238,13 +254,13 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(22, 30);
+            this.label6.Location = new System.Drawing.Point(29, 30);
             this.label6.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
             this.label6.Name = "label6";
-            this.label6.Padding = new System.Windows.Forms.Padding(0, 0, 40, 0);
-            this.label6.Size = new System.Drawing.Size(164, 42);
+            this.label6.Size = new System.Drawing.Size(124, 42);
             this.label6.TabIndex = 14;
             this.label6.Text = "Admin";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
@@ -431,21 +447,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // bills
-            // 
-            this.bills.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bills.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bills.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bills.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bills.FillColor = System.Drawing.Color.Green;
-            this.bills.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bills.ForeColor = System.Drawing.Color.White;
-            this.bills.Location = new System.Drawing.Point(14, 467);
-            this.bills.Name = "bills";
-            this.bills.Size = new System.Drawing.Size(180, 45);
-            this.bills.TabIndex = 17;
-            this.bills.Text = "Bills";
             // 
             // AdminForm
             // 

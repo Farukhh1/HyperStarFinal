@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.UI;
 
 namespace HyperstarManagementSystem
 {
@@ -22,15 +23,7 @@ namespace HyperstarManagementSystem
 
             this.mainContentPanel.Controls.Clear();
             ProductCrud productControl = new ProductCrud();
-
-
-            // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(productControl);
-        }
-
-        private void mainContentPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void InventoryManager_Load(object sender, EventArgs e)
@@ -44,9 +37,6 @@ namespace HyperstarManagementSystem
 
             this.mainContentPanel.Controls.Clear();
             ProductCrud productControl = new ProductCrud();
-
-
-            // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(productControl);
         }
 
@@ -54,6 +44,34 @@ namespace HyperstarManagementSystem
         {
             this.Hide();
 
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void Products_Click(object sender, EventArgs e)
+        {
+            this.mainContentPanel.Controls.Clear();
+            ProductCrud productControl = new ProductCrud();
+            productControl.Dock = DockStyle.Fill;
+            this.mainContentPanel.Controls.Add(productControl);
+        }
+
+        private void Customers_Click(object sender, EventArgs e)
+        {
+            this.mainContentPanel.Controls.Clear();
+            Departments departments = new Departments();
+            departments.Dock = DockStyle.Fill;
+            this.mainContentPanel.Controls.Add(departments);
+        }
+
+        private void EmployeeCrudButton_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button4_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
             Login login = new Login();
             login.Show();
         }

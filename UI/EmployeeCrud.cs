@@ -17,6 +17,7 @@ namespace HyperstarManagementSystem
         public EmployeeCrud()
         {
             InitializeComponent();
+
             getRows();
         }
 
@@ -27,7 +28,7 @@ namespace HyperstarManagementSystem
             employeeView.Columns[0].Visible = false;
             DataTable dt2 = EmployeeDL.getRole();
             role.DataSource = dt2;
-            role.DisplayMember = "roll_name";
+            role.DisplayMember = "role_name";
             DataTable dt3 = EmployeeDL.getDept();
             dept.DataSource = dt3;
             dept.DisplayMember = "dept_name";
@@ -67,7 +68,7 @@ namespace HyperstarManagementSystem
         {
             try
             {
-                string query = $"select role_id from roles where roll_name = '{role.Text}'";
+                string query = $"select role_id from roles where role_name = '{role.Text}'";
                 DataTable dt = DataBaseHelper.GetTable(query);
                 int role_id = Convert.ToInt32(dt.Rows[0]["role_id"].ToString());
                 string query2 = $"select dept_id from departments where dept_name = '{dept.Text}'";
@@ -96,7 +97,7 @@ namespace HyperstarManagementSystem
         {
             try
             {
-                string query = $"select role_id from roles where roll_name = '{role.Text}'";
+                string query = $"select role_id from roles where role_name = '{role.Text}'";
                 DataTable dt = DataBaseHelper.GetTable(query);
                 int role_id = Convert.ToInt32(dt.Rows[0]["role_id"].ToString());
                 string query2 = $"select dept_id from departments where dept_name = '{dept.Text}'";
@@ -122,11 +123,18 @@ namespace HyperstarManagementSystem
         }
         private void employeeView_Click(object sender, EventArgs e)
         {
-            name.Text = employeeView.CurrentRow.Cells[1].Value.ToString();
-            username.Text = employeeView.CurrentRow.Cells[2].Value.ToString();
-            pwd.Text = employeeView.CurrentRow.Cells[3].Value.ToString();
-            role.Text = employeeView.CurrentRow.Cells[4].Value.ToString();
-            dept.Text = employeeView.CurrentRow.Cells[5].Value.ToString();
+            try
+            {
+                name.Text = employeeView.CurrentRow.Cells[1].Value.ToString();
+                username.Text = employeeView.CurrentRow.Cells[2].Value.ToString();
+                pwd.Text = employeeView.CurrentRow.Cells[3].Value.ToString();
+                role.Text = employeeView.CurrentRow.Cells[4].Value.ToString();
+                dept.Text = employeeView.CurrentRow.Cells[5].Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         private void label5_Click(object sender, EventArgs e)
         {
@@ -186,6 +194,14 @@ namespace HyperstarManagementSystem
         }
         private void EmployeeCrud_Load(object sender, EventArgs e)
         {
+            employeeView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            employeeView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            employeeView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // Set Column Header Font Size (Optional)
+            employeeView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
 
         }
 
