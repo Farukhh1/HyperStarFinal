@@ -59,17 +59,17 @@ namespace HyperstarManagementSystem
         private void Customers_Click(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
-            Departments departments = new Departments();
-            departments.Dock = DockStyle.Fill;
-            this.mainContentPanel.Controls.Add(departments);
+            StockManagement stockManagement = new StockManagement();
+            stockManagement.Dock = DockStyle.Fill;
+            this.mainContentPanel.Controls.Add(stockManagement);
         }
 
         private void EmployeeCrudButton_Click_1(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
-            Manufacturer manufacturer = new Manufacturer();
-            manufacturer.Dock = DockStyle.Fill;
-            this.mainContentPanel.Controls.Add(manufacturer);
+            StockOrders so = new StockOrders();
+            so.Dock = DockStyle.Fill;
+            this.mainContentPanel.Controls.Add(so);
         }
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
@@ -85,6 +85,11 @@ namespace HyperstarManagementSystem
             SupplierCrud supplierCrud = new SupplierCrud();
             supplierCrud.Dock = DockStyle.Fill;
             this.mainContentPanel.Controls.Add(supplierCrud);
+
+        }
+
+        private void Report_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -121,7 +121,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\StockOrderBL.cs" />
+    <Compile Include="BL\SupplierBL.cs" />
     <Compile Include="DL\CustomerDL.cs" />
+    <Compile Include="DL\StockOrderDL.cs" />
+    <Compile Include="DL\SupplierDL.cs" />
     <Compile Include="UI\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,12 +175,6 @@
     <Compile Include="UI\CustomerCrud.Designer.cs">
       <DependentUpon>CustomerCrud.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Departments.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UI\Departments.Designer.cs">
-      <DependentUpon>Departments.cs</DependentUpon>
-    </Compile>
     <Compile Include="UI\EmployeeCrud.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -195,11 +193,11 @@
     <Compile Include="UI\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Manufacturer.cs">
+    <Compile Include="UI\StockOrders.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UI\Manufacturer.Designer.cs">
-      <DependentUpon>Manufacturer.cs</DependentUpon>
+    <Compile Include="UI\StockOrders.Designer.cs">
+      <DependentUpon>StockOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\ProductCrud.cs">
       <SubType>UserControl</SubType>
@@ -222,6 +220,12 @@
       <DependentUpon>Report.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="UI\StockManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\StockManagement.Designer.cs">
+      <DependentUpon>StockManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\SupplierCrud.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -246,9 +250,6 @@
     <EmbeddedResource Include="UI\CustomerCrud.resx">
       <DependentUpon>CustomerCrud.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Departments.resx">
-      <DependentUpon>Departments.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UI\EmployeeCrud.resx">
       <DependentUpon>EmployeeCrud.cs</DependentUpon>
     </EmbeddedResource>
@@ -258,8 +259,8 @@
     <EmbeddedResource Include="UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Manufacturer.resx">
-      <DependentUpon>Manufacturer.cs</DependentUpon>
+    <EmbeddedResource Include="UI\StockOrders.resx">
+      <DependentUpon>StockOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\ProductCrud.resx">
       <DependentUpon>ProductCrud.cs</DependentUpon>
@@ -281,6 +282,9 @@
     <EmbeddedResource Include="Report\ProductReport.rdlc" />
     <EmbeddedResource Include="Report\Report.resx">
       <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\StockManagement.resx">
+      <DependentUpon>StockManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\SupplierCrud.resx">
       <DependentUpon>SupplierCrud.cs</DependentUpon>

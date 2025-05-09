@@ -68,11 +68,40 @@ namespace HyperstarManagementSystem.DL
             }
             return products;
         }
+        public static int getDeptIdByName(string deptName)
+        {
+            string qry = $"select dept_id from departments where dept_name = '{deptName}'";
+            DataTable dt = DataBaseHelper.GetTable(qry);
+
+            return Convert.ToInt32(dt.Rows[0][0]);
+
+        }
+        public static List<string> GetAllManufacturers()
+        {
+            string qry = $"select m_name from manufacturers";
+            DataTable dt = DataBaseHelper.GetTable(qry);
+            List<string> manufacturers = new List<string>();
+            foreach (DataRow dr in dt.Rows)
+            {
+                string manufacturer = dr["m_name"].ToString();
+                manufacturers.Add(manufacturer);
+            }
+            return manufacturers;
+        }
         public static void Add(ProductBL p)
         {
-            string qry = $"insert into products (product_code, product_name, price, in_stock, supplierID, manufacturer, dept_id) values ('{p.ProductCode}', '{p.ProductName}', {p.Price}, {p.in_stock}, {p.supplierID}, '{p.manufacturer}', {p.dept_id})";
+            string qry = $"insert into products (product_code, name, price, in_stock, supplier_id, manufacturer, dept_id) values ('{p.ProductCode}', '{p.ProductName}', {p.Price}, {p.In_Stock}, {p.supplierID}, '{p.manufacturer}', {p.dept_id})";
             DataBaseHelper.ExecuteDML(qry);
-
+        }
+        public static void Update(ProductBL p)
+        {
+            string qry = $"update products set name = '{p.ProductName}', price = {p.Price}, supplier_id = {p.supplierID}, manufacturer = '{p.manufacturer}', dept_id = {p.dept_id} where product_code = '{p.ProductCode}'";
+            DataBaseHelper.ExecuteDML(qry);
+        }
+        public static void Delete(string productCode)
+        {
+            string qry = $"update products set deleted = 1 where product_code = '{productCode}'";
+            DataBaseHelper.ExecuteDML(qry);
         }
     }
 }
