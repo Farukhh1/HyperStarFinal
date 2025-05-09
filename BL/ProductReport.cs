@@ -12,18 +12,19 @@ namespace HyperstarManagementSystem.BL
         public string ProductName { get; set; }
         public decimal Price { get; set; }
         public int in_stock { get; set; }
-        public string supplier { get; set; }
-        public string manufacturer { get; set; }
-        public string dept { get; set; }
-        public ProductReport(string productCode, string productName, decimal price, int in_stock, string supplier, string manufacturer, string dept)
+        public string Supplier { get; set; }
+        public string Manufacturer { get; set; }
+        public string Department { get; set; }
+        
+        public ProductReport(string productCode, string productName, decimal price, int in_stock, string supplier, string manufacturer, string department)
         {
             ProductCode = productCode;
             ProductName = productName;
             Price = price;
             this.in_stock = in_stock;
-            this.supplier = supplier;
-            this.manufacturer = manufacturer;
-            this.dept = dept;
+            Supplier = supplier;
+            Manufacturer = manufacturer;
+            Department = department;
         }
     }
 }
