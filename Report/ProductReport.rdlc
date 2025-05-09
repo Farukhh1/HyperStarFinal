@@ -420,21 +420,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="dept">
+                    <Textbox Name="Department">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!dept.Value</Value>
+                              <Value>=Fields!Department.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>dept</rd:DefaultName>
+                      <rd:DefaultName>Department</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -450,21 +450,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="manufacturer1">
+                    <Textbox Name="Manufacturer">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!manufacturer.Value</Value>
+                              <Value>=Fields!Manufacturer.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>manufacturer1</rd:DefaultName>
+                      <rd:DefaultName>Manufacturer</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -480,21 +480,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="supplier">
+                    <Textbox Name="in_stock1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!supplier.Value</Value>
+                              <Value>=Fields!in_stock.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>supplier</rd:DefaultName>
+                      <rd:DefaultName>in_stock1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -506,6 +506,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -668,16 +669,16 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="dept">
-          <DataField>dept</DataField>
+        <Field Name="Department">
+          <DataField>Department</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="in_stock">
           <DataField>in_stock</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="manufacturer">
-          <DataField>manufacturer</DataField>
+        <Field Name="Manufacturer">
+          <DataField>Manufacturer</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Price">
@@ -692,8 +693,8 @@
           <DataField>ProductName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="supplier">
-          <DataField>supplier</DataField>
+        <Field Name="Supplier">
+          <DataField>Supplier</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

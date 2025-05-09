@@ -121,6 +121,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\CustomerBL.cs" />
     <Compile Include="BL\StockOrderBL.cs" />
     <Compile Include="BL\SupplierBL.cs" />
     <Compile Include="BL\CustomerReportBL.cs" />
