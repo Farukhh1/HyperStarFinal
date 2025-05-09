@@ -62,6 +62,7 @@
             this.ProductView.Dock = System.Windows.Forms.DockStyle.Top;
             this.ProductView.GridColor = System.Drawing.Color.Green;
             this.ProductView.Location = new System.Drawing.Point(0, 0);
+            this.ProductView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ProductView.Name = "ProductView";
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
@@ -81,7 +82,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ProductView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ProductView.RowTemplate.Height = 28;
-            this.ProductView.Size = new System.Drawing.Size(976, 645);
+            this.ProductView.Size = new System.Drawing.Size(1301, 806);
             this.ProductView.TabIndex = 23;
             this.ProductView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.ProductView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -104,15 +105,17 @@
             this.ProductView.ThemeStyle.RowsStyle.Height = 28;
             this.ProductView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ProductView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ProductView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductView_CellContentClick);
             // 
             // ProductsView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.ProductView);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ProductsView";
-            this.Size = new System.Drawing.Size(976, 740);
+            this.Size = new System.Drawing.Size(1301, 925);
             this.Load += new System.EventHandler(this.ProductsView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProductView)).EndInit();
             this.ResumeLayout(false);

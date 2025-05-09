@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.DL;
 
 namespace HyperstarManagementSystem
 {
@@ -34,6 +35,11 @@ namespace HyperstarManagementSystem
 
             // Set Column Header Font Size (Optional)
             ProductView.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 12, FontStyle.Bold);
+            ProductView.DataSource = ProductDL.GetAllProducts();
+        }
+
+        private void ProductView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

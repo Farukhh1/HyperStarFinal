@@ -15,6 +15,29 @@ namespace HyperstarManagementSystem.UI
         public BillView()
         {
             InitializeComponent();
+            getRows();
+        }
+        private void getRows()
+        {
+            employeeView.DataSource = BillsDL.GetAll();
+        }
+        private void employeeView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void BillDetails_Click(object sender, EventArgs e)
+        {
+            if (BillDetails.Text == "Details")
+            {
+                employeeView.DataSource = BillDetailDL.GetBilldetailsByBillID((int)employeeView.CurrentRow.Cells[0].Value);
+                BillDetails.Text = "Back";
+            }
+            else
+            {
+                getRows();
+                BillDetails.Text = "Details";
+            }
         }
     }
 }
