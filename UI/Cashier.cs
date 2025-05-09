@@ -52,7 +52,7 @@ namespace HyperstarManagementSystem.UI
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
-            BillsCrud BillControl = new BillsCrud();
+            BillCrud BillControl = new BillCrud();
             BillControl.Dock = DockStyle.Fill;
 
             // Add it to the container panel (assumed named mainContentPanel)
