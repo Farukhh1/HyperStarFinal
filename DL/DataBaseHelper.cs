@@ -11,7 +11,7 @@ namespace HyperstarManagementSystem.DL
 {
     public class DataBaseHelper
     {
-        private static String constring = "Server = localhost; Uid= root; Pwd =tayyab1075; Database = hyperstarfinal;";
+        private static String constring = "Server = localhost; Uid= root; Pwd = farrukh09; Database = hyperstarfinal;";
         public static void ExecuteDML(string dml)
         {
             MySqlConnection con = new MySqlConnection(constring);
