@@ -138,6 +138,22 @@
             this.guna2Shapes4.Text = "guna2Shapes4";
             this.guna2Shapes4.Zoom = 80;
             // 
+            // guna2Shapes4
+            // 
+            this.guna2Shapes4.BackColor = System.Drawing.Color.Green;
+            this.guna2Shapes4.BorderColor = System.Drawing.Color.Green;
+            this.guna2Shapes4.FillColor = System.Drawing.Color.Green;
+            this.guna2Shapes4.Location = new System.Drawing.Point(183, 0);
+            this.guna2Shapes4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Shapes4.Name = "guna2Shapes4";
+            this.guna2Shapes4.PolygonSkip = 1;
+            this.guna2Shapes4.Rotate = 0F;
+            this.guna2Shapes4.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
+            this.guna2Shapes4.Size = new System.Drawing.Size(19, 91);
+            this.guna2Shapes4.TabIndex = 30;
+            this.guna2Shapes4.Text = "guna2Shapes4";
+            this.guna2Shapes4.Zoom = 80;
+            // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
