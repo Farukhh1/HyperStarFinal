@@ -11,11 +11,13 @@ namespace HyperstarManagementSystem.BL
         public string DepartmentName { get; set; }
         public double Discount { get; set; }
         public string DepartmentDescription { get; set; }
-        public DepartmentBL(string DepartmentName,double Discount, string DepartmentDescription)
+        public double TotalRevenue { get; set; }
+        public DepartmentBL(string DepartmentName,double Discount, string DepartmentDescription, double totalRevenue)
         {
             this.Discount = Discount;
             this.DepartmentName = DepartmentName;
             this.DepartmentDescription = DepartmentDescription;
+            TotalRevenue = totalRevenue;
         }
     }
 }

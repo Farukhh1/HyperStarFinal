@@ -30,12 +30,21 @@ namespace HyperstarManagementSystem.DL
         {
             string qry = $"select * from payments where bill_id = {billID}";
             DataTable dt = DataBaseHelper.GetTable(qry);
-
-            DataRow dr = dt.Rows[0];
+            if(dt.Rows.Count == 0)
+            {
+                return null;
+            }
+            else if (dt.Rows.Count > 1)
+            {
+                throw new Exception("Multiple payments found for the same bill ID.");
+            }
+            else
+            {
+                DataRow dr = dt.Rows[0];
             decimal cashReceived = Convert.ToDecimal(dr["cash_rec"]);
             PaymentBL p = new PaymentBL(billID, cashReceived);
             return p;
-
+            }
         }
     }
 }
