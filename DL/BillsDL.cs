@@ -114,8 +114,6 @@ namespace HyperstarManagementSystem
             using (var conn = new MySqlConnection(connStr))
             {
                 conn.Open();
-
-                // 1. Bill metadata
                 string billInfoQuery = @"
             SELECT b.bill_id, b.billdate, c.fullname AS CustomerName, e.fullname AS EmployeeName, 
                    b.totalamount, p.cash_rec
@@ -141,8 +139,6 @@ namespace HyperstarManagementSystem
                         }
                     }
                 }
-
-                // 2. Product details
                 string itemsQuery = @"
             SELECT p.name AS ProductName, bd.qty, bd.total_price / bd.qty AS UnitPrice
             FROM billdetails bd

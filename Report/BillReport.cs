@@ -28,12 +28,8 @@ namespace HyperstarManagementSystem.Report
         }
         public void ShowBillReport(int billId)
         {
-            var reportData = BillsDL.GetBillReport(billId);  // Get report data
-
-            // 1. Data source for bill items (table)
+            var reportData = BillsDL.GetBillReport(billId);
             ReportDataSource rds = new ReportDataSource("DataSet1", reportData.Items);
-
-            // 2. Parameters for header/footer
             ReportParameter[] parameters = new ReportParameter[]
             {
                 new ReportParameter("BillID", reportData.BillID.ToString()),
@@ -44,8 +40,6 @@ namespace HyperstarManagementSystem.Report
                 new ReportParameter("CashReceived", reportData.CashReceived.ToString("F2")),
                 new ReportParameter("Change", reportData.Change.ToString("F2"))
             };
-
-            // 3. Bind everything to *this* reportViewer in your UserControl
             reportViewer1.ProcessingMode = ProcessingMode.Local;
             reportViewer1.LocalReport.ReportPath = "F:\\DB\\Final_Project\\HyperStarFinal\\Report\\BillReport.rdlc";
             reportViewer1.LocalReport.DataSources.Clear();
