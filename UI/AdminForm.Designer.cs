@@ -96,7 +96,7 @@
             this.bills.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.bills.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.bills.FillColor = System.Drawing.Color.Green;
-            this.bills.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.bills.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bills.ForeColor = System.Drawing.Color.White;
             this.bills.Location = new System.Drawing.Point(14, 467);
             this.bills.Name = "bills";
@@ -128,7 +128,7 @@
             this.Report.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Report.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Report.FillColor = System.Drawing.Color.Green;
-            this.Report.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Report.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Report.ForeColor = System.Drawing.Color.White;
             this.Report.Location = new System.Drawing.Point(12, 539);
             this.Report.Name = "Report";
@@ -144,9 +144,9 @@
             this.Customers.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Customers.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Customers.FillColor = System.Drawing.Color.Green;
-            this.Customers.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Customers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Customers.ForeColor = System.Drawing.Color.White;
-            this.Customers.Location = new System.Drawing.Point(14, 337);
+            this.Customers.Location = new System.Drawing.Point(16, 340);
             this.Customers.Name = "Customers";
             this.Customers.Size = new System.Drawing.Size(180, 45);
             this.Customers.TabIndex = 14;
@@ -160,7 +160,7 @@
             this.Products.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.Products.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.Products.FillColor = System.Drawing.Color.Green;
-            this.Products.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Products.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Products.ForeColor = System.Drawing.Color.White;
             this.Products.Location = new System.Drawing.Point(14, 404);
             this.Products.Name = "Products";
@@ -176,9 +176,9 @@
             this.EmployeeCrudButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.EmployeeCrudButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.EmployeeCrudButton.FillColor = System.Drawing.Color.Green;
-            this.EmployeeCrudButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.EmployeeCrudButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeCrudButton.ForeColor = System.Drawing.Color.White;
-            this.EmployeeCrudButton.Location = new System.Drawing.Point(12, 264);
+            this.EmployeeCrudButton.Location = new System.Drawing.Point(14, 267);
             this.EmployeeCrudButton.Name = "EmployeeCrudButton";
             this.EmployeeCrudButton.Size = new System.Drawing.Size(180, 45);
             this.EmployeeCrudButton.TabIndex = 12;

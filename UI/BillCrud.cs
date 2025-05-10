@@ -118,5 +118,10 @@ namespace HyperstarManagementSystem.UI
         {
 
         }
+
+        private void BillViewPanel_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

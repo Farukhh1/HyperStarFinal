@@ -29,6 +29,10 @@ namespace HyperstarManagementSystem.UI
             {
                 ProductView.DataSource = null;
                 ProductView.DataSource = StockOrderDL.getAllStocks();
+                ProductView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                ProductView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                ProductView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                ProductView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
             }
             catch (Exception ex)
             {
@@ -110,6 +114,11 @@ namespace HyperstarManagementSystem.UI
                 tbStock.Clear();
                 dateTimePicker1.Value = DateTime.Now;
             }
+        }
+
+        private void ProductView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

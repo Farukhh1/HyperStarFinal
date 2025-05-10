@@ -83,7 +83,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.StockOrdersView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.StockOrdersView.RowTemplate.Height = 28;
-            this.StockOrdersView.Size = new System.Drawing.Size(868, 592);
+            this.StockOrdersView.Size = new System.Drawing.Size(976, 740);
             this.StockOrdersView.TabIndex = 25;
             this.StockOrdersView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.StockOrdersView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -106,15 +106,16 @@
             this.StockOrdersView.ThemeStyle.RowsStyle.Height = 28;
             this.StockOrdersView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.StockOrdersView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.StockOrdersView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.StockOrdersView_CellContentClick);
             // 
             // StockOrders
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.StockOrdersView);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StockOrders";
-            this.Size = new System.Drawing.Size(868, 592);
+            this.Size = new System.Drawing.Size(976, 740);
             this.Load += new System.EventHandler(this.StockOrders_Load);
             this.VisibleChanged += new System.EventHandler(this.StockOrders_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.StockOrdersView)).EndInit();

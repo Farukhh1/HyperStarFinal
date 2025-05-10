@@ -29,6 +29,10 @@ namespace HyperstarManagementSystem.UI
                 SupplierView.DataSource = null;
                 SupplierView.DataSource = SupplierDL.GetAll();
                 SupplierView.Columns[0].Visible = false;
+                SupplierView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                SupplierView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                SupplierView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                SupplierView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
             }
             catch (Exception ex)
             {

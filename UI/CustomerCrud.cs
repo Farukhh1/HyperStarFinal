@@ -23,6 +23,10 @@ namespace HyperstarManagementSystem.UI
         {
             employeeView.DataSource = CustomerDL.GetCustomer();
             employeeView.Columns[0].Visible = false;
+            employeeView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            employeeView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            employeeView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            employeeView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
         }
         private void clear()
         {

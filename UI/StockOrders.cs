@@ -21,6 +21,10 @@ namespace HyperstarManagementSystem.UI
         private void StockOrders_Load(object sender, EventArgs e)
         {
             StockOrdersView.DataSource = StockOrderDL.GetStockOrdersByEmpid(1);
+            StockOrdersView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            StockOrdersView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            StockOrdersView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            StockOrdersView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
         }
 
         private void StockOrders_VisibleChanged(object sender, EventArgs e)
@@ -31,6 +35,11 @@ namespace HyperstarManagementSystem.UI
                 StockOrdersView.DataSource = StockOrderDL.GetStockOrdersByEmpid(1);
 
             }
+        }
+
+        private void StockOrdersView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

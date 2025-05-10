@@ -28,11 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BillViewPanel = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.ResponseT = new System.Windows.Forms.TextBox();
+            this.ResponseL = new System.Windows.Forms.Label();
+            this.FinishB = new Guna.UI2.WinForms.Guna2Button();
+            this.ContactT = new System.Windows.Forms.TextBox();
+            this.ContactL = new System.Windows.Forms.Label();
+            this.CashRecievedT = new System.Windows.Forms.TextBox();
+            this.CashRecievedL = new System.Windows.Forms.Label();
+            this.NextButton = new Guna.UI2.WinForms.Guna2Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.DateLabel = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.DeleteButton = new Guna.UI2.WinForms.Guna2Button();
             this.ClearButton = new Guna.UI2.WinForms.Guna2Button();
             this.UpdateButton = new Guna.UI2.WinForms.Guna2Button();
@@ -41,44 +53,32 @@
             this.ProductCodeL = new System.Windows.Forms.Label();
             this.quantityT = new System.Windows.Forms.TextBox();
             this.QuantityL = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.DateLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.NextButton = new Guna.UI2.WinForms.Guna2Button();
-            this.ResponseT = new System.Windows.Forms.TextBox();
-            this.ResponseL = new System.Windows.Forms.Label();
-            this.FinishB = new Guna.UI2.WinForms.Guna2Button();
-            this.ContactT = new System.Windows.Forms.TextBox();
-            this.ContactL = new System.Windows.Forms.Label();
-            this.CashRecievedT = new System.Windows.Forms.TextBox();
-            this.CashRecievedL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BillViewPanel)).BeginInit();
             this.Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // BillViewPanel
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.BillViewPanel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.BillViewPanel.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.BillViewPanel.BackgroundColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.BillViewPanel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.BillViewPanel.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.BillViewPanel.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.BillViewPanel.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.BillViewPanel.DefaultCellStyle = dataGridViewCellStyle6;
             this.BillViewPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.BillViewPanel.GridColor = System.Drawing.Color.Green;
             this.BillViewPanel.Location = new System.Drawing.Point(0, 0);
@@ -109,6 +109,7 @@
             this.BillViewPanel.ThemeStyle.RowsStyle.Height = 28;
             this.BillViewPanel.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.BillViewPanel.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.BillViewPanel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BillViewPanel_CellContentClick);
             // 
             // Panel1
             // 
@@ -138,6 +139,155 @@
             this.Panel1.Size = new System.Drawing.Size(970, 358);
             this.Panel1.TabIndex = 27;
             this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // ResponseT
+            // 
+            this.ResponseT.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ResponseT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ResponseT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResponseT.Location = new System.Drawing.Point(676, 135);
+            this.ResponseT.Multiline = true;
+            this.ResponseT.Name = "ResponseT";
+            this.ResponseT.Size = new System.Drawing.Size(282, 118);
+            this.ResponseT.TabIndex = 89;
+            // 
+            // ResponseL
+            // 
+            this.ResponseL.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ResponseL.AutoSize = true;
+            this.ResponseL.BackColor = System.Drawing.Color.Transparent;
+            this.ResponseL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResponseL.Location = new System.Drawing.Point(522, 136);
+            this.ResponseL.Name = "ResponseL";
+            this.ResponseL.Size = new System.Drawing.Size(103, 27);
+            this.ResponseL.TabIndex = 88;
+            this.ResponseL.Text = "Response";
+            // 
+            // FinishB
+            // 
+            this.FinishB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.FinishB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.FinishB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.FinishB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.FinishB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.FinishB.FillColor = System.Drawing.Color.Green;
+            this.FinishB.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.FinishB.ForeColor = System.Drawing.Color.White;
+            this.FinishB.Location = new System.Drawing.Point(832, 302);
+            this.FinishB.Name = "FinishB";
+            this.FinishB.Size = new System.Drawing.Size(132, 43);
+            this.FinishB.TabIndex = 87;
+            this.FinishB.Text = "Finish";
+            this.FinishB.Click += new System.EventHandler(this.FinishB_Click_1);
+            // 
+            // ContactT
+            // 
+            this.ContactT.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ContactT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ContactT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactT.Location = new System.Drawing.Point(676, 17);
+            this.ContactT.Name = "ContactT";
+            this.ContactT.Size = new System.Drawing.Size(220, 28);
+            this.ContactT.TabIndex = 86;
+            // 
+            // ContactL
+            // 
+            this.ContactL.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.ContactL.AutoSize = true;
+            this.ContactL.BackColor = System.Drawing.Color.Transparent;
+            this.ContactL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactL.Location = new System.Drawing.Point(522, 18);
+            this.ContactL.Name = "ContactL";
+            this.ContactL.Size = new System.Drawing.Size(85, 27);
+            this.ContactL.TabIndex = 85;
+            this.ContactL.Text = "Contact";
+            // 
+            // CashRecievedT
+            // 
+            this.CashRecievedT.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.CashRecievedT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CashRecievedT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashRecievedT.Location = new System.Drawing.Point(676, 74);
+            this.CashRecievedT.Name = "CashRecievedT";
+            this.CashRecievedT.Size = new System.Drawing.Size(220, 28);
+            this.CashRecievedT.TabIndex = 84;
+            // 
+            // CashRecievedL
+            // 
+            this.CashRecievedL.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.CashRecievedL.AutoSize = true;
+            this.CashRecievedL.BackColor = System.Drawing.Color.Transparent;
+            this.CashRecievedL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CashRecievedL.Location = new System.Drawing.Point(522, 75);
+            this.CashRecievedL.Name = "CashRecievedL";
+            this.CashRecievedL.Size = new System.Drawing.Size(148, 27);
+            this.CashRecievedL.TabIndex = 83;
+            this.CashRecievedL.Text = "Cash Recieved";
+            // 
+            // NextButton
+            // 
+            this.NextButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.NextButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.NextButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.NextButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.NextButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.NextButton.FillColor = System.Drawing.Color.Green;
+            this.NextButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NextButton.ForeColor = System.Drawing.Color.White;
+            this.NextButton.Location = new System.Drawing.Point(690, 302);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(132, 43);
+            this.NextButton.TabIndex = 80;
+            this.NextButton.Text = "Next";
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click_2);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.comboBox1.ForeColor = System.Drawing.Color.Gray;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(40, 210);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(262, 28);
+            this.comboBox1.TabIndex = 79;
+            this.comboBox1.Text = "Search";
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.Green;
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(326, 210);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(132, 43);
+            this.guna2Button2.TabIndex = 78;
+            this.guna2Button2.Text = "Search";
+            // 
+            // DateLabel
+            // 
+            this.DateLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.DateLabel.AutoSize = true;
+            this.DateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DateLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateLabel.Location = new System.Drawing.Point(16, 127);
+            this.DateLabel.Name = "DateLabel";
+            this.DateLabel.Size = new System.Drawing.Size(56, 27);
+            this.DateLabel.TabIndex = 66;
+            this.DateLabel.Text = "Date";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.dateTimePicker1.Location = new System.Drawing.Point(131, 128);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(305, 26);
+            this.dateTimePicker1.TabIndex = 65;
             // 
             // DeleteButton
             // 
@@ -250,154 +400,6 @@
             this.QuantityL.Size = new System.Drawing.Size(93, 27);
             this.QuantityL.TabIndex = 51;
             this.QuantityL.Text = "Quantity";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(131, 127);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(305, 26);
-            this.dateTimePicker1.TabIndex = 65;
-            // 
-            // DateLabel
-            // 
-            this.DateLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.DateLabel.AutoSize = true;
-            this.DateLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DateLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.Location = new System.Drawing.Point(16, 127);
-            this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(56, 27);
-            this.DateLabel.TabIndex = 66;
-            this.DateLabel.Text = "Date";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.comboBox1.ForeColor = System.Drawing.Color.Gray;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(40, 210);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(262, 28);
-            this.comboBox1.TabIndex = 79;
-            this.comboBox1.Text = "Search";
-            // 
-            // guna2Button2
-            // 
-            this.guna2Button2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.Green;
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(326, 210);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(132, 43);
-            this.guna2Button2.TabIndex = 78;
-            this.guna2Button2.Text = "Search";
-            // 
-            // NextButton
-            // 
-            this.NextButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.NextButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.NextButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.NextButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.NextButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.NextButton.FillColor = System.Drawing.Color.Green;
-            this.NextButton.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NextButton.ForeColor = System.Drawing.Color.White;
-            this.NextButton.Location = new System.Drawing.Point(690, 302);
-            this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(132, 43);
-            this.NextButton.TabIndex = 80;
-            this.NextButton.Text = "Next";
-            this.NextButton.Click += new System.EventHandler(this.NextButton_Click_2);
-            // 
-            // ResponseT
-            // 
-            this.ResponseT.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ResponseT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ResponseT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResponseT.Location = new System.Drawing.Point(676, 135);
-            this.ResponseT.Multiline = true;
-            this.ResponseT.Name = "ResponseT";
-            this.ResponseT.Size = new System.Drawing.Size(282, 118);
-            this.ResponseT.TabIndex = 89;
-            // 
-            // ResponseL
-            // 
-            this.ResponseL.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ResponseL.AutoSize = true;
-            this.ResponseL.BackColor = System.Drawing.Color.Transparent;
-            this.ResponseL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResponseL.Location = new System.Drawing.Point(522, 136);
-            this.ResponseL.Name = "ResponseL";
-            this.ResponseL.Size = new System.Drawing.Size(103, 27);
-            this.ResponseL.TabIndex = 88;
-            this.ResponseL.Text = "Response";
-            // 
-            // FinishB
-            // 
-            this.FinishB.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.FinishB.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.FinishB.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.FinishB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.FinishB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.FinishB.FillColor = System.Drawing.Color.Green;
-            this.FinishB.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.FinishB.ForeColor = System.Drawing.Color.White;
-            this.FinishB.Location = new System.Drawing.Point(832, 302);
-            this.FinishB.Name = "FinishB";
-            this.FinishB.Size = new System.Drawing.Size(132, 43);
-            this.FinishB.TabIndex = 87;
-            this.FinishB.Text = "Finish";
-            this.FinishB.Click += new System.EventHandler(this.FinishB_Click_1);
-            // 
-            // ContactT
-            // 
-            this.ContactT.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ContactT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ContactT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactT.Location = new System.Drawing.Point(676, 17);
-            this.ContactT.Name = "ContactT";
-            this.ContactT.Size = new System.Drawing.Size(220, 28);
-            this.ContactT.TabIndex = 86;
-            // 
-            // ContactL
-            // 
-            this.ContactL.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.ContactL.AutoSize = true;
-            this.ContactL.BackColor = System.Drawing.Color.Transparent;
-            this.ContactL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactL.Location = new System.Drawing.Point(522, 18);
-            this.ContactL.Name = "ContactL";
-            this.ContactL.Size = new System.Drawing.Size(85, 27);
-            this.ContactL.TabIndex = 85;
-            this.ContactL.Text = "Contact";
-            // 
-            // CashRecievedT
-            // 
-            this.CashRecievedT.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CashRecievedT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CashRecievedT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CashRecievedT.Location = new System.Drawing.Point(676, 74);
-            this.CashRecievedT.Name = "CashRecievedT";
-            this.CashRecievedT.Size = new System.Drawing.Size(220, 28);
-            this.CashRecievedT.TabIndex = 84;
-            // 
-            // CashRecievedL
-            // 
-            this.CashRecievedL.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.CashRecievedL.AutoSize = true;
-            this.CashRecievedL.BackColor = System.Drawing.Color.Transparent;
-            this.CashRecievedL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CashRecievedL.Location = new System.Drawing.Point(522, 75);
-            this.CashRecievedL.Name = "CashRecievedL";
-            this.CashRecievedL.Size = new System.Drawing.Size(148, 27);
-            this.CashRecievedL.TabIndex = 83;
-            this.CashRecievedL.Text = "Cash Recieved";
             // 
             // BillCrud
             // 

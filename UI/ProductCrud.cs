@@ -26,6 +26,7 @@ namespace HyperstarManagementSystem
             cbSupplier.DataSource = SupplierDL.GetAllNames();
             cbManufacturer.Text = "Select";
             cbSupplier.Text = "Select";
+
         }
 
         private void AddButton_Click(object sender, EventArgs e)
@@ -56,6 +57,10 @@ namespace HyperstarManagementSystem
             {
                 ProductView.DataSource = null;
                 ProductView.DataSource = ProductDL.GetAllProducts();
+                ProductView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                ProductView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                ProductView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                ProductView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
             }
             catch (Exception ex)
             {
@@ -148,6 +153,11 @@ namespace HyperstarManagementSystem
             cbSupplier.Text = "Select";
             cbManufacturer.Text = "Select";
             dept.Text = "Select";
+        }
+
+        private void ProductView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
