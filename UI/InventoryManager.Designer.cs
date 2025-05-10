@@ -32,6 +32,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
+            this.guna2Shapes4 = new Guna.UI2.WinForms.Guna2Shapes();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Shapes2 = new Guna.UI2.WinForms.Guna2Shapes();
             this.label6 = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.bills = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.Report = new Guna.UI2.WinForms.Guna2Button();
             this.btnStock = new Guna.UI2.WinForms.Guna2Button();
             this.Products = new Guna.UI2.WinForms.Guna2Button();
             this.EmployeeCrudButton = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +57,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2Shapes4 = new Guna.UI2.WinForms.Guna2Shapes();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -122,6 +121,22 @@
             this.guna2Shapes1.TabIndex = 28;
             this.guna2Shapes1.Text = "guna2Shapes1";
             this.guna2Shapes1.Zoom = 80;
+            // 
+            // guna2Shapes4
+            // 
+            this.guna2Shapes4.BackColor = System.Drawing.Color.Green;
+            this.guna2Shapes4.BorderColor = System.Drawing.Color.Green;
+            this.guna2Shapes4.FillColor = System.Drawing.Color.Green;
+            this.guna2Shapes4.Location = new System.Drawing.Point(183, 0);
+            this.guna2Shapes4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Shapes4.Name = "guna2Shapes4";
+            this.guna2Shapes4.PolygonSkip = 1;
+            this.guna2Shapes4.Rotate = 0F;
+            this.guna2Shapes4.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
+            this.guna2Shapes4.Size = new System.Drawing.Size(19, 91);
+            this.guna2Shapes4.TabIndex = 30;
+            this.guna2Shapes4.Text = "guna2Shapes4";
+            this.guna2Shapes4.Zoom = 80;
             // 
             // label2
             // 
@@ -191,7 +206,6 @@
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.panel4.Controls.Add(this.bills);
             this.panel4.Controls.Add(this.guna2Button4);
-            this.panel4.Controls.Add(this.Report);
             this.panel4.Controls.Add(this.btnStock);
             this.panel4.Controls.Add(this.Products);
             this.panel4.Controls.Add(this.EmployeeCrudButton);
@@ -238,23 +252,6 @@
             this.guna2Button4.Text = "BACK";
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click_1);
             // 
-            // Report
-            // 
-            this.Report.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Report.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Report.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Report.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Report.FillColor = System.Drawing.Color.Green;
-            this.Report.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Report.ForeColor = System.Drawing.Color.White;
-            this.Report.Location = new System.Drawing.Point(12, 539);
-            this.Report.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Report.Name = "Report";
-            this.Report.Size = new System.Drawing.Size(180, 45);
-            this.Report.TabIndex = 15;
-            this.Report.Text = ".";
-            this.Report.Click += new System.EventHandler(this.Report_Click);
-            // 
             // btnStock
             // 
             this.btnStock.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -262,14 +259,14 @@
             this.btnStock.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnStock.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnStock.FillColor = System.Drawing.Color.Green;
-            this.btnStock.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStock.ForeColor = System.Drawing.Color.White;
             this.btnStock.Location = new System.Drawing.Point(14, 338);
             this.btnStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(180, 45);
             this.btnStock.TabIndex = 14;
-            this.btnStock.Text = "Stock Management";
+            this.btnStock.Text = "Stock";
             this.btnStock.Click += new System.EventHandler(this.Customers_Click);
             // 
             // Products
@@ -475,22 +472,6 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Welcome ";
             // 
-            // guna2Shapes4
-            // 
-            this.guna2Shapes4.BackColor = System.Drawing.Color.Green;
-            this.guna2Shapes4.BorderColor = System.Drawing.Color.Green;
-            this.guna2Shapes4.FillColor = System.Drawing.Color.Green;
-            this.guna2Shapes4.Location = new System.Drawing.Point(183, 0);
-            this.guna2Shapes4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Shapes4.Name = "guna2Shapes4";
-            this.guna2Shapes4.PolygonSkip = 1;
-            this.guna2Shapes4.Rotate = 0F;
-            this.guna2Shapes4.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes4.Size = new System.Drawing.Size(19, 91);
-            this.guna2Shapes4.TabIndex = 30;
-            this.guna2Shapes4.Text = "guna2Shapes4";
-            this.guna2Shapes4.Zoom = 80;
-            // 
             // InventoryManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -532,7 +513,6 @@
         private System.Windows.Forms.Panel panel4;
         private Guna.UI2.WinForms.Guna2Button bills;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button Report;
         private Guna.UI2.WinForms.Guna2Button btnStock;
         private Guna.UI2.WinForms.Guna2Button Products;
         private Guna.UI2.WinForms.Guna2Button EmployeeCrudButton;

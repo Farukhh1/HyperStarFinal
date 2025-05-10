@@ -108,7 +108,7 @@ namespace HyperstarManagementSystem
         }
         public static BillReportBL GetBillReport(int billId)
         {
-            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=tayyab1075;";
+            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=nehanking;";
             var report = new BillReportBL();
 
             using (var conn = new MySqlConnection(connStr))
