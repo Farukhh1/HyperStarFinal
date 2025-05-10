@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.Report;
 using HyperstarManagementSystem.Reports;
 using HyperstarManagementSystem.UI;
 
@@ -44,7 +45,7 @@ namespace HyperstarManagementSystem
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
-            Report report = new Report();
+            BillReport report = new BillReport();
             report.Dock = DockStyle.Fill;
 
             // Add it to the container panel (assumed named mainContentPanel)

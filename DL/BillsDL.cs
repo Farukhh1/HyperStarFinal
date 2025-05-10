@@ -37,7 +37,7 @@ namespace HyperstarManagementSystem
         
         public static bool SaveBillTransaction(BillsBL bill)
         {
-            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=farrukh09;";
+            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=tayyab1075;";
 
             using (var conn = new MySqlConnection(connStr))
             {
@@ -105,6 +105,70 @@ namespace HyperstarManagementSystem
                     }
                 }
             }
+        }
+        public static BillReportBL GetBillReport(int billId)
+        {
+            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=tayyab1075;";
+            var report = new BillReportBL();
+
+            using (var conn = new MySqlConnection(connStr))
+            {
+                conn.Open();
+
+                // 1. Bill metadata
+                string billInfoQuery = @"
+            SELECT b.bill_id, b.billdate, c.fullname AS CustomerName, e.fullname AS EmployeeName, 
+                   b.totalamount, p.cash_rec
+            FROM bills b
+            LEFT JOIN customers c ON b.customer_id = c.customer_id
+            LEFT JOIN employees e ON b.employee_id = e.employee_id
+            LEFT JOIN payments p ON b.bill_id = p.bill_id
+            WHERE b.bill_id = @bid";
+
+                using (var cmd = new MySqlCommand(billInfoQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@bid", billId);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            report.BillID = reader.GetInt32("bill_id");
+                            report.BillDate = reader.GetDateTime("billdate");
+                            report.CustomerName = reader["CustomerName"].ToString();
+                            report.EmployeeName = reader["EmployeeName"].ToString();
+                            report.TotalAmount = reader.GetDecimal("totalamount");
+                            report.CashReceived = reader.GetDecimal("cash_rec");
+                        }
+                    }
+                }
+
+                // 2. Product details
+                string itemsQuery = @"
+            SELECT p.name AS ProductName, bd.qty, bd.total_price / bd.qty AS UnitPrice
+            FROM billdetails bd
+            JOIN products p ON bd.product_code = p.product_code
+            WHERE bd.bill_id = @bid";
+
+                using (var cmd = new MySqlCommand(itemsQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@bid", billId);
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            report.Items.Add( new BillReportItem
+                            (
+                                reader["ProductName"].ToString(),
+                                Convert.ToInt32(reader["qty"]),
+                                Convert.ToInt32(reader["UnitPrice"])
+                            )
+                            );
+                        }
+                    }
+                }
+            }
+
+            return report;
         }
 
     }

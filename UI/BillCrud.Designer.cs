@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BillViewPanel = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Panel1 = new System.Windows.Forms.Panel();
+            this.cmbSearchProduct = new System.Windows.Forms.ComboBox();
             this.ResponseT = new System.Windows.Forms.TextBox();
             this.ResponseL = new System.Windows.Forms.Label();
             this.FinishB = new Guna.UI2.WinForms.Guna2Button();
@@ -52,7 +53,7 @@
             this.ProductCodeL = new System.Windows.Forms.Label();
             this.quantityT = new System.Windows.Forms.TextBox();
             this.QuantityL = new System.Windows.Forms.Label();
-            this.cmbSearchProduct = new System.Windows.Forms.ComboBox();
+            this.billReport1 = new HyperstarManagementSystem.Report.BillReport();
             ((System.ComponentModel.ISupportInitialize)(this.BillViewPanel)).BeginInit();
             this.Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -82,12 +83,12 @@
             this.BillViewPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.BillViewPanel.GridColor = System.Drawing.Color.Green;
             this.BillViewPanel.Location = new System.Drawing.Point(0, 0);
-            this.BillViewPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.BillViewPanel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BillViewPanel.Name = "BillViewPanel";
             this.BillViewPanel.RowHeadersVisible = false;
             this.BillViewPanel.RowHeadersWidth = 62;
             this.BillViewPanel.RowTemplate.Height = 28;
-            this.BillViewPanel.Size = new System.Drawing.Size(862, 313);
+            this.BillViewPanel.Size = new System.Drawing.Size(1293, 489);
             this.BillViewPanel.TabIndex = 26;
             this.BillViewPanel.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.BillViewPanel.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -135,23 +136,38 @@
             this.Panel1.Controls.Add(this.quantityT);
             this.Panel1.Controls.Add(this.QuantityL);
             this.Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Panel1.Location = new System.Drawing.Point(0, 313);
-            this.Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Panel1.Location = new System.Drawing.Point(0, 489);
+            this.Panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Panel1.Name = "Panel1";
-            this.Panel1.Size = new System.Drawing.Size(862, 286);
+            this.Panel1.Size = new System.Drawing.Size(1293, 447);
             this.Panel1.TabIndex = 27;
             this.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
+            // 
+            // cmbSearchProduct
+            // 
+            this.cmbSearchProduct.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cmbSearchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSearchProduct.ForeColor = System.Drawing.Color.Gray;
+            this.cmbSearchProduct.FormattingEnabled = true;
+            this.cmbSearchProduct.ItemHeight = 29;
+            this.cmbSearchProduct.Location = new System.Drawing.Point(60, 262);
+            this.cmbSearchProduct.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbSearchProduct.Name = "cmbSearchProduct";
+            this.cmbSearchProduct.Size = new System.Drawing.Size(349, 37);
+            this.cmbSearchProduct.TabIndex = 90;
+            this.cmbSearchProduct.Text = "Select";
+            this.cmbSearchProduct.SelectedIndexChanged += new System.EventHandler(this.cmbSearchProduct_SelectedIndexChanged);
             // 
             // ResponseT
             // 
             this.ResponseT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ResponseT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ResponseT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResponseT.Location = new System.Drawing.Point(601, 108);
-            this.ResponseT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ResponseT.Location = new System.Drawing.Point(902, 169);
+            this.ResponseT.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ResponseT.Multiline = true;
             this.ResponseT.Name = "ResponseT";
-            this.ResponseT.Size = new System.Drawing.Size(251, 95);
+            this.ResponseT.Size = new System.Drawing.Size(374, 146);
             this.ResponseT.TabIndex = 89;
             // 
             // ResponseL
@@ -160,9 +176,10 @@
             this.ResponseL.AutoSize = true;
             this.ResponseL.BackColor = System.Drawing.Color.Transparent;
             this.ResponseL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResponseL.Location = new System.Drawing.Point(464, 109);
+            this.ResponseL.Location = new System.Drawing.Point(696, 170);
+            this.ResponseL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ResponseL.Name = "ResponseL";
-            this.ResponseL.Size = new System.Drawing.Size(89, 23);
+            this.ResponseL.Size = new System.Drawing.Size(140, 35);
             this.ResponseL.TabIndex = 88;
             this.ResponseL.Text = "Response";
             // 
@@ -176,10 +193,10 @@
             this.FinishB.FillColor = System.Drawing.Color.Green;
             this.FinishB.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.FinishB.ForeColor = System.Drawing.Color.White;
-            this.FinishB.Location = new System.Drawing.Point(740, 242);
-            this.FinishB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FinishB.Location = new System.Drawing.Point(1110, 378);
+            this.FinishB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FinishB.Name = "FinishB";
-            this.FinishB.Size = new System.Drawing.Size(117, 34);
+            this.FinishB.Size = new System.Drawing.Size(176, 53);
             this.FinishB.TabIndex = 87;
             this.FinishB.Text = "Finish";
             this.FinishB.Click += new System.EventHandler(this.FinishB_Click_1);
@@ -189,10 +206,10 @@
             this.ContactT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ContactT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ContactT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactT.Location = new System.Drawing.Point(601, 14);
-            this.ContactT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ContactT.Location = new System.Drawing.Point(902, 22);
+            this.ContactT.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ContactT.Name = "ContactT";
-            this.ContactT.Size = new System.Drawing.Size(196, 24);
+            this.ContactT.Size = new System.Drawing.Size(292, 35);
             this.ContactT.TabIndex = 86;
             // 
             // ContactL
@@ -201,9 +218,10 @@
             this.ContactL.AutoSize = true;
             this.ContactL.BackColor = System.Drawing.Color.Transparent;
             this.ContactL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactL.Location = new System.Drawing.Point(464, 14);
+            this.ContactL.Location = new System.Drawing.Point(696, 22);
+            this.ContactL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ContactL.Name = "ContactL";
-            this.ContactL.Size = new System.Drawing.Size(72, 23);
+            this.ContactL.Size = new System.Drawing.Size(116, 35);
             this.ContactL.TabIndex = 85;
             this.ContactL.Text = "Contact";
             // 
@@ -212,10 +230,10 @@
             this.CashRecievedT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CashRecievedT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CashRecievedT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CashRecievedT.Location = new System.Drawing.Point(601, 59);
-            this.CashRecievedT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CashRecievedT.Location = new System.Drawing.Point(902, 92);
+            this.CashRecievedT.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CashRecievedT.Name = "CashRecievedT";
-            this.CashRecievedT.Size = new System.Drawing.Size(196, 24);
+            this.CashRecievedT.Size = new System.Drawing.Size(292, 35);
             this.CashRecievedT.TabIndex = 84;
             // 
             // CashRecievedL
@@ -224,9 +242,10 @@
             this.CashRecievedL.AutoSize = true;
             this.CashRecievedL.BackColor = System.Drawing.Color.Transparent;
             this.CashRecievedL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CashRecievedL.Location = new System.Drawing.Point(464, 60);
+            this.CashRecievedL.Location = new System.Drawing.Point(696, 94);
+            this.CashRecievedL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.CashRecievedL.Name = "CashRecievedL";
-            this.CashRecievedL.Size = new System.Drawing.Size(128, 23);
+            this.CashRecievedL.Size = new System.Drawing.Size(201, 35);
             this.CashRecievedL.TabIndex = 83;
             this.CashRecievedL.Text = "Cash Recieved";
             // 
@@ -240,10 +259,10 @@
             this.NextButton.FillColor = System.Drawing.Color.Green;
             this.NextButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.NextButton.ForeColor = System.Drawing.Color.White;
-            this.NextButton.Location = new System.Drawing.Point(613, 242);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NextButton.Location = new System.Drawing.Point(920, 378);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(117, 34);
+            this.NextButton.Size = new System.Drawing.Size(176, 53);
             this.NextButton.TabIndex = 80;
             this.NextButton.Text = "Next";
             this.NextButton.Click += new System.EventHandler(this.NextButton_Click_2);
@@ -258,10 +277,10 @@
             this.guna2Button2.FillColor = System.Drawing.Color.Green;
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(291, 160);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button2.Location = new System.Drawing.Point(436, 250);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(117, 34);
+            this.guna2Button2.Size = new System.Drawing.Size(176, 53);
             this.guna2Button2.TabIndex = 78;
             this.guna2Button2.Text = "Search";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -272,19 +291,20 @@
             this.DateLabel.AutoSize = true;
             this.DateLabel.BackColor = System.Drawing.Color.Transparent;
             this.DateLabel.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateLabel.Location = new System.Drawing.Point(14, 110);
+            this.DateLabel.Location = new System.Drawing.Point(21, 172);
+            this.DateLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.DateLabel.Name = "DateLabel";
-            this.DateLabel.Size = new System.Drawing.Size(48, 23);
+            this.DateLabel.Size = new System.Drawing.Size(76, 35);
             this.DateLabel.TabIndex = 66;
             this.DateLabel.Text = "Date";
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.dateTimePicker1.Location = new System.Drawing.Point(116, 110);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dateTimePicker1.Location = new System.Drawing.Point(174, 172);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(272, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(406, 31);
             this.dateTimePicker1.TabIndex = 65;
             // 
             // DeleteButton
@@ -298,10 +318,10 @@
             this.DeleteButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.DeleteButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.DeleteButton.ForeColor = System.Drawing.Color.White;
-            this.DeleteButton.Location = new System.Drawing.Point(116, 230);
-            this.DeleteButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DeleteButton.Location = new System.Drawing.Point(174, 359);
+            this.DeleteButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(108, 46);
+            this.DeleteButton.Size = new System.Drawing.Size(162, 72);
             this.DeleteButton.TabIndex = 64;
             this.DeleteButton.Text = "Delete";
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -317,10 +337,10 @@
             this.ClearButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.ClearButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ClearButton.ForeColor = System.Drawing.Color.White;
-            this.ClearButton.Location = new System.Drawing.Point(344, 230);
-            this.ClearButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClearButton.Location = new System.Drawing.Point(516, 359);
+            this.ClearButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.ClearButton.Name = "ClearButton";
-            this.ClearButton.Size = new System.Drawing.Size(108, 46);
+            this.ClearButton.Size = new System.Drawing.Size(162, 72);
             this.ClearButton.TabIndex = 63;
             this.ClearButton.Text = "Clear";
             this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
@@ -336,10 +356,10 @@
             this.UpdateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.UpdateButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.UpdateButton.ForeColor = System.Drawing.Color.White;
-            this.UpdateButton.Location = new System.Drawing.Point(230, 230);
-            this.UpdateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UpdateButton.Location = new System.Drawing.Point(345, 359);
+            this.UpdateButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(108, 46);
+            this.UpdateButton.Size = new System.Drawing.Size(162, 72);
             this.UpdateButton.TabIndex = 62;
             this.UpdateButton.Text = "Update";
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
@@ -355,10 +375,10 @@
             this.AddButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.AddButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddButton.ForeColor = System.Drawing.Color.White;
-            this.AddButton.Location = new System.Drawing.Point(3, 230);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddButton.Location = new System.Drawing.Point(4, 359);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(108, 46);
+            this.AddButton.Size = new System.Drawing.Size(162, 72);
             this.AddButton.TabIndex = 61;
             this.AddButton.Text = "Add";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -368,10 +388,10 @@
             this.CodeT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.CodeT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CodeT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodeT.Location = new System.Drawing.Point(147, 14);
-            this.CodeT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CodeT.Location = new System.Drawing.Point(220, 22);
+            this.CodeT.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.CodeT.Name = "CodeT";
-            this.CodeT.Size = new System.Drawing.Size(196, 24);
+            this.CodeT.Size = new System.Drawing.Size(292, 35);
             this.CodeT.TabIndex = 56;
             // 
             // ProductCodeL
@@ -380,9 +400,10 @@
             this.ProductCodeL.AutoSize = true;
             this.ProductCodeL.BackColor = System.Drawing.Color.Transparent;
             this.ProductCodeL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductCodeL.Location = new System.Drawing.Point(14, 13);
+            this.ProductCodeL.Location = new System.Drawing.Point(21, 20);
+            this.ProductCodeL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.ProductCodeL.Name = "ProductCodeL";
-            this.ProductCodeL.Size = new System.Drawing.Size(121, 23);
+            this.ProductCodeL.Size = new System.Drawing.Size(192, 35);
             this.ProductCodeL.TabIndex = 55;
             this.ProductCodeL.Text = "Product Code";
             // 
@@ -391,10 +412,10 @@
             this.quantityT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.quantityT.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.quantityT.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantityT.Location = new System.Drawing.Point(147, 62);
-            this.quantityT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.quantityT.Location = new System.Drawing.Point(220, 97);
+            this.quantityT.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.quantityT.Name = "quantityT";
-            this.quantityT.Size = new System.Drawing.Size(196, 24);
+            this.quantityT.Size = new System.Drawing.Size(292, 35);
             this.quantityT.TabIndex = 52;
             // 
             // QuantityL
@@ -403,35 +424,30 @@
             this.QuantityL.AutoSize = true;
             this.QuantityL.BackColor = System.Drawing.Color.Transparent;
             this.QuantityL.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityL.Location = new System.Drawing.Point(14, 61);
+            this.QuantityL.Location = new System.Drawing.Point(21, 95);
+            this.QuantityL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.QuantityL.Name = "QuantityL";
-            this.QuantityL.Size = new System.Drawing.Size(79, 23);
+            this.QuantityL.Size = new System.Drawing.Size(127, 35);
             this.QuantityL.TabIndex = 51;
             this.QuantityL.Text = "Quantity";
             // 
-            // cmbSearchProduct
+            // billReport1
             // 
-            this.cmbSearchProduct.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cmbSearchProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbSearchProduct.ForeColor = System.Drawing.Color.Gray;
-            this.cmbSearchProduct.FormattingEnabled = true;
-            this.cmbSearchProduct.ItemHeight = 18;
-            this.cmbSearchProduct.Location = new System.Drawing.Point(40, 168);
-            this.cmbSearchProduct.Name = "cmbSearchProduct";
-            this.cmbSearchProduct.Size = new System.Drawing.Size(234, 26);
-            this.cmbSearchProduct.TabIndex = 90;
-            this.cmbSearchProduct.Text = "Select";
-            this.cmbSearchProduct.SelectedIndexChanged += new System.EventHandler(this.cmbSearchProduct_SelectedIndexChanged);
+            this.billReport1.Location = new System.Drawing.Point(4, 0);
+            this.billReport1.Name = "billReport1";
+            this.billReport1.Size = new System.Drawing.Size(1569, 842);
+            this.billReport1.TabIndex = 28;
             // 
             // BillCrud
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.billReport1);
             this.Controls.Add(this.Panel1);
             this.Controls.Add(this.BillViewPanel);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "BillCrud";
-            this.Size = new System.Drawing.Size(862, 599);
+            this.Size = new System.Drawing.Size(1293, 936);
             this.Load += new System.EventHandler(this.BillCrud_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BillViewPanel)).EndInit();
             this.Panel1.ResumeLayout(false);
@@ -464,5 +480,6 @@
         private System.Windows.Forms.TextBox CashRecievedT;
         private System.Windows.Forms.Label CashRecievedL;
         private System.Windows.Forms.ComboBox cmbSearchProduct;
+        private Report.BillReport billReport1;
     }
 }

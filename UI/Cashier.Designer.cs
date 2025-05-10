@@ -300,7 +300,6 @@
             // pictureBox10
             // 
             this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox10.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
             this.pictureBox10.Location = new System.Drawing.Point(867, 115);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(87, 103);
@@ -311,7 +310,6 @@
             // pictureBox9
             // 
             this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox9.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
             this.pictureBox9.Location = new System.Drawing.Point(601, 102);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(87, 103);
@@ -322,7 +320,6 @@
             // pictureBox8
             // 
             this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox8.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
             this.pictureBox8.Location = new System.Drawing.Point(251, 102);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(87, 103);
@@ -333,7 +330,6 @@
             // pictureBox7
             // 
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox7.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
             this.pictureBox7.Location = new System.Drawing.Point(76, 370);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(87, 103);
@@ -344,7 +340,6 @@
             // pictureBox6
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox6.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
             this.pictureBox6.Location = new System.Drawing.Point(783, 300);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(87, 103);
@@ -355,7 +350,6 @@
             // pictureBox5
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox5.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
             this.pictureBox5.Location = new System.Drawing.Point(181, 535);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(87, 103);
@@ -366,7 +360,6 @@
             // pictureBox4
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox4.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
             this.pictureBox4.Location = new System.Drawing.Point(867, 516);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(87, 103);
@@ -377,7 +370,6 @@
             // pictureBox3
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox3.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
             this.pictureBox3.Location = new System.Drawing.Point(446, 535);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(87, 103);
@@ -388,7 +380,6 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.pictureBox2.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
             this.pictureBox2.Location = new System.Drawing.Point(22, 144);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(87, 103);

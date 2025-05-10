@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HyperstarManagementSystem.BL;
 using HyperstarManagementSystem.DL;
+using HyperstarManagementSystem.Reports;
 
 namespace HyperstarManagementSystem.UI
 {
@@ -42,6 +43,7 @@ namespace HyperstarManagementSystem.UI
             ResponseT.Visible = false;
             CashRecievedL.Visible = false;
             CashRecievedT.Visible = false;
+            billReport1.Visible = false;
 
         }
 
@@ -159,7 +161,7 @@ namespace HyperstarManagementSystem.UI
                         MessageBox.Show("Bill Saved Successfully");
                         DefaultVisibility();
                         cart.Clear();
-                        ShowDetails();
+                        billReport1.Visible = true;
                     }
                     else
                     {

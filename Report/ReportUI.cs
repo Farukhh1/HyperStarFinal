@@ -13,9 +13,9 @@ using Microsoft.Reporting.WinForms;
 
 namespace HyperstarManagementSystem.Reports
 {
-    public partial class Report : UserControl
+    public partial class ReportUI : UserControl
     {
-        public Report()
+        public ReportUI()
         {
             InitializeComponent();
         }
@@ -96,6 +96,11 @@ namespace HyperstarManagementSystem.Reports
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReportUI_Load(object sender, EventArgs e)
         {
 
         }

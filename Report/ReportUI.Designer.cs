@@ -1,6 +1,6 @@
 ﻿namespace HyperstarManagementSystem.Reports
 {
-    partial class Report
+    partial class ReportUI
     {
         /// <summary> 
         /// Required designer variable.
@@ -30,16 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.productReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.productReportBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.inactiveProductBLBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productReportBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.inactiveProductBLBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // productReportBindingSource
+            // 
+            this.productReportBindingSource.DataSource = typeof(HyperstarManagementSystem.BL.ProductReport);
             // 
             // panel1
             // 
@@ -95,15 +99,11 @@
             this.comboBox1.TabIndex = 4;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // productReportBindingSource
-            // 
-            this.productReportBindingSource.DataSource = typeof(HyperstarManagementSystem.BL.ProductReport);
-            // 
             // inactiveProductBLBindingSource
             // 
             this.inactiveProductBLBindingSource.DataSource = typeof(HyperstarManagementSystem.BL.InactiveProductBL);
             // 
-            // Report
+            // ReportUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -111,10 +111,11 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Button1);
-            this.Name = "Report";
+            this.Name = "ReportUI";
             this.Size = new System.Drawing.Size(1569, 836);
-            this.panel1.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.ReportUI_Load);
             ((System.ComponentModel.ISupportInitialize)(this.productReportBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.inactiveProductBLBindingSource)).EndInit();
             this.ResumeLayout(false);
 
