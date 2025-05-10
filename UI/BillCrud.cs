@@ -7,13 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.BL;
+using HyperstarManagementSystem.DL;
 
 namespace HyperstarManagementSystem.UI
 {
     public partial class BillCrud : UserControl
     {
         public bool btnClick = false;
-
+        private BillsBL currentBill = null;
+        private List<BillDetailBL> cart = new List<BillDetailBL>();
         public void DefaultVisibility()
         {
             ProductCodeL.Visible = true;
@@ -21,7 +24,7 @@ namespace HyperstarManagementSystem.UI
             QuantityL.Visible = true;
             quantityT.Visible = true;
             dateTimePicker1.Visible = true;
-            comboBox1.Visible = true;
+            cmbSearchProduct.Visible = true;
             guna2Button2.Visible = true;
             NextButton.Visible = true;
             AddButton.Visible = true;
@@ -49,7 +52,7 @@ namespace HyperstarManagementSystem.UI
             QuantityL.Visible = false;
             quantityT.Visible = false;
             dateTimePicker1.Visible = false;
-            comboBox1.Visible = false;
+            cmbSearchProduct.Visible = false;
             guna2Button2.Visible = false;
             NextButton.Visible = false;
             AddButton.Visible = false;
@@ -71,10 +74,26 @@ namespace HyperstarManagementSystem.UI
         {
             InitializeComponent();
             DefaultVisibility();
-           
-        }
-     
 
+        }
+
+        private void ShowDetails()
+        {
+            try
+            {
+                BillViewPanel.DataSource = null;
+                BillViewPanel.DataSource = cart;
+                BillViewPanel.Columns["ProductCode"].HeaderText = "Product Code";
+                BillViewPanel.Columns[0].Visible = false;
+                BillViewPanel.Columns[1].Visible = false;
+                BillViewPanel.Columns[4].Visible = false;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
         private void BillCrud_Load(object sender, EventArgs e)
         {
             DefaultVisibility();
@@ -110,18 +129,187 @@ namespace HyperstarManagementSystem.UI
 
         private void NextButton_Click_2(object sender, EventArgs e)
         {
-            changeVisibility();
-      
+            if (CodeT.Text != "" && quantityT.Text != "" && cmbSearchProduct.Text != "")
+            {
+                string pcode = CodeT.Text;
+                changeVisibility();
+
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the fields");
+            }
         }
 
         private void FinishB_Click_1(object sender, EventArgs e)
         {
+            if(ContactT.Text != "" && CashRecievedT.Text != "" && ResponseT.Text != "")
+            {
+                try
+                {
+                    int customerID = CustomerDL.getCustomerIdByPhone(ContactT.Text.ToString());
+                    decimal cashRecieved = Convert.ToDecimal(CashRecievedT.Text.ToString());
+                    string response = ResponseT.Text.ToString();
+                    string billDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
 
+                    PaymentBL paym = new PaymentBL(cashRecieved);
+                    currentBill = new BillsBL(customerID, 1, billDate, cart, paym, response);
+                    if (BillsDL.SaveBillTransaction(currentBill))
+                    {
+                        MessageBox.Show("Bill Saved Successfully");
+                        DefaultVisibility();
+                        cart.Clear();
+                        ShowDetails();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error in saving bill");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the fields");
+            }
         }
 
         private void BillViewPanel_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void AddButton_Click(object sender, EventArgs e)
+        {
+            if (CodeT.Text != "" && quantityT.Text != "" && cmbSearchProduct.Text != "")
+            {
+                try
+                {
+                    string pcode = CodeT.Text.ToString();
+                    if (ProductDL.productExists(pcode))
+                    {
+                        int quantity = Convert.ToInt32(quantityT.Text.ToString());
+                        BillDetailBL billDetail = new BillDetailBL(pcode, quantity);
+                        cart.Add(billDetail);
+                        ShowDetails();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product does not exist.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the fields");
+
+            }
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            if (CodeT.Text != "")
+            {
+                try
+                {
+                    string pcode = CodeT.Text.ToString();
+                    if (ProductDL.productExists(pcode))
+                    {
+                        foreach (BillDetailBL bd in cart)
+                        {
+                            if (bd.ProductCode == pcode)
+                            {
+                                cart.Remove(bd);
+                                break;
+                            }
+                        }
+                        ShowDetails();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product does not exist.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please specify Product Code.");
+            }
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            CodeT.Clear();
+            quantityT.Clear();
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            if (CodeT.Text != "")
+            {
+                try
+                {
+                    string pcode = CodeT.Text.ToString();
+                    if (ProductDL.productExists(pcode))
+                    {
+                        foreach (BillDetailBL bd in cart)
+                        {
+                            if (bd.ProductCode == pcode)
+                            {
+                                int qty = Convert.ToInt32(quantityT.Text.ToString());
+                                bd.Quantity = qty;
+                                break;
+                            }
+                        }
+                        ShowDetails();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Product does not exist.");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please fill all the fields");
+            }
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            string input = cmbSearchProduct.Text.Trim();
+            List<string> matches = ProductDL.GetMatchingProductCodes(input);
+
+            cmbSearchProduct.Items.Clear();
+            foreach (string code in matches)
+            {
+                cmbSearchProduct.Items.Add(code);
+            }
+
+            if (cmbSearchProduct.Items.Count > 0)
+            {
+                cmbSearchProduct.DroppedDown = true;
+            }
+        }
+
+        private void cmbSearchProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CodeT.Text = cmbSearchProduct.SelectedItem.ToString();
         }
     }
 }

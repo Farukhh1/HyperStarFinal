@@ -34,9 +34,10 @@ namespace HyperstarManagementSystem
             }
             return bills;
         }
+        
         public static bool SaveBillTransaction(BillsBL bill)
         {
-            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=nehanking;";
+            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=farrukh09;";
 
             using (var conn = new MySqlConnection(connStr))
             {
@@ -87,6 +88,12 @@ namespace HyperstarManagementSystem
                         payCmd.Parameters.AddWithValue("@bid", billId);
                         payCmd.Parameters.AddWithValue("@cash", bill.Payment.CashReceived);
                         payCmd.ExecuteNonQuery();
+
+                        // 7. Insert response
+                        var responseCmd = new MySqlCommand("INSERT INTO responses (response,bill_id) VALUES (@res, @bid)", conn, transaction);
+                        responseCmd.Parameters.AddWithValue("@res", bill.Response);
+                        responseCmd.Parameters.AddWithValue("@bid", billId);
+                        responseCmd.ExecuteNonQuery();
 
                         transaction.Commit();
                         return true;

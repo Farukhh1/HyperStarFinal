@@ -36,17 +36,24 @@ namespace HyperstarManagementSystem.UI
         }
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            try
+            if(name.Text != "" && phone.Text != "" && Address.Text != "")
             {
-                CustomerBL customer = new CustomerBL((int)employeeView.CurrentRow.Cells[0].Value, name.Text, phone.Text, Address.Text);
-                CustomerDL.UpdateCustomer(customer);
-                MessageBox.Show("Customer updated successfully.");
-                getRows();
-                clear();
+                try
+                {
+                    CustomerBL customer = new CustomerBL((int)employeeView.CurrentRow.Cells[0].Value, name.Text, phone.Text, Address.Text);
+                    CustomerDL.UpdateCustomer(customer);
+                    MessageBox.Show("Customer updated successfully.");
+                    getRows();
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                } 
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show("Please fill all fields.");
             }
         }
 
