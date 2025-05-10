@@ -321,6 +321,7 @@
             // 
             // mainContentPanel
             // 
+            this.mainContentPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mainContentPanel.Controls.Add(this.pictureBox10);
             this.mainContentPanel.Controls.Add(this.pictureBox9);
             this.mainContentPanel.Controls.Add(this.pictureBox8);
