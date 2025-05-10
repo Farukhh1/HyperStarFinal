@@ -52,10 +52,10 @@
                   <Width>2.34376in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.69271in</Width>
+                  <Width>1.32604in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.30728in</Width>
+                  <Width>1.01773in</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.82812in</Width>
@@ -298,7 +298,9 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>UnitPrice</rd:DefaultName>
@@ -328,7 +330,9 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Quantity</rd:DefaultName>
@@ -358,7 +362,9 @@
                                   <Style />
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>TotalPrice</rd:DefaultName>
@@ -399,9 +405,9 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Top>1.2526in</Top>
-            <Left>0.4375in</Left>
+            <Left>0.68751in</Left>
             <Height>0.5in</Height>
-            <Width>7.17187in</Width>
+            <Width>6.51565in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -416,7 +422,7 @@
                   <TextRun>
                     <Value>Hyper Star</Value>
                     <Style>
-                      <FontSize>12pt</FontSize>
+                      <FontSize>16pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <TextDecoration>Underline</TextDecoration>
                     </Style>
@@ -429,7 +435,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox34</rd:DefaultName>
             <Left>3.03127in</Left>
-            <Height>0.29167in</Height>
+            <Height>0.35639in</Height>
             <Width>2.19667in</Width>
             <ZIndex>1</ZIndex>
             <Style>
@@ -659,10 +665,12 @@
       </Body>
       <Width>8.06771in</Width>
       <Page>
-        <LeftMargin>1in</LeftMargin>
-        <RightMargin>1in</RightMargin>
-        <TopMargin>1in</TopMargin>
-        <BottomMargin>1in</BottomMargin>
+        <PageHeight>8.27in</PageHeight>
+        <PageWidth>11.69in</PageWidth>
+        <LeftMargin>1.8in</LeftMargin>
+        <RightMargin>0.5in</RightMargin>
+        <TopMargin>0.75in</TopMargin>
+        <BottomMargin>0.75in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>

@@ -45,7 +45,7 @@ namespace HyperstarManagementSystem
         private void guna2Button1_Click_1(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
-            BillReport report = new BillReport();
+            ReportUI report = new ReportUI();
             report.Dock = DockStyle.Fill;
 
             // Add it to the container panel (assumed named mainContentPanel)

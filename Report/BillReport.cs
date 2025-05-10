@@ -16,17 +16,19 @@ namespace HyperstarManagementSystem.Report
 {
     public partial class BillReport : UserControl
     {
-        public BillReport()
+        private int billId;
+        public BillReport(int billID)
         {
             InitializeComponent();
+            this.billId = billID;
         }
 
         private void BillReport_Load(object sender, EventArgs e)
         {
-            ShowBillReport(7);
+            ShowBillReport();
             reportViewer1.RefreshReport();
         }
-        public void ShowBillReport(int billId)
+        public void ShowBillReport()
         {
             var reportData = BillsDL.GetBillReport(billId);
             ReportDataSource rds = new ReportDataSource("DataSet1", reportData.Items);
@@ -41,7 +43,7 @@ namespace HyperstarManagementSystem.Report
                 new ReportParameter("Change", reportData.Change.ToString("F2"))
             };
             reportViewer1.ProcessingMode = ProcessingMode.Local;
-            reportViewer1.LocalReport.ReportPath = "F:\\DB\\Final_Project\\HyperStarFinal\\Report\\BillReport.rdlc";
+            reportViewer1.LocalReport.ReportPath = "C:\\Users\\Admin\\Documents\\GitHub\\DBSF013\\HyperStarManagementSystem\\Report\\BillReport.rdlc";
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(rds);
             reportViewer1.LocalReport.SetParameters(parameters);

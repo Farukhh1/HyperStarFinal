@@ -35,6 +35,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.employeeView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.BillDetails = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrintReport = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.employeeView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,8 +64,8 @@
             this.employeeView.Dock = System.Windows.Forms.DockStyle.Top;
             this.employeeView.GridColor = System.Drawing.Color.Green;
             this.employeeView.Location = new System.Drawing.Point(0, 0);
-            this.employeeView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.employeeView.Name = "employeeView";
+            this.employeeView.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -83,7 +84,7 @@
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.employeeView.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.employeeView.RowTemplate.Height = 28;
-            this.employeeView.Size = new System.Drawing.Size(1301, 620);
+            this.employeeView.Size = new System.Drawing.Size(867, 397);
             this.employeeView.TabIndex = 24;
             this.employeeView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.employeeView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -98,7 +99,7 @@
             this.employeeView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.employeeView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.employeeView.ThemeStyle.HeaderStyle.Height = 40;
-            this.employeeView.ThemeStyle.ReadOnly = false;
+            this.employeeView.ThemeStyle.ReadOnly = true;
             this.employeeView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.employeeView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.employeeView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -117,26 +118,43 @@
             this.BillDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.BillDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.BillDetails.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
-            this.BillDetails.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BillDetails.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BillDetails.ForeColor = System.Drawing.Color.White;
-            this.BillDetails.Location = new System.Drawing.Point(467, 741);
-            this.BillDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BillDetails.Location = new System.Drawing.Point(228, 474);
             this.BillDetails.Name = "BillDetails";
-            this.BillDetails.Size = new System.Drawing.Size(375, 72);
+            this.BillDetails.Size = new System.Drawing.Size(169, 46);
             this.BillDetails.TabIndex = 63;
             this.BillDetails.Text = "Details";
             this.BillDetails.Click += new System.EventHandler(this.BillDetails_Click);
             // 
+            // btnPrintReport
+            // 
+            this.btnPrintReport.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnPrintReport.BorderRadius = 15;
+            this.btnPrintReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrintReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrintReport.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
+            this.btnPrintReport.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintReport.ForeColor = System.Drawing.Color.White;
+            this.btnPrintReport.Location = new System.Drawing.Point(471, 474);
+            this.btnPrintReport.Name = "btnPrintReport";
+            this.btnPrintReport.Size = new System.Drawing.Size(169, 46);
+            this.btnPrintReport.TabIndex = 64;
+            this.btnPrintReport.Text = "Print";
+            this.btnPrintReport.Click += new System.EventHandler(this.btnPrintReport_Click);
+            // 
             // BillView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.Controls.Add(this.btnPrintReport);
             this.Controls.Add(this.BillDetails);
             this.Controls.Add(this.employeeView);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "BillView";
-            this.Size = new System.Drawing.Size(1301, 925);
+            this.Size = new System.Drawing.Size(867, 592);
             ((System.ComponentModel.ISupportInitialize)(this.employeeView)).EndInit();
             this.ResumeLayout(false);
 
@@ -146,5 +164,6 @@
 
         private Guna.UI2.WinForms.Guna2DataGridView employeeView;
         private Guna.UI2.WinForms.Guna2Button BillDetails;
+        private Guna.UI2.WinForms.Guna2Button btnPrintReport;
     }
 }

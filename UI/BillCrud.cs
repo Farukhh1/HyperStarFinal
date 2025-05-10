@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using HyperstarManagementSystem.BL;
 using HyperstarManagementSystem.DL;
-using HyperstarManagementSystem.Reports;
+using HyperstarManagementSystem.Report;
 
 namespace HyperstarManagementSystem.UI
 {
@@ -43,7 +43,6 @@ namespace HyperstarManagementSystem.UI
             ResponseT.Visible = false;
             CashRecievedL.Visible = false;
             CashRecievedT.Visible = false;
-            billReport1.Visible = false;
 
         }
 
@@ -99,6 +98,10 @@ namespace HyperstarManagementSystem.UI
         private void BillCrud_Load(object sender, EventArgs e)
         {
             DefaultVisibility();
+            BillViewPanel.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            BillViewPanel.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            BillViewPanel.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            BillViewPanel.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
@@ -121,17 +124,11 @@ namespace HyperstarManagementSystem.UI
             btnClick = true;
         }
 
-        private void NextButton_Click_1(object sender, EventArgs e)
-        {
-            btnClick = true;
-            //Panel1.Visible = false;
-            //panel2.Visible = true;
-            //panel2.BringToFront();
-        }
+
 
         private void NextButton_Click_2(object sender, EventArgs e)
         {
-            if (CodeT.Text != "" && quantityT.Text != "" && cmbSearchProduct.Text != "")
+            if (cart != null)
             {
                 string pcode = CodeT.Text;
                 changeVisibility();
@@ -139,13 +136,13 @@ namespace HyperstarManagementSystem.UI
             }
             else
             {
-                MessageBox.Show("Please fill all the fields");
+                MessageBox.Show("Please add products to the bill.");
             }
         }
 
         private void FinishB_Click_1(object sender, EventArgs e)
         {
-            if(ContactT.Text != "" && CashRecievedT.Text != "" && ResponseT.Text != "")
+            if (ContactT.Text != "" && CashRecievedT.Text != "" && ResponseT.Text != "")
             {
                 try
                 {
@@ -161,7 +158,7 @@ namespace HyperstarManagementSystem.UI
                         MessageBox.Show("Bill Saved Successfully");
                         DefaultVisibility();
                         cart.Clear();
-                        billReport1.Visible = true;
+
                     }
                     else
                     {
@@ -186,21 +183,35 @@ namespace HyperstarManagementSystem.UI
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+            bool entered = false;
             if (CodeT.Text != "" && quantityT.Text != "" && cmbSearchProduct.Text != "")
             {
                 try
                 {
                     string pcode = CodeT.Text.ToString();
-                    if (ProductDL.productExists(pcode))
+                    foreach (BillDetailBL bdt in cart)
                     {
-                        int quantity = Convert.ToInt32(quantityT.Text.ToString());
-                        BillDetailBL billDetail = new BillDetailBL(pcode, quantity);
-                        cart.Add(billDetail);
-                        ShowDetails();
+                        if (bdt.ProductCode == pcode)
+                        {
+                            bdt.Quantity += Convert.ToInt32(quantityT.Text.ToString());
+                            ShowDetails();
+                            entered = true;
+                            break;
+                        }
                     }
-                    else
+                    if (entered == false)
                     {
-                        MessageBox.Show("Product does not exist.");
+                        if (ProductDL.productExists(pcode))
+                        {
+                            int quantity = Convert.ToInt32(quantityT.Text.ToString());
+                            BillDetailBL billDetail = new BillDetailBL(pcode, quantity);
+                            cart.Add(billDetail);
+                            ShowDetails();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Product does not exist.");
+                        }
                     }
                 }
                 catch (Exception ex)

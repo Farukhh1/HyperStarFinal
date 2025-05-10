@@ -45,7 +45,7 @@ namespace HyperstarManagementSystem.UI
             try
             {
                 string supplierName = name.Text.ToString();
-                string supplierPhone = contact.Text.ToString();
+                string supplierPhone = "+92-" + contact.Text.ToString();
                 string supplierAddress = city.Text.ToString();
                 SupplierBL sp = new SupplierBL(supplierName, supplierAddress, supplierPhone);
                 SupplierDL.Add(sp);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.Report;
 
 namespace HyperstarManagementSystem.UI
 {
@@ -19,7 +20,7 @@ namespace HyperstarManagementSystem.UI
         }
         private void getRows()
         {
-            employeeView.DataSource = BillsDL.GetAll();
+            employeeView.DataSource = BillsDL.GetBillViewTable(1);
             employeeView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             employeeView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             employeeView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -35,12 +36,23 @@ namespace HyperstarManagementSystem.UI
             if (BillDetails.Text == "Details")
             {
                 employeeView.DataSource = BillDetailDL.GetBilldetailsByBillID((int)employeeView.CurrentRow.Cells[0].Value);
+                employeeView.Columns[0].Visible = false;
+                employeeView.Columns[1].Visible = false;
                 BillDetails.Text = "Back";
             }
             else
             {
                 getRows();
                 BillDetails.Text = "Details";
+            }
+        }
+
+        private void btnPrintReport_Click(object sender, EventArgs e)
+        {
+            var form = this.FindForm() as Cashier;
+            if (form != null)
+            {
+                form.LoadUserControl(new BillReport((int)employeeView.CurrentRow.Cells[0].Value));
             }
         }
     }

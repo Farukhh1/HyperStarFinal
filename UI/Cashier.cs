@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.Report;
 
 namespace HyperstarManagementSystem.UI
 {
@@ -75,5 +76,13 @@ namespace HyperstarManagementSystem.UI
             Login login = new Login();
             login.Show();
         }
+        public void LoadUserControl(UserControl uc)
+        {
+            this.mainContentPanel.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            this.mainContentPanel.Controls.Add(uc);
+            
+        }
+
     }
 }

@@ -88,9 +88,6 @@ namespace HyperstarManagementSystem
 
         }
 
-        private void Report_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

@@ -44,6 +44,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.employeeView)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -73,7 +74,9 @@
             this.employeeView.Dock = System.Windows.Forms.DockStyle.Top;
             this.employeeView.GridColor = System.Drawing.Color.Green;
             this.employeeView.Location = new System.Drawing.Point(0, 0);
+            this.employeeView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.employeeView.Name = "employeeView";
+            this.employeeView.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,7 +91,7 @@
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.employeeView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.employeeView.RowTemplate.Height = 28;
-            this.employeeView.Size = new System.Drawing.Size(976, 391);
+            this.employeeView.Size = new System.Drawing.Size(868, 313);
             this.employeeView.TabIndex = 28;
             this.employeeView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.employeeView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -103,7 +106,7 @@
             this.employeeView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.employeeView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.employeeView.ThemeStyle.HeaderStyle.Height = 40;
-            this.employeeView.ThemeStyle.ReadOnly = false;
+            this.employeeView.ThemeStyle.ReadOnly = true;
             this.employeeView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.employeeView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.employeeView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,9 +123,9 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(24, 122);
+            this.label2.Location = new System.Drawing.Point(21, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(72, 27);
+            this.label2.Size = new System.Drawing.Size(61, 23);
             this.label2.TabIndex = 51;
             this.label2.Text = "Phone";
             // 
@@ -131,9 +134,10 @@
             this.phone.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.phone.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.phone.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.phone.Location = new System.Drawing.Point(173, 123);
+            this.phone.Location = new System.Drawing.Point(161, 97);
+            this.phone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.phone.Name = "phone";
-            this.phone.Size = new System.Drawing.Size(220, 28);
+            this.phone.Size = new System.Drawing.Size(196, 24);
             this.phone.TabIndex = 52;
             // 
             // label4
@@ -142,9 +146,9 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(24, 181);
+            this.label4.Location = new System.Drawing.Point(21, 145);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 27);
+            this.label4.Size = new System.Drawing.Size(76, 23);
             this.label4.TabIndex = 53;
             this.label4.Text = "Address";
             // 
@@ -153,9 +157,10 @@
             this.Address.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.Address.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Address.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Address.Location = new System.Drawing.Point(173, 181);
+            this.Address.Location = new System.Drawing.Point(161, 144);
+            this.Address.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Address.Name = "Address";
-            this.Address.Size = new System.Drawing.Size(220, 28);
+            this.Address.Size = new System.Drawing.Size(196, 24);
             this.Address.TabIndex = 54;
             // 
             // label1
@@ -164,9 +169,9 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(24, 65);
+            this.label1.Location = new System.Drawing.Point(21, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 27);
+            this.label1.Size = new System.Drawing.Size(93, 23);
             this.label1.TabIndex = 55;
             this.label1.Text = "Full Name";
             // 
@@ -175,9 +180,10 @@
             this.name.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.name.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.name.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.name.Location = new System.Drawing.Point(173, 66);
+            this.name.Location = new System.Drawing.Point(161, 52);
+            this.name.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.name.Name = "name";
-            this.name.Size = new System.Drawing.Size(220, 28);
+            this.name.Size = new System.Drawing.Size(196, 24);
             this.name.TabIndex = 56;
             // 
             // AddButton
@@ -191,9 +197,10 @@
             this.AddButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
             this.AddButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.AddButton.ForeColor = System.Drawing.Color.White;
-            this.AddButton.Location = new System.Drawing.Point(616, 211);
+            this.AddButton.Location = new System.Drawing.Point(548, 169);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(189, 58);
+            this.AddButton.Size = new System.Drawing.Size(168, 46);
             this.AddButton.TabIndex = 61;
             this.AddButton.Text = "Add";
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -202,11 +209,12 @@
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.Gray;
-            this.textBox2.Location = new System.Drawing.Point(463, 66);
+            this.textBox2.Location = new System.Drawing.Point(455, 48);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(324, 28);
+            this.textBox2.Size = new System.Drawing.Size(261, 27);
             this.textBox2.TabIndex = 71;
             this.textBox2.Text = "search";
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
@@ -221,9 +229,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.Green;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(821, 53);
+            this.guna2Button1.Location = new System.Drawing.Point(730, 42);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(132, 41);
+            this.guna2Button1.Size = new System.Drawing.Size(117, 33);
             this.guna2Button1.TabIndex = 72;
             this.guna2Button1.Text = "Search";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -231,6 +240,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.AddButton);
@@ -241,19 +251,34 @@
             this.panel1.Controls.Add(this.phone);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 391);
+            this.panel1.Location = new System.Drawing.Point(0, 313);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(976, 349);
+            this.panel1.Size = new System.Drawing.Size(868, 279);
             this.panel1.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(105, 98);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 21);
+            this.label3.TabIndex = 73;
+            this.label3.Text = "+92-";
             // 
             // CustomerAdd
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.employeeView);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CustomerAdd";
-            this.Size = new System.Drawing.Size(976, 740);
+            this.Size = new System.Drawing.Size(868, 592);
             ((System.ComponentModel.ISupportInitialize)(this.employeeView)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -274,5 +299,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
     }
 }

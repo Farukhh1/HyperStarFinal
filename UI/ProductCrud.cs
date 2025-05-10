@@ -31,7 +31,7 @@ namespace HyperstarManagementSystem
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if (tbPCode.Text != "" && tbName.Text != "" && tbPrice.Text != "" && tbStock.Text != "")
+            if (tbPCode.Text != "" && tbName.Text != "" && tbPrice.Text != "" && tbStock.Text != "" && cbManufacturer.Text != "Select" && cbManufacturer.Text != "" && cbSupplier.Text != "Select" && cbSupplier.Text != "" && dept.Text != "Select" && dept.Text != "")
             {
                 try
                 {
@@ -99,7 +99,7 @@ namespace HyperstarManagementSystem
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            if (tbPCode.Text != "" && tbName.Text != "" && tbPrice.Text != "" && tbStock.Text != "")
+            if (tbPCode.Text != "" && tbName.Text != "" && tbPrice.Text != "" && tbStock.Text != "" && cbManufacturer.Text != "Select" && cbManufacturer.Text != "" && cbSupplier.Text != "Select" && cbSupplier.Text != "" && dept.Text != "Select" && dept.Text != "")
             {
                 try
                 {

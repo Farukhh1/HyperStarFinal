@@ -62,7 +62,9 @@
             this.ProductView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProductView.GridColor = System.Drawing.Color.Green;
             this.ProductView.Location = new System.Drawing.Point(0, 0);
+            this.ProductView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ProductView.Name = "ProductView";
+            this.ProductView.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -81,7 +83,7 @@
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ProductView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ProductView.RowTemplate.Height = 28;
-            this.ProductView.Size = new System.Drawing.Size(976, 740);
+            this.ProductView.Size = new System.Drawing.Size(868, 592);
             this.ProductView.TabIndex = 23;
             this.ProductView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.ProductView.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -96,7 +98,7 @@
             this.ProductView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.ProductView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.ProductView.ThemeStyle.HeaderStyle.Height = 40;
-            this.ProductView.ThemeStyle.ReadOnly = false;
+            this.ProductView.ThemeStyle.ReadOnly = true;
             this.ProductView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.ProductView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.ProductView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -108,12 +110,13 @@
             // 
             // ProductsView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Controls.Add(this.ProductView);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ProductsView";
-            this.Size = new System.Drawing.Size(976, 740);
+            this.Size = new System.Drawing.Size(868, 592);
             this.Load += new System.EventHandler(this.ProductsView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProductView)).EndInit();
             this.ResumeLayout(false);

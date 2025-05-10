@@ -34,10 +34,15 @@ namespace HyperstarManagementSystem
             }
             return bills;
         }
-        
+        public static DataTable GetBillViewTable(int empid)
+        {
+            string qry = $"call Get_Bill_View({empid})";
+            DataTable dt = DataBaseHelper.GetTable(qry);
+            return dt;
+        }
         public static bool SaveBillTransaction(BillsBL bill)
         {
-            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=tayyab1075;";
+            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=farrukh09;";
 
             using (var conn = new MySqlConnection(connStr))
             {
@@ -108,7 +113,7 @@ namespace HyperstarManagementSystem
         }
         public static BillReportBL GetBillReport(int billId)
         {
-            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=tayyab1075;";
+            string connStr = "server=localhost;user=root;database=hyperstarfinal;password=farrukh09;";
             var report = new BillReportBL();
 
             using (var conn = new MySqlConnection(connStr))

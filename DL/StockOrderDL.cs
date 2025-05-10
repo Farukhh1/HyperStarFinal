@@ -37,7 +37,7 @@ namespace HyperstarManagementSystem.DL
         }
         public static DataTable getAllStocks()
         {
-            string qry = "select product_code,name,manufacturer,in_stock from products where deleted = 0";
+            string qry = "select * from VIEW_All_Stocks";
             DataTable dt = DataBaseHelper.GetTable(qry);
             return dt;
         }

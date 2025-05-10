@@ -40,7 +40,8 @@ namespace HyperstarManagementSystem.UI
             {
                 try
                 {
-                    CustomerBL customer = new CustomerBL(0, name.Text, phone.Text, Address.Text);
+                    string phoneNumber = "+92-" + phone.Text.ToString();
+                    CustomerBL customer = new CustomerBL(0, name.Text, phoneNumber, Address.Text);
                     CustomerDL.AddCustomer(customer);
                     getRows();
                     clear();
