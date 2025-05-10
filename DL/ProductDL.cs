@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 using HyperstarManagementSystem.BL;
 using System.ComponentModel;
+using MySql.Data.MySqlClient;
 
 namespace HyperstarManagementSystem.DL
 {
@@ -102,6 +103,47 @@ namespace HyperstarManagementSystem.DL
         {
             string qry = $"update products set deleted = 1 where product_code = '{productCode}'";
             DataBaseHelper.ExecuteDML(qry);
+        }
+        public static bool productExists(string productCode)
+        {
+            string qry = "select product_code from products where deleted = 0";
+            DataTable dt = DataBaseHelper.GetTable(qry);
+            foreach (DataRow dr in dt.Rows)
+            {
+                string pcode = dr["product_code"].ToString();
+                if (pcode == productCode)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public static List<string> GetMatchingProductCodes(string input)
+        {
+            var result = new List<string>();
+
+            if (string.IsNullOrWhiteSpace(input))
+                return result;
+
+            string connStr = "server=localhost;user=root;password=farrukh09;database=hyperstarfinal;";
+            using (var conn = new MySqlConnection(connStr))
+            {
+                conn.Open();
+                string query = "SELECT product_code FROM products WHERE deleted = 0 AND product_code LIKE @input";
+                using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@input", input + "%");
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            result.Add(reader.GetString(0));
+                        }
+                    }
+                }
+            }
+
+            return result;
         }
     }
 }

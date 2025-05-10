@@ -31,23 +31,30 @@ namespace HyperstarManagementSystem
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            try
+            if (tbPCode.Text != "" && tbName.Text != "" && tbPrice.Text != "" && tbStock.Text != "")
             {
-                string productCode = tbPCode.Text.ToString();
-                string productName = tbName.Text.ToString();
-                decimal price = Convert.ToDecimal(tbPrice.Text.ToString());
-                int in_stock = Convert.ToInt32(tbStock.Text.ToString());
-                int supplierID = SupplierDL.GetID(cbSupplier.SelectedItem.ToString());
-                string manufacturer = cbManufacturer.SelectedItem.ToString();
-                int dept_id = ProductDL.getDeptIdByName(dept.SelectedItem.ToString());
-                ProductBL p = new ProductBL(productCode, productName, price, in_stock, supplierID, manufacturer, dept_id);
-                ProductDL.Add(p);
-                MessageBox.Show("Product added successfully");
-                ShowRows();
+                try
+                {
+                    string productCode = tbPCode.Text.ToString();
+                    string productName = tbName.Text.ToString();
+                    decimal price = Convert.ToDecimal(tbPrice.Text.ToString());
+                    int in_stock = Convert.ToInt32(tbStock.Text.ToString());
+                    int supplierID = SupplierDL.GetID(cbSupplier.SelectedItem.ToString());
+                    string manufacturer = cbManufacturer.SelectedItem.ToString();
+                    int dept_id = ProductDL.getDeptIdByName(dept.SelectedItem.ToString());
+                    ProductBL p = new ProductBL(productCode, productName, price, in_stock, supplierID, manufacturer, dept_id);
+                    ProductDL.Add(p);
+                    MessageBox.Show("Product added successfully");
+                    ShowRows();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Please fill all fields");
             }
         }
 
@@ -70,38 +77,52 @@ namespace HyperstarManagementSystem
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            try
+            if (tbPCode.Text != "")
             {
-                string productCode = tbPCode.Text.ToString();
-                ProductDL.Delete(productCode);
-                MessageBox.Show("Product deleted successfully");
-                ShowRows();
+                try
+                {
+                    string productCode = tbPCode.Text.ToString();
+                    ProductDL.Delete(productCode);
+                    MessageBox.Show("Product deleted successfully");
+                    ShowRows();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Please specify Product Code");
             }
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            try
+            if (tbPCode.Text != "" && tbName.Text != "" && tbPrice.Text != "" && tbStock.Text != "")
             {
-                string productCode = tbPCode.Text.ToString();
-                string productName = tbName.Text.ToString();
-                decimal price = Convert.ToDecimal(tbPrice.Text.ToString());
-                int in_stock = Convert.ToInt32(tbStock.Text.ToString());
-                int supplierID = SupplierDL.GetID(cbSupplier.SelectedItem.ToString());
-                string manufacturer = cbManufacturer.SelectedItem.ToString();
-                int dept_id = ProductDL.getDeptIdByName(dept.SelectedItem.ToString());
-                ProductBL p = new ProductBL(productCode, productName, price, in_stock, supplierID, manufacturer, dept_id);
-                ProductDL.Update(p);
-                MessageBox.Show("Product updated successfully");
-                ShowRows();
+                try
+                {
+                    string productCode = tbPCode.Text.ToString();
+                    string productName = tbName.Text.ToString();
+                    decimal price = Convert.ToDecimal(tbPrice.Text.ToString());
+                    int in_stock = Convert.ToInt32(tbStock.Text.ToString());
+                    int supplierID = SupplierDL.GetID(cbSupplier.SelectedItem.ToString());
+                    string manufacturer = cbManufacturer.SelectedItem.ToString();
+                    int dept_id = ProductDL.getDeptIdByName(dept.SelectedItem.ToString());
+                    ProductBL p = new ProductBL(productCode, productName, price, in_stock, supplierID, manufacturer, dept_id);
+                    ProductDL.Update(p);
+                    MessageBox.Show("Product updated successfully");
+                    ShowRows();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Please fill all fields");
             }
         }
 
@@ -125,7 +146,7 @@ namespace HyperstarManagementSystem
 
         private void ProductCrud_VisibleChanged(object sender, EventArgs e)
         {
-            if(this.Visible == true)
+            if (this.Visible == true)
             {
                 try
                 {

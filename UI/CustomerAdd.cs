@@ -36,16 +36,23 @@ namespace HyperstarManagementSystem.UI
         }
         private void AddButton_Click(object sender, EventArgs e)
         {
-            try
+            if (name.Text != "" && phone.Text != "" && Address.Text != "")
             {
-                CustomerBL customer = new CustomerBL(0,name.Text, phone.Text, Address.Text);
-                CustomerDL.AddCustomer(customer);
-                getRows();
-                clear();
+                try
+                {
+                    CustomerBL customer = new CustomerBL(0, name.Text, phone.Text, Address.Text);
+                    CustomerDL.AddCustomer(customer);
+                    getRows();
+                    clear();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show($"An error occurred: {ex.Message}");
+                MessageBox.Show("Please fill all fields.");
             }
         }
 
