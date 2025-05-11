@@ -18,6 +18,7 @@ namespace HyperstarManagementSystem.UI
         public bool btnClick = false;
         private BillsBL currentBill = null;
         private List<BillDetailBL> cart = new List<BillDetailBL>();
+        EmployeeBL emp = null;
         public void DefaultVisibility()
         {
             ProductCodeL.Visible = true;
@@ -43,6 +44,7 @@ namespace HyperstarManagementSystem.UI
             ResponseT.Visible = false;
             CashRecievedL.Visible = false;
             CashRecievedT.Visible = false;
+            label3.Visible = false;
 
         }
 
@@ -70,12 +72,13 @@ namespace HyperstarManagementSystem.UI
             ResponseT.Visible = true;
             CashRecievedL.Visible = true;
             CashRecievedT.Visible = true;
+            label3.Visible = true;
         }
-        public BillCrud()
+        public BillCrud(EmployeeBL emp)
         {
             InitializeComponent();
             DefaultVisibility();
-
+            this.emp = emp;
         }
 
         private void ShowDetails()
@@ -128,7 +131,7 @@ namespace HyperstarManagementSystem.UI
 
         private void NextButton_Click_2(object sender, EventArgs e)
         {
-            if (cart != null)
+            if (cart.Count != 0)
             {
                 string pcode = CodeT.Text;
                 changeVisibility();
@@ -146,13 +149,13 @@ namespace HyperstarManagementSystem.UI
             {
                 try
                 {
-                    int customerID = CustomerDL.getCustomerIdByPhone(ContactT.Text.ToString());
+                    int customerID = CustomerDL.getCustomerIdByPhone("+92-" + ContactT.Text.ToString());
                     decimal cashRecieved = Convert.ToDecimal(CashRecievedT.Text.ToString());
                     string response = ResponseT.Text.ToString();
                     string billDate = dateTimePicker1.Value.ToString("yyyy-MM-dd");
 
                     PaymentBL paym = new PaymentBL(cashRecieved);
-                    currentBill = new BillsBL(customerID, 1, billDate, cart, paym, response);
+                    currentBill = new BillsBL(customerID, emp.ID, billDate, cart, paym, response);
                     if (BillsDL.SaveBillTransaction(currentBill))
                     {
                         MessageBox.Show("Bill Saved Successfully");
@@ -184,7 +187,7 @@ namespace HyperstarManagementSystem.UI
         private void AddButton_Click(object sender, EventArgs e)
         {
             bool entered = false;
-            if (CodeT.Text != "" && quantityT.Text != "" && cmbSearchProduct.Text != "")
+            if (CodeT.Text != "" && quantityT.Text != "")
             {
                 try
                 {
@@ -322,7 +325,12 @@ namespace HyperstarManagementSystem.UI
 
         private void cmbSearchProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CodeT.Text = cmbSearchProduct.SelectedItem.ToString();
+            try
+            {
+                CodeT.Text = cmbSearchProduct.SelectedItem.ToString();
+            }
+            catch (Exception ex)
+            { MessageBox.Show("Error: " + ex.Message); }
         }
     }
 }

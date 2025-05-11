@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.DL;
 using HyperstarManagementSystem.UI;
+using HyperstarManagementSystem.BL;
 
 namespace HyperstarManagementSystem
 {
@@ -25,10 +27,47 @@ namespace HyperstarManagementSystem
 
         private void LoginButton_Click(object sender, EventArgs e)
         {
-
-            this.Hide();
-            AdminForm adminForm = new AdminForm();
-            adminForm.Show();
+            if (tbUsername.Text != "" && tbPassword.Text != "")
+            {
+                try
+                {
+                    if(tbUsername.Text == "admin" && tbPassword.Text == "admin")
+                    {
+                        AdminForm admin = new AdminForm();
+                        this.Hide();
+                        admin.Show();
+                    }
+                    else if (EmployeeDL.CheckUser(tbUsername.Text, tbPassword.Text) == null)
+                    {
+                        MessageBox.Show("Invalid username or password!");
+                    }
+                    else
+                    {
+                        EmployeeBL emp = EmployeeDL.CheckUser(tbUsername.Text, tbPassword.Text);
+                        
+                        if (emp.role_id == 1)
+                        {
+                            Cashier cashr = new Cashier(emp);
+                            this.Hide();
+                            cashr.Show();
+                        }
+                        else
+                        {
+                            InventoryManager inv = new InventoryManager(emp);
+                            this.Hide();
+                            inv.Show();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred: " + ex.Message);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter username and password!");
+            }
 
         }
 
@@ -44,22 +83,9 @@ namespace HyperstarManagementSystem
 
         private void guna2CustomCheckBox1_Click(object sender, EventArgs e)
         {
-            textBox2.PasswordChar = guna2CustomCheckBox1.Checked ? '\0' : '*';
+            tbPassword.PasswordChar = guna2CustomCheckBox1.Checked ? '\0' : '*';
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            InventoryManager inventoryManager = new InventoryManager();
-            inventoryManager.Show();
-
-        }
-
-        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            Cashier customer = new Cashier();
-            customer.Show();
-        }
+        
     }
 }

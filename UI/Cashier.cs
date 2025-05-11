@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.BL;
 using HyperstarManagementSystem.Report;
 
 namespace HyperstarManagementSystem.UI
 {
     public partial class Cashier : Form
     {
-        public Cashier()
+        public EmployeeBL emp = null;
+        public Cashier(EmployeeBL emp)
         {
             InitializeComponent();
+            this.emp = emp;
+            label8.Text = emp.username;
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -45,7 +49,7 @@ namespace HyperstarManagementSystem.UI
         private void EmployeeCrudButton_Click(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
-            BillView billView = new BillView();
+            BillView billView = new BillView(emp);
             billView.Dock = DockStyle.Fill;
             // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(billView);
@@ -74,7 +78,7 @@ namespace HyperstarManagementSystem.UI
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
-            BillCrud BillControl = new BillCrud();
+            BillCrud BillControl = new BillCrud(emp);
             BillControl.Dock = DockStyle.Fill;
 
             // Add it to the container panel (assumed named mainContentPanel)

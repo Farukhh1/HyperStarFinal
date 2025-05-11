@@ -42,38 +42,52 @@ namespace HyperstarManagementSystem.UI
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            try
+            if (name.Text != "" && contact.Text != "" && city.Text != "")
             {
-                string supplierName = name.Text.ToString();
-                string supplierPhone = "+92-" + contact.Text.ToString();
-                string supplierAddress = city.Text.ToString();
-                SupplierBL sp = new SupplierBL(supplierName, supplierAddress, supplierPhone);
-                SupplierDL.Add(sp);
-                MessageBox.Show("Supplier added successfully");
-                ShowRows();
+                try
+                {
+                    string supplierName = name.Text.ToString();
+                    string supplierPhone = "+92-" + contact.Text.ToString();
+                    string supplierAddress = city.Text.ToString();
+                    SupplierBL sp = new SupplierBL(supplierName, supplierAddress, supplierPhone);
+                    SupplierDL.Add(sp);
+                    MessageBox.Show("Supplier added successfully");
+                    ShowRows();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Please fill all fields");
             }
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            try
+            if (name.Text != "" && contact.Text != "" && city.Text != "")
             {
-                int supplierID = Convert.ToInt32(SupplierView.SelectedRows[0].Cells[0].Value);
-                string supplierName = name.Text.ToString();
-                string supplierPhone = contact.Text.ToString();
-                string supplierAddress = city.Text.ToString();
-                SupplierBL sp = new SupplierBL(supplierID, supplierName, supplierAddress, supplierPhone);
-                SupplierDL.Update(sp);
-                MessageBox.Show("Supplier updated successfully");
-                ShowRows();
+                try
+                {
+                    int supplierID = Convert.ToInt32(SupplierView.SelectedRows[0].Cells[0].Value);
+                    string supplierName = name.Text.ToString();
+                    string supplierPhone = contact.Text.ToString();
+                    string supplierAddress = city.Text.ToString();
+                    SupplierBL sp = new SupplierBL(supplierID, supplierName, supplierAddress, supplierPhone);
+                    SupplierDL.Update(sp);
+                    MessageBox.Show("Supplier updated successfully");
+                    ShowRows();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Please fill all fields");
             }
         }
 

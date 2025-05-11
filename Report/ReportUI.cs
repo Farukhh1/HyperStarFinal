@@ -92,6 +92,10 @@ namespace HyperstarManagementSystem.Reports
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.DataSources.Add(rds);
             }
+            else
+            {
+                MessageBox.Show("Please Select a Report");
+            }
             reportViewer1.RefreshReport();
         }
 

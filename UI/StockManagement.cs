@@ -7,16 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using HyperstarManagementSystem.BL;
 using HyperstarManagementSystem.DL;
+using Org.BouncyCastle.Math.EC;
 
 namespace HyperstarManagementSystem.UI
 {
     public partial class StockManagement : UserControl
     {
-        public StockManagement()
+        public EmployeeBL emp = null;
+        public StockManagement(EmployeeBL emp)
         {
             InitializeComponent();
+            this.emp = emp;
         }
 
         private void StockManagement_Load(object sender, EventArgs e)
@@ -42,55 +46,76 @@ namespace HyperstarManagementSystem.UI
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            try
+            if (tbPCode.Text != "" && tbStock.Text != "")
             {
-                string productCode = tbPCode.Text.ToString();
-                int stk = Convert.ToInt32(tbStock.Text.ToString());
-                string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-                StockOrderBL so = new StockOrderBL(1, productCode, date, "ADDED");
-                StockOrderDL.Add(productCode, stk, so);
-                MessageBox.Show("Stock Added.");
-                ShowRows();
+                try
+                {
+                    string productCode = tbPCode.Text.ToString();
+                    int stk = Convert.ToInt32(tbStock.Text.ToString());
+                    string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                    StockOrderBL so = new StockOrderBL(emp.ID, productCode, date, "ADDED");
+                    StockOrderDL.Add(productCode, stk, so);
+                    MessageBox.Show("Stock Added.");
+                    ShowRows();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Please fill all fields");
             }
         }
 
         private void ReduceButton_Click(object sender, EventArgs e)
         {
-            try
+            if (tbPCode.Text != "" && tbStock.Text != "")
             {
-                string productCode = tbPCode.Text.ToString();
-                int stk = Convert.ToInt32(tbStock.Text.ToString());
-                string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-                StockOrderBL so = new StockOrderBL(1, productCode, date, "REDUCED");
-                StockOrderDL.Reduce(productCode, stk, so);
-                MessageBox.Show("Stock Reduced.");
-                ShowRows();
+                try
+                {
+                    string productCode = tbPCode.Text.ToString();
+                    int stk = Convert.ToInt32(tbStock.Text.ToString());
+                    string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                    StockOrderBL so = new StockOrderBL(emp.ID, productCode, date, "REDUCED");
+                    StockOrderDL.Reduce(productCode, stk, so);
+                    MessageBox.Show("Stock Reduced.");
+                    ShowRows();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Please fill all fields");
             }
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            try
+            if (tbPCode.Text != "" && tbStock.Text != "")
             {
-                string productCode = tbPCode.Text.ToString();
-                int stk = Convert.ToInt32(tbStock.Text.ToString());
-                string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
-                StockOrderBL so = new StockOrderBL(1, productCode, date, "UPDATED");
-                StockOrderDL.Update(productCode, stk, so);
-                MessageBox.Show("Stock Updated.");
-                ShowRows();
+                try
+                {
+                    string productCode = tbPCode.Text.ToString();
+                    int stk = Convert.ToInt32(tbStock.Text.ToString());
+                    string date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+                    StockOrderBL so = new StockOrderBL(emp.ID, productCode, date, "UPDATED");
+                    StockOrderDL.Update(productCode, stk, so);
+                    MessageBox.Show("Stock Updated.");
+                    ShowRows();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Please fill all fields");
             }
         }
 

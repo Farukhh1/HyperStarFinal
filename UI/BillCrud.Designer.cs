@@ -53,12 +53,14 @@
             this.quantityT = new System.Windows.Forms.TextBox();
             this.QuantityL = new System.Windows.Forms.Label();
             this.BillViewPanel = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label3 = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BillViewPanel)).BeginInit();
             this.SuspendLayout();
             // 
             // Panel1
             // 
+            this.Panel1.Controls.Add(this.label3);
             this.Panel1.Controls.Add(this.cmbSearchProduct);
             this.Panel1.Controls.Add(this.ResponseT);
             this.Panel1.Controls.Add(this.ResponseL);
@@ -424,6 +426,19 @@
             this.BillViewPanel.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.BillViewPanel.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.BillViewPanel_CellContentClick);
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(547, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 21);
+            this.label3.TabIndex = 91;
+            this.label3.Text = "+92-";
+            // 
             // BillCrud
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -464,5 +479,6 @@
         private System.Windows.Forms.Label CashRecievedL;
         private System.Windows.Forms.ComboBox cmbSearchProduct;
         private Guna.UI2.WinForms.Guna2DataGridView BillViewPanel;
+        private System.Windows.Forms.Label label3;
     }
 }
