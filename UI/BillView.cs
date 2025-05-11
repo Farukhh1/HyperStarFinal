@@ -7,20 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HyperstarManagementSystem.BL;
 using HyperstarManagementSystem.Report;
 
 namespace HyperstarManagementSystem.UI
 {
     public partial class BillView : UserControl
     {
+        public EmployeeBL emp = null;
+        public BillView(EmployeeBL emp)
+        {
+            InitializeComponent();
+            this.emp = emp;
+            getRows();
+        }
         public BillView()
         {
             InitializeComponent();
-            getRows();
         }
         private void getRows()
         {
-            employeeView.DataSource = BillsDL.GetBillViewTable(1);
+            if(emp == null)
+            {
+                employeeView.DataSource = BillsDL.GetBillViewTable();
+            }
+            else
+            {
+                employeeView.DataSource = BillsDL.GetBillViewTable(emp.ID);
+            }
             employeeView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             employeeView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             employeeView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;

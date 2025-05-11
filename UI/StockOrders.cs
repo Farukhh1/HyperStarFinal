@@ -8,19 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HyperstarManagementSystem.DL;
+using HyperstarManagementSystem.BL;
 
 namespace HyperstarManagementSystem.UI
 {
     public partial class StockOrders : UserControl
     {
-        public StockOrders()
+        public EmployeeBL emp = null;
+        public StockOrders(EmployeeBL emp)
         {
             InitializeComponent();
+            this.emp = emp;
         }
 
         private void StockOrders_Load(object sender, EventArgs e)
         {
-            StockOrdersView.DataSource = StockOrderDL.GetStockOrdersByEmpid(1);
+            StockOrdersView.DataSource = StockOrderDL.GetStockOrdersByEmpid(emp.ID);
             StockOrdersView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             StockOrdersView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             StockOrdersView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -32,7 +35,7 @@ namespace HyperstarManagementSystem.UI
             if (this.Visible == true)
             {
                 StockOrdersView.DataSource = null;
-                StockOrdersView.DataSource = StockOrderDL.GetStockOrdersByEmpid(1);
+                StockOrdersView.DataSource = StockOrderDL.GetStockOrdersByEmpid(emp.ID);
 
             }
         }

@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HyperstarManagementSystem.UI;
+using HyperstarManagementSystem.BL;
 
 namespace HyperstarManagementSystem
 {
     public partial class InventoryManager : Form
     {
-        public InventoryManager()
+        public EmployeeBL emp = null;
+        public InventoryManager(EmployeeBL emp)
         {
             InitializeComponent();
+            this.emp = emp;
+            label8.Text = emp.username;
         }
 
         private void EmployeeCrudButton_Click(object sender, EventArgs e)
@@ -59,7 +63,7 @@ namespace HyperstarManagementSystem
         private void Customers_Click(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
-            StockManagement stockManagement = new StockManagement();
+            StockManagement stockManagement = new StockManagement(emp);
             stockManagement.Dock = DockStyle.Fill;
             this.mainContentPanel.Controls.Add(stockManagement);
         }
@@ -67,7 +71,7 @@ namespace HyperstarManagementSystem
         private void EmployeeCrudButton_Click_1(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
-            StockOrders so = new StockOrders();
+            StockOrders so = new StockOrders(emp);
             so.Dock = DockStyle.Fill;
             this.mainContentPanel.Controls.Add(so);
         }

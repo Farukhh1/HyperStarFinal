@@ -82,10 +82,10 @@
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel4.ForeColor = System.Drawing.Color.Black;
-            this.panel4.Location = new System.Drawing.Point(0, 100);
+            this.panel4.Location = new System.Drawing.Point(0, 80);
             this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(202, 740);
+            this.panel4.Size = new System.Drawing.Size(180, 592);
             this.panel4.TabIndex = 0;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
@@ -98,9 +98,10 @@
             this.bills.FillColor = System.Drawing.Color.Green;
             this.bills.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bills.ForeColor = System.Drawing.Color.White;
-            this.bills.Location = new System.Drawing.Point(14, 467);
+            this.bills.Location = new System.Drawing.Point(11, 374);
+            this.bills.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bills.Name = "bills";
-            this.bills.Size = new System.Drawing.Size(180, 45);
+            this.bills.Size = new System.Drawing.Size(160, 36);
             this.bills.TabIndex = 17;
             this.bills.Text = "Bills";
             this.bills.Click += new System.EventHandler(this.bills_Click);
@@ -114,9 +115,10 @@
             this.guna2Button4.FillColor = System.Drawing.Color.Green;
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(14, 683);
+            this.guna2Button4.Location = new System.Drawing.Point(12, 546);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button4.Size = new System.Drawing.Size(160, 36);
             this.guna2Button4.TabIndex = 16;
             this.guna2Button4.Text = "BACK";
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
@@ -130,9 +132,10 @@
             this.Report.FillColor = System.Drawing.Color.Green;
             this.Report.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Report.ForeColor = System.Drawing.Color.White;
-            this.Report.Location = new System.Drawing.Point(12, 539);
+            this.Report.Location = new System.Drawing.Point(11, 429);
+            this.Report.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Report.Name = "Report";
-            this.Report.Size = new System.Drawing.Size(180, 45);
+            this.Report.Size = new System.Drawing.Size(160, 36);
             this.Report.TabIndex = 15;
             this.Report.Text = "Report";
             this.Report.Click += new System.EventHandler(this.guna2Button1_Click_1);
@@ -146,9 +149,10 @@
             this.Customers.FillColor = System.Drawing.Color.Green;
             this.Customers.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Customers.ForeColor = System.Drawing.Color.White;
-            this.Customers.Location = new System.Drawing.Point(16, 340);
+            this.Customers.Location = new System.Drawing.Point(11, 265);
+            this.Customers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Customers.Name = "Customers";
-            this.Customers.Size = new System.Drawing.Size(180, 45);
+            this.Customers.Size = new System.Drawing.Size(160, 36);
             this.Customers.TabIndex = 14;
             this.Customers.Text = "Customers";
             this.Customers.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -162,9 +166,10 @@
             this.Products.FillColor = System.Drawing.Color.Green;
             this.Products.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Products.ForeColor = System.Drawing.Color.White;
-            this.Products.Location = new System.Drawing.Point(14, 404);
+            this.Products.Location = new System.Drawing.Point(11, 320);
+            this.Products.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Products.Name = "Products";
-            this.Products.Size = new System.Drawing.Size(180, 45);
+            this.Products.Size = new System.Drawing.Size(160, 36);
             this.Products.TabIndex = 13;
             this.Products.Text = "Products";
             this.Products.Click += new System.EventHandler(this.guna2Button2_Click);
@@ -178,9 +183,10 @@
             this.EmployeeCrudButton.FillColor = System.Drawing.Color.Green;
             this.EmployeeCrudButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeCrudButton.ForeColor = System.Drawing.Color.White;
-            this.EmployeeCrudButton.Location = new System.Drawing.Point(14, 267);
+            this.EmployeeCrudButton.Location = new System.Drawing.Point(12, 211);
+            this.EmployeeCrudButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EmployeeCrudButton.Name = "EmployeeCrudButton";
-            this.EmployeeCrudButton.Size = new System.Drawing.Size(180, 45);
+            this.EmployeeCrudButton.Size = new System.Drawing.Size(160, 36);
             this.EmployeeCrudButton.TabIndex = 12;
             this.EmployeeCrudButton.Text = "Employees";
             this.EmployeeCrudButton.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -190,9 +196,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(36, 67);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 54);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(126, 125);
+            this.pictureBox1.Size = new System.Drawing.Size(112, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
@@ -203,12 +210,13 @@
             this.guna2Shapes2.BackColor = System.Drawing.Color.Green;
             this.guna2Shapes2.BorderColor = System.Drawing.Color.Green;
             this.guna2Shapes2.FillColor = System.Drawing.Color.Green;
-            this.guna2Shapes2.Location = new System.Drawing.Point(-3, 84);
+            this.guna2Shapes2.Location = new System.Drawing.Point(-3, 67);
+            this.guna2Shapes2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Shapes2.Name = "guna2Shapes2";
             this.guna2Shapes2.PolygonSkip = 1;
             this.guna2Shapes2.Rotate = 0F;
             this.guna2Shapes2.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes2.Size = new System.Drawing.Size(202, 16);
+            this.guna2Shapes2.Size = new System.Drawing.Size(180, 13);
             this.guna2Shapes2.TabIndex = 4;
             this.guna2Shapes2.Text = "guna2Shapes2";
             this.guna2Shapes2.Zoom = 80;
@@ -219,12 +227,13 @@
             this.guna2Shapes3.BackColor = System.Drawing.Color.Green;
             this.guna2Shapes3.BorderColor = System.Drawing.Color.Green;
             this.guna2Shapes3.FillColor = System.Drawing.Color.Green;
-            this.guna2Shapes3.Location = new System.Drawing.Point(180, 0);
+            this.guna2Shapes3.Location = new System.Drawing.Point(160, 0);
+            this.guna2Shapes3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Shapes3.Name = "guna2Shapes3";
             this.guna2Shapes3.PolygonSkip = 1;
             this.guna2Shapes3.Rotate = 0F;
             this.guna2Shapes3.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes3.Size = new System.Drawing.Size(19, 91);
+            this.guna2Shapes3.Size = new System.Drawing.Size(17, 73);
             this.guna2Shapes3.TabIndex = 26;
             this.guna2Shapes3.Text = "guna2Shapes3";
             this.guna2Shapes3.Zoom = 80;
@@ -242,7 +251,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1178, 100);
+            this.panel2.Size = new System.Drawing.Size(1047, 80);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -254,10 +263,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(29, 30);
-            this.label6.Margin = new System.Windows.Forms.Padding(0, 3, 0, 3);
+            this.label6.Location = new System.Drawing.Point(26, 24);
+            this.label6.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 42);
+            this.label6.Size = new System.Drawing.Size(106, 36);
             this.label6.TabIndex = 14;
             this.label6.Text = "Admin";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,13 +276,13 @@
             // 
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label2.Font = new System.Drawing.Font("Stencil", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
-            this.label2.Padding = new System.Windows.Forms.Padding(190, 0, 0, 0);
-            this.label2.Size = new System.Drawing.Size(1178, 100);
+            this.label2.Padding = new System.Windows.Forms.Padding(169, 0, 0, 0);
+            this.label2.Size = new System.Drawing.Size(1047, 80);
             this.label2.TabIndex = 13;
             this.label2.Text = "Hyperstar Management System";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -295,9 +304,10 @@
             this.mainContentPanel.Controls.Add(this.label3);
             this.mainContentPanel.Controls.Add(this.label1);
             this.mainContentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainContentPanel.Location = new System.Drawing.Point(202, 100);
+            this.mainContentPanel.Location = new System.Drawing.Point(180, 80);
+            this.mainContentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.mainContentPanel.Name = "mainContentPanel";
-            this.mainContentPanel.Size = new System.Drawing.Size(976, 740);
+            this.mainContentPanel.Size = new System.Drawing.Size(867, 592);
             this.mainContentPanel.TabIndex = 3;
             this.mainContentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainContentPanel_Paint);
             // 
@@ -305,9 +315,10 @@
             // 
             this.pictureBox10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox10.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
-            this.pictureBox10.Location = new System.Drawing.Point(869, 47);
+            this.pictureBox10.Location = new System.Drawing.Point(771, 38);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(87, 103);
+            this.pictureBox10.Size = new System.Drawing.Size(77, 82);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox10.TabIndex = 11;
             this.pictureBox10.TabStop = false;
@@ -317,9 +328,10 @@
             // 
             this.pictureBox9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox9.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
-            this.pictureBox9.Location = new System.Drawing.Point(603, 34);
+            this.pictureBox9.Location = new System.Drawing.Point(535, 27);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(87, 103);
+            this.pictureBox9.Size = new System.Drawing.Size(77, 82);
             this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox9.TabIndex = 10;
             this.pictureBox9.TabStop = false;
@@ -329,9 +341,10 @@
             // 
             this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox8.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
-            this.pictureBox8.Location = new System.Drawing.Point(253, 34);
+            this.pictureBox8.Location = new System.Drawing.Point(224, 27);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(87, 103);
+            this.pictureBox8.Size = new System.Drawing.Size(77, 82);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox8.TabIndex = 9;
             this.pictureBox8.TabStop = false;
@@ -341,9 +354,10 @@
             // 
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox7.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
-            this.pictureBox7.Location = new System.Drawing.Point(78, 302);
+            this.pictureBox7.Location = new System.Drawing.Point(68, 242);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(87, 103);
+            this.pictureBox7.Size = new System.Drawing.Size(77, 82);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox7.TabIndex = 8;
             this.pictureBox7.TabStop = false;
@@ -353,9 +367,10 @@
             // 
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox6.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
-            this.pictureBox6.Location = new System.Drawing.Point(785, 232);
+            this.pictureBox6.Location = new System.Drawing.Point(697, 186);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(87, 103);
+            this.pictureBox6.Size = new System.Drawing.Size(77, 82);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox6.TabIndex = 7;
             this.pictureBox6.TabStop = false;
@@ -365,9 +380,10 @@
             // 
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox5.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
-            this.pictureBox5.Location = new System.Drawing.Point(183, 467);
+            this.pictureBox5.Location = new System.Drawing.Point(162, 374);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(87, 103);
+            this.pictureBox5.Size = new System.Drawing.Size(77, 82);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 6;
             this.pictureBox5.TabStop = false;
@@ -377,9 +393,10 @@
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox4.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(869, 448);
+            this.pictureBox4.Location = new System.Drawing.Point(771, 358);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(87, 103);
+            this.pictureBox4.Size = new System.Drawing.Size(77, 82);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 5;
             this.pictureBox4.TabStop = false;
@@ -389,9 +406,10 @@
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox3.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
-            this.pictureBox3.Location = new System.Drawing.Point(448, 467);
+            this.pictureBox3.Location = new System.Drawing.Point(397, 374);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(87, 103);
+            this.pictureBox3.Size = new System.Drawing.Size(77, 82);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 4;
             this.pictureBox3.TabStop = false;
@@ -401,9 +419,10 @@
             // 
             this.pictureBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBox2.Image = global::HyperstarManagementSystem.Properties.Resources.icons8_stars_100__1_;
-            this.pictureBox2.Location = new System.Drawing.Point(24, 76);
+            this.pictureBox2.Location = new System.Drawing.Point(20, 61);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(87, 103);
+            this.pictureBox2.Size = new System.Drawing.Size(77, 82);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -413,11 +432,11 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Goudy Stout", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
-            this.label4.Location = new System.Drawing.Point(436, 264);
+            this.label4.Location = new System.Drawing.Point(387, 211);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 71);
+            this.label4.Size = new System.Drawing.Size(60, 52);
             this.label4.TabIndex = 2;
             this.label4.Text = "to";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -426,11 +445,11 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Goudy Stout", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
-            this.label3.Location = new System.Drawing.Point(171, 358);
+            this.label3.Location = new System.Drawing.Point(151, 286);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(638, 71);
+            this.label3.Size = new System.Drawing.Size(228, 52);
             this.label3.TabIndex = 1;
             this.label3.Text = "HyperStar";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -439,24 +458,25 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Goudy Stout", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
-            this.label1.Location = new System.Drawing.Point(215, 175);
+            this.label1.Location = new System.Drawing.Point(190, 140);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(542, 71);
+            this.label1.Size = new System.Drawing.Size(225, 52);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AdminForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1178, 840);
+            this.ClientSize = new System.Drawing.Size(1047, 672);
             this.Controls.Add(this.mainContentPanel);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";

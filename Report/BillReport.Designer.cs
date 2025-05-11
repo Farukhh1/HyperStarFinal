@@ -40,7 +40,7 @@
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "HyperstarManagementSystem.Report.ProductReport.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(33, 24);
-            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.reportViewer1.Margin = new System.Windows.Forms.Padding(2);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(979, 494);
@@ -52,7 +52,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.reportViewer1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "BillReport";
             this.Size = new System.Drawing.Size(1046, 535);
             this.Load += new System.EventHandler(this.BillReport_Load);

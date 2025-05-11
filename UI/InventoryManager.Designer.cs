@@ -57,6 +57,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -127,23 +129,7 @@
             this.guna2Shapes4.BackColor = System.Drawing.Color.Green;
             this.guna2Shapes4.BorderColor = System.Drawing.Color.Green;
             this.guna2Shapes4.FillColor = System.Drawing.Color.Green;
-            this.guna2Shapes4.Location = new System.Drawing.Point(163, 0);
-            this.guna2Shapes4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Shapes4.Name = "guna2Shapes4";
-            this.guna2Shapes4.PolygonSkip = 1;
-            this.guna2Shapes4.Rotate = 0F;
-            this.guna2Shapes4.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes4.Size = new System.Drawing.Size(17, 73);
-            this.guna2Shapes4.TabIndex = 30;
-            this.guna2Shapes4.Text = "guna2Shapes4";
-            this.guna2Shapes4.Zoom = 80;
-            // 
-            // guna2Shapes4
-            // 
-            this.guna2Shapes4.BackColor = System.Drawing.Color.Green;
-            this.guna2Shapes4.BorderColor = System.Drawing.Color.Green;
-            this.guna2Shapes4.FillColor = System.Drawing.Color.Green;
-            this.guna2Shapes4.Location = new System.Drawing.Point(183, 0);
+            this.guna2Shapes4.Location = new System.Drawing.Point(180, 0);
             this.guna2Shapes4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Shapes4.Name = "guna2Shapes4";
             this.guna2Shapes4.PolygonSkip = 1;
@@ -220,6 +206,8 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(200)))), ((int)(((byte)(24)))));
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.bills);
             this.panel4.Controls.Add(this.guna2Button4);
             this.panel4.Controls.Add(this.btnStock);
@@ -243,7 +231,7 @@
             this.bills.FillColor = System.Drawing.Color.Green;
             this.bills.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bills.ForeColor = System.Drawing.Color.White;
-            this.bills.Location = new System.Drawing.Point(12, 374);
+            this.bills.Location = new System.Drawing.Point(12, 398);
             this.bills.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bills.Name = "bills";
             this.bills.Size = new System.Drawing.Size(160, 36);
@@ -277,7 +265,7 @@
             this.btnStock.FillColor = System.Drawing.Color.Green;
             this.btnStock.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStock.ForeColor = System.Drawing.Color.White;
-            this.btnStock.Location = new System.Drawing.Point(12, 270);
+            this.btnStock.Location = new System.Drawing.Point(12, 294);
             this.btnStock.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(160, 36);
@@ -295,7 +283,7 @@
             this.Products.FocusedColor = System.Drawing.Color.Transparent;
             this.Products.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Products.ForeColor = System.Drawing.Color.White;
-            this.Products.Location = new System.Drawing.Point(12, 323);
+            this.Products.Location = new System.Drawing.Point(12, 347);
             this.Products.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Products.Name = "Products";
             this.Products.Size = new System.Drawing.Size(160, 36);
@@ -312,7 +300,7 @@
             this.EmployeeCrudButton.FillColor = System.Drawing.Color.Green;
             this.EmployeeCrudButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EmployeeCrudButton.ForeColor = System.Drawing.Color.White;
-            this.EmployeeCrudButton.Location = new System.Drawing.Point(12, 219);
+            this.EmployeeCrudButton.Location = new System.Drawing.Point(12, 243);
             this.EmployeeCrudButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.EmployeeCrudButton.Name = "EmployeeCrudButton";
             this.EmployeeCrudButton.Size = new System.Drawing.Size(160, 36);
@@ -325,7 +313,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(32, 54);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 15);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(112, 100);
@@ -499,6 +487,33 @@
             this.label1.TabIndex = 12;
             this.label1.Text = "Welcome ";
             // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(23, 154);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(66, 23);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "[name]";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(23, 125);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 20);
+            this.label5.TabIndex = 18;
+            this.label5.Text = "MANAGER NAME:";
+            // 
             // InventoryManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -515,6 +530,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.mainContentPanel.ResumeLayout(false);
             this.mainContentPanel.PerformLayout();
@@ -561,5 +577,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Shapes guna2Shapes4;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label5;
     }
 }

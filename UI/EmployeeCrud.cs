@@ -52,15 +52,22 @@ namespace HyperstarManagementSystem
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            try
+            if (role.Text != "" && dept.Text != "" && username.Text != "" && pwd.Text != "" && name.Text != "")
             {
-                EmployeeDL.deleteEmployee(Convert.ToInt32(employeeView.CurrentRow.Cells[0].Value.ToString()));
-                MessageBox.Show("Employee Deleted");
-                getRows();
+                try
+                {
+                    EmployeeDL.deleteEmployee(Convert.ToInt32(employeeView.CurrentRow.Cells[0].Value.ToString()));
+                    MessageBox.Show("Employee Deleted");
+                    getRows();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Please select an employee to delete");
             }
         }
 
@@ -71,59 +78,73 @@ namespace HyperstarManagementSystem
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            try
+            if (role.Text != "" && dept.Text != "" && username.Text != "" && pwd.Text != "" && name.Text != "")
             {
-                string query = $"select role_id from roles where role_name = '{role.Text}'";
-                DataTable dt = DataBaseHelper.GetTable(query);
-                int role_id = Convert.ToInt32(dt.Rows[0]["role_id"].ToString());
-                string query2 = $"select dept_id from departments where dept_name = '{dept.Text}'";
-                DataTable dt2 = DataBaseHelper.GetTable(query2);
-                int dept_id = Convert.ToInt32(dt2.Rows[0]["dept_id"].ToString());
                 try
                 {
-                    EmployeeBL employeeBL = new EmployeeBL((int)employeeView.CurrentRow.Cells[0].Value, name.Text, username.Text, pwd.Text, role_id, dept_id);
-                    EmployeeDL.updateEmployee(employeeBL);
-                    MessageBox.Show("Employee Updated");
+                    string query = $"select role_id from roles where role_name = '{role.Text}'";
+                    DataTable dt = DataBaseHelper.GetTable(query);
+                    int role_id = Convert.ToInt32(dt.Rows[0]["role_id"].ToString());
+                    string query2 = $"select dept_id from departments where dept_name = '{dept.Text}'";
+                    DataTable dt2 = DataBaseHelper.GetTable(query2);
+                    int dept_id = Convert.ToInt32(dt2.Rows[0]["dept_id"].ToString());
+                    try
+                    {
+                        EmployeeBL employeeBL = new EmployeeBL((int)employeeView.CurrentRow.Cells[0].Value, name.Text, username.Text, pwd.Text, role_id, dept_id);
+                        EmployeeDL.updateEmployee(employeeBL);
+                        MessageBox.Show("Employee Updated");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    getRows();
+                    clear();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-                getRows();
-                clear();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Please fill all fields");
             }
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            try
+            if (role.Text != "" && dept.Text != "" && username.Text != "" && pwd.Text != "" && name.Text != "")
             {
-                string query = $"select role_id from roles where role_name = '{role.Text}'";
-                DataTable dt = DataBaseHelper.GetTable(query);
-                int role_id = Convert.ToInt32(dt.Rows[0]["role_id"].ToString());
-                string query2 = $"select dept_id from departments where dept_name = '{dept.Text}'";
-                DataTable dt2 = DataBaseHelper.GetTable(query2);
-                int dept_id = Convert.ToInt32(dt2.Rows[0]["dept_id"].ToString());
                 try
                 {
-                    EmployeeBL employeeBL = new EmployeeBL(0, name.Text, username.Text, pwd.Text, role_id, dept_id);
-                    EmployeeDL.addEmployee(employeeBL);
-                    MessageBox.Show("Employee Added");
+                    string query = $"select role_id from roles where role_name = '{role.Text}'";
+                    DataTable dt = DataBaseHelper.GetTable(query);
+                    int role_id = Convert.ToInt32(dt.Rows[0]["role_id"].ToString());
+                    string query2 = $"select dept_id from departments where dept_name = '{dept.Text}'";
+                    DataTable dt2 = DataBaseHelper.GetTable(query2);
+                    int dept_id = Convert.ToInt32(dt2.Rows[0]["dept_id"].ToString());
+                    try
+                    {
+                        EmployeeBL employeeBL = new EmployeeBL(0, name.Text, username.Text, pwd.Text, role_id, dept_id);
+                        EmployeeDL.addEmployee(employeeBL);
+                        MessageBox.Show("Employee Added");
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    getRows();
+                    clear();
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-                getRows();
-                clear();
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Please fill all fields");
             }
         }
         private void employeeView_Click(object sender, EventArgs e)
