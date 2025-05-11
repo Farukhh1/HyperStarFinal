@@ -22,6 +22,25 @@ namespace HyperstarManagementSystem.UI
         {
 
         }
+        private Guna.UI2.WinForms.Guna2Button lastClickedButton = null;
+
+
+        private void ToggleButtonColor(Guna.UI2.WinForms.Guna2Button clickedButton)
+        {
+            if (lastClickedButton != null && lastClickedButton != clickedButton)
+
+            {
+                lastClickedButton.FillColor = Color.Green;
+                lastClickedButton.ForeColor = Color.White;
+            }
+
+
+            clickedButton.FillColor = Color.White;
+            clickedButton.ForeColor = Color.Green;
+
+
+            lastClickedButton = clickedButton;
+        }
 
         private void EmployeeCrudButton_Click(object sender, EventArgs e)
         {
@@ -30,6 +49,7 @@ namespace HyperstarManagementSystem.UI
             billView.Dock = DockStyle.Fill;
             // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(billView);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
 
         }
 
@@ -48,6 +68,7 @@ namespace HyperstarManagementSystem.UI
 
             // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(customeradd);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -58,6 +79,7 @@ namespace HyperstarManagementSystem.UI
 
             // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(BillControl);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
 
         }
 
@@ -68,6 +90,7 @@ namespace HyperstarManagementSystem.UI
             productsView.Dock = DockStyle.Fill;
             // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(productsView);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)

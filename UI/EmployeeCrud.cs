@@ -26,6 +26,14 @@ namespace HyperstarManagementSystem
             DataTable dt = EmployeeDL.getAllEmployees();
             employeeView.DataSource = dt;
             employeeView.Columns[0].Visible = false;
+
+            employeeView.Columns[1].HeaderText = "Employee Name";
+            employeeView.Columns[2].HeaderText = "Username";
+            employeeView.Columns[3].HeaderText = "Password";
+            employeeView.Columns[4].HeaderText = "Role";
+            employeeView.Columns[5].HeaderText = "Department";
+
+
             DataTable dt2 = EmployeeDL.getRole();
             role.DataSource = dt2;
             role.DisplayMember = "role_name";
@@ -40,6 +48,10 @@ namespace HyperstarManagementSystem
             employeeView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             employeeView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
         }
+
+
+        
+
         private void clear()
         {
             name.Clear();

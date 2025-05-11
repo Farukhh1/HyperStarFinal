@@ -17,13 +17,31 @@ namespace HyperstarManagementSystem
         {
             InitializeComponent();
         }
+        private Guna.UI2.WinForms.Guna2Button lastClickedButton = null;
 
+        private void ToggleButtonColor(Guna.UI2.WinForms.Guna2Button clickedButton)
+        {
+            if (lastClickedButton != null && lastClickedButton != clickedButton)
+
+            {
+                lastClickedButton.FillColor = Color.Green;
+                lastClickedButton.ForeColor = Color.White;
+            }
+
+
+            clickedButton.FillColor = Color.White;
+            clickedButton.ForeColor = Color.Green;
+
+
+            lastClickedButton = clickedButton;
+        }
         private void EmployeeCrudButton_Click(object sender, EventArgs e)
         {
 
             this.mainContentPanel.Controls.Clear();
             ProductCrud productControl = new ProductCrud();
             this.mainContentPanel.Controls.Add(productControl);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void InventoryManager_Load(object sender, EventArgs e)
@@ -38,6 +56,7 @@ namespace HyperstarManagementSystem
             this.mainContentPanel.Controls.Clear();
             ProductCrud productControl = new ProductCrud();
             this.mainContentPanel.Controls.Add(productControl);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void guna2Button4_Click(object sender, EventArgs e)
@@ -54,6 +73,7 @@ namespace HyperstarManagementSystem
             ProductCrud productControl = new ProductCrud();
             productControl.Dock = DockStyle.Fill;
             this.mainContentPanel.Controls.Add(productControl);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void Customers_Click(object sender, EventArgs e)
@@ -62,6 +82,7 @@ namespace HyperstarManagementSystem
             StockManagement stockManagement = new StockManagement();
             stockManagement.Dock = DockStyle.Fill;
             this.mainContentPanel.Controls.Add(stockManagement);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void EmployeeCrudButton_Click_1(object sender, EventArgs e)
@@ -70,6 +91,7 @@ namespace HyperstarManagementSystem
             StockOrders so = new StockOrders();
             so.Dock = DockStyle.Fill;
             this.mainContentPanel.Controls.Add(so);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void guna2Button4_Click_1(object sender, EventArgs e)
@@ -85,6 +107,7 @@ namespace HyperstarManagementSystem
             SupplierCrud supplierCrud = new SupplierCrud();
             supplierCrud.Dock = DockStyle.Fill;
             this.mainContentPanel.Controls.Add(supplierCrud);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
 
         }
 

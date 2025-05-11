@@ -219,12 +219,12 @@
             this.guna2Shapes3.BackColor = System.Drawing.Color.Green;
             this.guna2Shapes3.BorderColor = System.Drawing.Color.Green;
             this.guna2Shapes3.FillColor = System.Drawing.Color.Green;
-            this.guna2Shapes3.Location = new System.Drawing.Point(180, 0);
+            this.guna2Shapes3.Location = new System.Drawing.Point(178, 0);
             this.guna2Shapes3.Name = "guna2Shapes3";
             this.guna2Shapes3.PolygonSkip = 1;
             this.guna2Shapes3.Rotate = 0F;
             this.guna2Shapes3.Shape = Guna.UI2.WinForms.Enums.ShapeType.Line;
-            this.guna2Shapes3.Size = new System.Drawing.Size(19, 91);
+            this.guna2Shapes3.Size = new System.Drawing.Size(21, 116);
             this.guna2Shapes3.TabIndex = 26;
             this.guna2Shapes3.Text = "guna2Shapes3";
             this.guna2Shapes3.Zoom = 80;

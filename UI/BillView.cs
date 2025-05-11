@@ -24,7 +24,7 @@ namespace HyperstarManagementSystem.UI
             employeeView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             employeeView.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             employeeView.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            employeeView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei UI", 10, FontStyle.Bold);
+            employeeView.ColumnHeadersDefaultCellStyle.Font = new Font("Microsoft YaHei UI", 8, FontStyle.Bold);
         }
         private void employeeView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

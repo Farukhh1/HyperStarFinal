@@ -19,6 +19,28 @@ namespace HyperstarManagementSystem
         {
             InitializeComponent();
         }
+        private Guna.UI2.WinForms.Guna2Button lastClickedButton = null;
+
+
+        private void ToggleButtonColor(Guna.UI2.WinForms.Guna2Button clickedButton)
+        {
+            if (lastClickedButton != null && lastClickedButton != clickedButton)
+
+            {
+                lastClickedButton.FillColor = Color.Green; 
+                lastClickedButton.ForeColor = Color.White; 
+            }
+
+     
+            clickedButton.FillColor = Color.White; 
+            clickedButton.ForeColor = Color.Green; 
+
+     
+            lastClickedButton = clickedButton;
+        }
+
+ 
+
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
@@ -31,15 +53,15 @@ namespace HyperstarManagementSystem
         {
 
         }
-
+        //EMP
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
             EmployeeCrud employeeControl = new EmployeeCrud();
             employeeControl.Dock = DockStyle.Fill;
-
-            // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(employeeControl);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
+
         }
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
@@ -47,23 +69,22 @@ namespace HyperstarManagementSystem
             this.mainContentPanel.Controls.Clear();
             ReportUI report = new ReportUI();
             report.Dock = DockStyle.Fill;
-
-            // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(report);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void mainContentPanel_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
+        //CUS
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             this.mainContentPanel.Controls.Clear();
             CustomerCrud customerCrud = new CustomerCrud();
             customerCrud.Dock = DockStyle.Fill;
-            // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(customerCrud);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -71,8 +92,8 @@ namespace HyperstarManagementSystem
             this.mainContentPanel.Controls.Clear();
             ProductsView productsView = new ProductsView();
             productsView.Dock = DockStyle.Fill;
-            // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(productsView);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
@@ -175,6 +196,7 @@ namespace HyperstarManagementSystem
             this.Hide();
             Login login = new Login();
             login.Show();
+
         }
 
         private void bills_Click(object sender, EventArgs e)
@@ -182,18 +204,9 @@ namespace HyperstarManagementSystem
             this.mainContentPanel.Controls.Clear();
             BillView billView = new BillView();
             billView.Dock = DockStyle.Fill;
-            // Add it to the container panel (assumed named mainContentPanel)
             this.mainContentPanel.Controls.Add(billView);
+            ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
 
-        // Handle resizing
-        //    this.Resize += (s, e) => CenterLoginPanel();
-        //}
-
-        //private void CenterLoginPanel()
-        //        {
-        //            loginPanel.Left = (mainContentPanel.Width - loginPanel.Width) / 2;
-        //            loginPanel.Top = (mainContentPanel.Height - loginPanel.Height) / 2;
-        //        }
     }
 }
