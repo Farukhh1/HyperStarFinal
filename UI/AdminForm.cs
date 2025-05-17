@@ -207,6 +207,12 @@ namespace HyperstarManagementSystem
             this.mainContentPanel.Controls.Add(billView);
             ToggleButtonColor((Guna.UI2.WinForms.Guna2Button)sender);
         }
+        public void LoadUserControl(UserControl uc)
+        {
+            this.mainContentPanel.Controls.Clear();
+            uc.Dock = DockStyle.Fill;
+            this.mainContentPanel.Controls.Add(uc);
 
+        }
     }
 }

@@ -422,9 +422,9 @@
                   <TextRun>
                     <Value>Hyper Star</Value>
                     <Style>
+                      <FontFamily>Microsoft YaHei UI</FontFamily>
                       <FontSize>16pt</FontSize>
                       <FontWeight>Bold</FontWeight>
-                      <TextDecoration>Underline</TextDecoration>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -456,7 +456,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>="Bill ID: " &amp; Parameters!BillID.Value</Value>
+                    <Value>="Bill NO: " &amp; Parameters!BillID.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>

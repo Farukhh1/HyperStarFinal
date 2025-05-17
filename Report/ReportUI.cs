@@ -24,7 +24,7 @@ namespace HyperstarManagementSystem.Reports
         {
             if (comboBox1.Text == "Active Products")
             {
-                string reportPath = "F:\\DB\\Final_Project\\HyperStarFinal\\Report\\ProductReport.rdlc";
+                string reportPath = "C:\\Users\\Admin\\Documents\\GitHub\\DBSF013\\HyperStarManagementSystem\\Report\\ProductReport.rdlc";
                 reportViewer1.ProcessingMode = ProcessingMode.Local;
                 reportViewer1.LocalReport.ReportPath = reportPath;
                 var data = ProductDL.GetAllProducts();
@@ -34,7 +34,7 @@ namespace HyperstarManagementSystem.Reports
             }
             else if(comboBox1.Text == "InActive Products")
             {
-                string reportPath = "F:\\DB\\Final_Project\\HyperStarFinal\\Report\\InactiveProducts.rdlc";
+                string reportPath = "C:\\Users\\Admin\\Documents\\GitHub\\DBSF013\\HyperStarManagementSystem\\Report\\InactiveProducts.rdlc";
                 reportViewer1.ProcessingMode = ProcessingMode.Local;
                 reportViewer1.LocalReport.ReportPath = reportPath;
                 var data = ProductDL.GetAllInactiveProducts();
@@ -44,7 +44,7 @@ namespace HyperstarManagementSystem.Reports
             }
             else if (comboBox1.Text == "Departments")
             {
-                string reportPath = "F:\\DB\\Final_Project\\HyperStarFinal\\Report\\DepartmentReport.rdlc";
+                string reportPath = "C:\\Users\\Admin\\Documents\\GitHub\\DBSF013\\HyperStarManagementSystem\\Report\\DepartmentReport.rdlc";
                 reportViewer1.ProcessingMode = ProcessingMode.Local;
                 reportViewer1.LocalReport.ReportPath = reportPath;
                 var data = DepartmentDL.GetDepartments();
@@ -54,7 +54,7 @@ namespace HyperstarManagementSystem.Reports
             }
             else if (comboBox1.Text == "Customers")
             {
-                string reportPath = "F:\\DB\\Final_Project\\HyperStarFinal\\Report\\CustomerReport.rdlc";
+                string reportPath = "C:\\Users\\Admin\\Documents\\GitHub\\DBSF013\\HyperStarManagementSystem\\Report\\CustomerReport.rdlc";
                 reportViewer1.ProcessingMode = ProcessingMode.Local;
                 reportViewer1.LocalReport.ReportPath = reportPath;
                 var data = CustomerReportDL.GetCustomers();
@@ -64,7 +64,7 @@ namespace HyperstarManagementSystem.Reports
             }
             else if (comboBox1.Text == "Product Sale")
             {
-                string reportPath = "F:\\DB\\Final_Project\\HyperStarFinal\\Report\\ALLProductSoldReport.rdlc";
+                string reportPath = "C:\\Users\\Admin\\Documents\\GitHub\\DBSF013\\HyperStarManagementSystem\\Report\\ALLProductSoldReport.rdlc";
                 reportViewer1.ProcessingMode = ProcessingMode.Local;
                 reportViewer1.LocalReport.ReportPath = reportPath;
                 var data = ProductSaleDL.GetProductSales();
@@ -74,7 +74,7 @@ namespace HyperstarManagementSystem.Reports
             }
             else if (comboBox1.Text == "Top10 Sold Products")
             {
-                string reportPath = "F:\\DB\\Final_Project\\HyperStarFinal\\Report\\ALLProductSoldReport.rdlc";
+                string reportPath = "C:\\Users\\Admin\\Documents\\GitHub\\DBSF013\\HyperStarManagementSystem\\Report\\ALLProductSoldReport.rdlc";
                 reportViewer1.ProcessingMode = ProcessingMode.Local;
                 reportViewer1.LocalReport.ReportPath = reportPath;
                 var data = ProductSaleDL.GetProductSalesTop10();
@@ -84,7 +84,7 @@ namespace HyperstarManagementSystem.Reports
             }
             else if (comboBox1.Text == "Employee Performance")
             {
-                string reportPath = "F:\\DB\\Final_Project\\HyperStarFinal\\Report\\EmployeePerformanceReport.rdlc";
+                string reportPath = "C:\\Users\\Admin\\Documents\\GitHub\\DBSF013\\HyperStarManagementSystem\\Report\\EmployeePerformanceReport.rdlc";
                 reportViewer1.ProcessingMode = ProcessingMode.Local;
                 reportViewer1.LocalReport.ReportPath = reportPath;
                 var data = EmployeePerformanceDL.GetEmployeePerformance();

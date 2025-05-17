@@ -79,7 +79,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(27, 192);
+            this.label3.Location = new System.Drawing.Point(50, 191);
             this.label3.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(195, 42);
@@ -92,7 +92,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(8, 251);
+            this.label1.Location = new System.Drawing.Point(23, 251);
             this.label1.Margin = new System.Windows.Forms.Padding(0, 2, 0, 2);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(255, 29);
@@ -213,8 +213,8 @@
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(701, 403);
             this.Controls.Add(this.linkLabel2);

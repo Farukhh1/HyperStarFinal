@@ -15,6 +15,7 @@ namespace HyperstarManagementSystem.UI
 {
     public partial class BillCrud : UserControl
     {
+        public static int billId { get; set; }
         public bool btnClick = false;
         private BillsBL currentBill = null;
         private List<BillDetailBL> cart = new List<BillDetailBL>();
@@ -162,6 +163,11 @@ namespace HyperstarManagementSystem.UI
                         DefaultVisibility();
                         cart.Clear();
 
+                        var form = this.FindForm() as Cashier;
+                        if (form != null)
+                        {
+                            form.LoadUserControl(new BillReport(billId));
+                        }
                     }
                     else
                     {
@@ -189,37 +195,44 @@ namespace HyperstarManagementSystem.UI
             bool entered = false;
             if (CodeT.Text != "" && quantityT.Text != "")
             {
-                try
+                if (Convert.ToInt32(quantityT.Text.ToString()) > 0)
                 {
-                    string pcode = CodeT.Text.ToString();
-                    foreach (BillDetailBL bdt in cart)
+                    try
                     {
-                        if (bdt.ProductCode == pcode)
+                        string pcode = CodeT.Text.ToString();
+                        foreach (BillDetailBL bdt in cart)
                         {
-                            bdt.Quantity += Convert.ToInt32(quantityT.Text.ToString());
-                            ShowDetails();
-                            entered = true;
-                            break;
+                            if (bdt.ProductCode == pcode)
+                            {
+                                bdt.Quantity += Convert.ToInt32(quantityT.Text.ToString());
+                                ShowDetails();
+                                entered = true;
+                                break;
+                            }
+                        }
+                        if (entered == false)
+                        {
+                            if (ProductDL.productExists(pcode))
+                            {
+                                int quantity = Convert.ToInt32(quantityT.Text.ToString());
+                                BillDetailBL billDetail = new BillDetailBL(pcode, quantity);
+                                cart.Add(billDetail);
+                                ShowDetails();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Product does not exist.");
+                            }
                         }
                     }
-                    if (entered == false)
+                    catch (Exception ex)
                     {
-                        if (ProductDL.productExists(pcode))
-                        {
-                            int quantity = Convert.ToInt32(quantityT.Text.ToString());
-                            BillDetailBL billDetail = new BillDetailBL(pcode, quantity);
-                            cart.Add(billDetail);
-                            ShowDetails();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Product does not exist.");
-                        }
+                        MessageBox.Show("Error: " + ex.Message);
                     }
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("Error: " + ex.Message);
+                    MessageBox.Show("Quantity must be greater than 0");
                 }
             }
             else
@@ -227,6 +240,7 @@ namespace HyperstarManagementSystem.UI
                 MessageBox.Show("Please fill all the fields");
 
             }
+        
         }
 
         private void DeleteButton_Click(object sender, EventArgs e)

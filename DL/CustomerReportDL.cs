@@ -12,7 +12,7 @@ namespace HyperstarManagementSystem.DL
     {
         public static List<CustomerReportBL> GetCustomers()
         {
-            string qry = "SELECT customers.fullname AS Name,customers.phone AS Phone_number,customers.address AS Address,COUNT(bills.bill_id) AS Total_Bills,COALESCE(SUM(bills.totalamount), 0) AS Total_Purchase FROM customers LEFT JOIN bills ON customers.customer_id = bills.customer_id AND bills.deleted = 0 GROUP BY customers.customer_id;";
+            string qry = "SELECT customers.fullname AS Name,customers.phone AS Phone_number,customers.address AS Address,COUNT(bills.bill_id) AS Total_Bills,COALESCE(SUM(bills.totalamount), 0) AS Total_Purchase FROM customers LEFT JOIN bills ON customers.customer_id = bills.customer_id AND bills.deleted = 0 GROUP BY customers.customer_id order by total_purchase desc";
             DataTable dt = DataBaseHelper.GetTable(qry);
             List<CustomerReportBL> customers = new List<CustomerReportBL>();
             foreach (DataRow dr in dt.Rows)

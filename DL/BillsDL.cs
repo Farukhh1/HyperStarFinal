@@ -29,7 +29,7 @@ namespace HyperstarManagementSystem
                 decimal totalAmount = Convert.ToDecimal(dr["totalamount"]);
                 List<BillDetailBL> billDetails = BillDetailDL.GetBilldetailsByBillID(billID);
                 PaymentBL payment = PaymentDL.getPaymentByBill(billID);
-                BillsBL b = new BillsBL(billID, customerID, 1, billDate, totalAmount, billDetails,payment);
+                BillsBL b = new BillsBL(billID, customerID, 1, billDate, totalAmount, billDetails, payment);
                 bills.Add(b);
             }
             return bills;
@@ -40,7 +40,7 @@ namespace HyperstarManagementSystem
             DataTable dt = DataBaseHelper.GetTable(qry);
             return dt;
         }
-        public static DataTable GetBillViewTable()
+        public static DataTable GetBillViewsTable()
         {
             string qry = $"call Get_All_Bill_View()";
             DataTable dt = DataBaseHelper.GetTable(qry);
@@ -107,6 +107,7 @@ namespace HyperstarManagementSystem
                         responseCmd.ExecuteNonQuery();
 
                         transaction.Commit();
+                        BillCrud.billId = Convert.ToInt32(billId);
                         return true;
                     }
                     catch
@@ -125,16 +126,16 @@ namespace HyperstarManagementSystem
             using (var conn = new MySqlConnection(connStr))
             {
                 conn.Open();
-                string billInfoQuery = @"
+                string qry = @"
             SELECT b.bill_id, b.billdate, c.fullname AS CustomerName, e.fullname AS EmployeeName, 
                    b.totalamount, p.cash_rec
             FROM bills b
-            LEFT JOIN customers c ON b.customer_id = c.customer_id
-            LEFT JOIN employees e ON b.employee_id = e.employee_id
-            LEFT JOIN payments p ON b.bill_id = p.bill_id
+            JOIN customers c ON b.customer_id = c.customer_id
+            JOIN employees e ON b.employee_id = e.employee_id
+            JOIN payments p ON b.bill_id = p.bill_id
             WHERE b.bill_id = @bid";
 
-                using (var cmd = new MySqlCommand(billInfoQuery, conn))
+                using (var cmd = new MySqlCommand(qry, conn))
                 {
                     cmd.Parameters.AddWithValue("@bid", billId);
                     using (var reader = cmd.ExecuteReader())
@@ -163,7 +164,7 @@ namespace HyperstarManagementSystem
                     {
                         while (reader.Read())
                         {
-                            report.Items.Add( new BillReportItem
+                            report.Items.Add(new BillReportItem
                             (
                                 reader["ProductName"].ToString(),
                                 Convert.ToInt32(reader["qty"]),

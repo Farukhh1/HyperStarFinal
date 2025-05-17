@@ -24,12 +24,13 @@ namespace HyperstarManagementSystem.UI
         public BillView()
         {
             InitializeComponent();
+            getRows();
         }
         private void getRows()
         {
             if(emp == null)
             {
-                employeeView.DataSource = BillsDL.GetBillViewTable();
+                employeeView.DataSource = BillsDL.GetBillViewsTable();
             }
             else
             {
@@ -53,20 +54,33 @@ namespace HyperstarManagementSystem.UI
                 employeeView.Columns[0].Visible = false;
                 employeeView.Columns[1].Visible = false;
                 BillDetails.Text = "Back";
+                btnPrintReport.Visible = false;
             }
             else
             {
                 getRows();
                 BillDetails.Text = "Details";
+                btnPrintReport.Visible = true;
             }
         }
 
         private void btnPrintReport_Click(object sender, EventArgs e)
         {
-            var form = this.FindForm() as Cashier;
-            if (form != null)
+            if (emp != null)
             {
-                form.LoadUserControl(new BillReport((int)employeeView.CurrentRow.Cells[0].Value));
+                var form = this.FindForm() as Cashier;
+                if (form != null)
+                {
+                    form.LoadUserControl(new BillReport((int)employeeView.CurrentRow.Cells[0].Value));
+                }
+            }
+            else
+            {
+                var form = this.FindForm() as AdminForm;
+                if (form != null)
+                {
+                    form.LoadUserControl(new BillReport((int)employeeView.CurrentRow.Cells[0].Value));
+                }
             }
         }
     }

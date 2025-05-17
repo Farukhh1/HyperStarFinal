@@ -13,10 +13,8 @@ namespace HyperstarManagementSystem.BL
         public string CustomerName { get; set; }
         public string EmployeeName { get; set; }
 
-        // Product details
         public List<BillReportItem> Items { get; set; } = new List<BillReportItem>();
 
-        // Financial summary
         public decimal TotalAmount { get; set; }
         public decimal CashReceived { get; set; }
         public decimal Change => CashReceived - TotalAmount;
